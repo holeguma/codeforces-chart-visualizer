@@ -1,123 +1,194 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <meta charset="utf-8">
-         <title>D3 Test</title>
-         <script type="text/javascript" src="./lib/d3.js"></script>
-      </head>
-      <body>
-<style>
+<html lang="en">
 
-</style>
-<script type="text/javascript">
-//このファイルと同じディレクトリに「lib/d3.js」と「contest_data」(これはGoogle Driveで共有します)を置いてください
-var cnt=0;
-let n_contests=1260;
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <title>D3 Test</title>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+    <script src="./bower_components/radar-chart-d3/src/radar-chart.js" charset="utf-8"></script>
+</head>
 
-//自分のrating,問題のdifficulty,解けたかどうか, から新しいratingを計算する
-function updateRating(rating,difficulty,result,K=32){
-    //if(rating-difficulty>400&&result==0)return rating;
-    var winProbability=1.0/(Math.pow(10.0,(difficulty-rating)/400.0)+1.0);
-    var newRating=rating+K*(result-winProbability);
-    return newRating;
-}
-//ユーザーネーム→各タグのrating のハッシュを用意する
-var hash={};
-//デフォルトのハッシュ
-var Status={
-    userID:"sample",
-    "bitmasks":1500,
-    "divide and conquer":1500,
-    "math":1500,
-    "data structures":1500,
-    "trees":1500,
-    "dp":1500,
-    "greedy":1500,
-    "binary search":1500,
-    "sortings":1500,
-    "number theory":1500,
-    "fft":1500,
-    "brute force":1500,
-    "hashing":1500,
-    "meet-in-the-middle":1500,
-    "two pointers":1500,
-    "implementation":1500,
-    "strings":1500,
-    "constructive algorithms":1500,
-    "graphs":1500,
-    "combinatorics":1500,
-    "dfs and similar":1500,
-    "dsu":1500,
-    "probabilities":1500,
-    "geometry":1500,
-    "interactive":1500,
-    "ternary search":1500,
-    "shortest paths":1500,
-    "flows":1500,
-    "matrices":1500,
-    "2-sat":1500,
-    "graph matchings":1500,
-    "games":1500,
-    "*special":1500,
-    "string suffix structures":1500,
-    "expression parsing":1500,
-    "chinese remainder theorem":1500,
-    "schedules":1500
-}
+<body>
+    <style>
+        body {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 11px;
+				font-weight: 300;
+				fill: #242424;
+				text-align: center;
+				text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+				cursor: default;
+			}
 
-//コンテストIDから、参加者全員のratingを更新する
-function calcRating(contestID){
-    return new Promise((resolve,reject)=>{
-        var filename="./contest_data/"+contestID+".json";
-        d3.json(filename).then(function(data){
-            //コンテストデータがなければスキップ
-            if(data.status=="FAILED"){
-                console.log(contestID+":FAILED");
-                return resolve();
-            }
-            let problems=data.result.problems;
-            let n_problems=problems.length;
+			.legend {
+				font-family: 'Raleway', sans-serif;
+				fill: #333333;
+			}
+    </style>
+    <form id="form1" action="#">
+        <input type="text" id="You" value=""><br>
+        <input type="text" id="Rivals" value=""><br>
+        <input type="button" onclick="button_clicked()" value="Enter">
+    </form>
+    <br><br><br>
+    <div class="radarChart" style="display: inline-flex;"></div>
+    <script type="text/javascript">
+        //このファイルと同じディレクトリに「lib/d3.js」と「contest_data」(これはGoogle Driveで共有します)を置いてください
+        var cnt = 0;
+        let n_contests = 1260;
 
-            let ranks=data.result.rows;
-            let n_contestants=ranks.length;
-            for(let i=0;i<n_contestants;i++){
-                let name=ranks[i].party.members[0].handle;
+        //自分のrating,問題のdifficulty,解けたかどうか, から新しいratingを計算する
+        function updateRating(rating, difficulty, result, K = 32) {
+            //if(rating-difficulty>400&&result==0)return rating;
+            var winProbability = 1.0 / (Math.pow(10.0, (difficulty - rating) / 400.0) + 1.0);
+            var newRating = rating + K * (result - winProbability);
+            return newRating;
+        }
+        //ユーザーネーム→各タグのrating のハッシュを用意する
+        var hash = {};
+        //デフォルトのハッシュ
+        var Status = {
+            userID: "sample",
+            "bitmasks": 1500,
+            "divide and conquer": 1500,
+            "math": 1500,
+            "data structures": 1500,
+            "trees": 1500,
+            "dp": 1500,
+            "greedy": 1500,
+            "binary search": 1500,
+            "sortings": 1500,
+            "number theory": 1500,
+            "fft": 1500,
+            "brute force": 1500,
+            "hashing": 1500,
+            "meet-in-the-middle": 1500,
+            "two pointers": 1500,
+            "implementation": 1500,
+            "strings": 1500,
+            "constructive algorithms": 1500,
+            "graphs": 1500,
+            "combinatorics": 1500,
+            "dfs and similar": 1500,
+            "dsu": 1500,
+            "probabilities": 1500,
+            "geometry": 1500,
+            "interactive": 1500,
+            "ternary search": 1500,
+            "shortest paths": 1500,
+            "flows": 1500,
+            "matrices": 1500,
+            "2-sat": 1500,
+            "graph matchings": 1500,
+            "games": 1500,
+            "*special": 1500,
+            "string suffix structures": 1500,
+            "expression parsing": 1500,
+            "chinese remainder theorem": 1500,
+            "schedules": 1500
+        }
 
-                //もしハッシュに名前が登録されてなければ新しく作る
-                if(!hash[name]){
-                    hash[name]=Object.create(Status);
-                    hash[name].userID=name;
-                }
-                for(let j=0;j<n_problems;j++){
-                    let result=ranks[i].problemResults[j].points?1:0;
-                    let difficulty=problems[j].rating;
-                    if(!difficulty)continue;//問題にdifficultyが設定されてなければスキップ
-                    for(let tag of problems[j].tags){
-                        let rating=hash[name][tag];
-                        hash[name][tag]=updateRating(rating,difficulty,result);
+        //コンテストIDから、参加者全員のratingを更新する
+        function calcRating(contestID) {
+            return new Promise((resolve, reject) => {
+                var filename = "./contest_data/" + contestID + ".json";
+                d3.json(filename).then(function (data) {
+                    //コンテストデータがなければスキップ
+                    if (data.status == "FAILED") {
+                        console.log(contestID + ":FAILED");
+                        return resolve();
                     }
-                }
-                resolve();
+                    let problems = data.result.problems;
+                    let n_problems = problems.length;
+
+                    let ranks = data.result.rows;
+                    let n_contestants = ranks.length;
+                    if (!n_contestants) return resolve();
+                    for (let i = 0; i < n_contestants; i++) {
+                        let name = ranks[i].party.members[0].handle;
+
+                        //もしハッシュに名前が登録されてなければ新しく作る
+                        if (!hash[name]) {
+                            hash[name] = Object.create(Status);
+                            hash[name].userID = name;
+                        }
+                        for (let j = 0; j < n_problems; j++) {
+                            if (ranks[i].party.participantType != 'CONTESTANT') continue;// Contestantでなければスキップ
+                            let result = ranks[i].problemResults[j].points ? 1 : 0;
+                            let difficulty = problems[j].rating;
+                            if (!difficulty) continue;//問題にdifficultyが設定されてなければスキップ
+                            for (let tag of problems[j].tags) {
+                                let rating = hash[name][tag];
+                                hash[name][tag] = updateRating(rating, difficulty, result);
+                            }
+                        }
+                        resolve();
+                    }
+                })
+            })
+        }
+
+        async function calc_all() {
+            for (let i = 1; i <= n_contests; i++) {
+                var result = await calcRating(i);
             }
+        }
+
+        calc_all().then(function () {
+            console.log(hash["Mojumbo"]);
+            console.log(hash["holeguma"]);
+            console.log(hash["tourist"]);
+            console.log(hash["rng_58"]);
+            console.log(hash["ransewhale"]);
+            console.log(hash["QWE_QWE"]);
+            console.log(hash["totori0908"]);
+            console.log(hash["Rubikun"]);
         })
-    })
-}
 
-async function calc_all(){
-    for(let i=1000;i<=n_contests;i++){
-        var result = await calcRating(i);
-    }
-}
+        function button_clicked() {
+            data = [];
+            var you = document.getElementById("You").value;
+            var rivals = (document.getElementById("Rivals").value).split(',');
+            addUserInRadarChart(you);
+            for (let rival of rivals) {
+                addUserInRadarChart(rival);
+            }
+            showRaderChart();
+        }
 
-calc_all().then(function(){
-    console.log(hash["Mojumbo"]);
-    console.log(hash["holeguma"]);
-    console.log(hash["tourist"]);
-    console.log(hash["rng_58"]);
-    console.log(hash["ransewhale"]);
-    console.log(hash["QWE_QWE"]);
-    console.log(hash["totori0908"]);
-    console.log(hash["Rubikun"]);
-})
+        function addUserInRadarChart(name) {
+            max_rating = 0;
+            newSeries = {};
+            newSeries.name = name;
+            newSeries.axes = [];
+            for (let tag in hash[name]) {
+                if (hash[name][tag] == name) continue;
+                if (max_rating < hash[name][tag]) max_rating = hash[name][tag];
+                newSeries.axes.push({ "axis": tag, "value": hash[name][tag] });
+            }
+            data.push(newSeries);
+        }
 
-</script>
-</body></html>
+        function showRaderChart() {
+            var margin = { top: 50, right: 80, bottom: 50, left: 80 };
+            var radarChartOptions = {
+                w: 300,
+                h: 300,
+                margin: margin,
+                maxValue: max_rating,
+                levels: 6,
+                roundStrokes: true,
+                color: d3.scaleOrdinal().range(["#26AF32", "#762712", "#2a2fd4"]),
+                format: '.0f'
+            };
+            console.log(data);
+            let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+    </script>
+</body>
+
+</html>
