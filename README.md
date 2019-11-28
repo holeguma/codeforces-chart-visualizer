@@ -5,3 +5,5 @@
 
 ## calcRating.html
 `contest_data`フォルダと`lib/d3.js`を同じ階層において実行してください
+↑
+d3をurlからとってくるようにしたから大丈夫です。
