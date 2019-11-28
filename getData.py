@@ -1,6 +1,7 @@
 import json
 import requests
 import os
+import datetime
 from time import sleep
 from tqdm import tqdm
 
@@ -11,6 +12,11 @@ url = "https://codeforces.com/api/contest.standings?contestId=" + \
 response = requests.get(url)
 json_data = response.json()
 
+def dumpFile(new_dir_path, new_filename, new_file_content, mode='w'):
+    os.makedirs(new_dir_path, exist_ok=True)
+    with open(os.path.join(new_dir_path, new_filename), mode) as f:
+        json.dump(new_file_content, f, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
+        f.close()
 
 def getData(count=5):
     res = []
