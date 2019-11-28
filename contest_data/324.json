@@ -1,0 +1,2179 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 7200,
+            "frozen": false,
+            "id": 324,
+            "name": "ABBYY Cup 3.0 - Finals",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 200884184,
+            "startTimeSeconds": 1374043200,
+            "type": "ICPC"
+        },
+        "problems": [
+            {
+                "contestId": 324,
+                "index": "A1",
+                "name": "Oh Sweet Beaverette",
+                "points": 30.0,
+                "rating": 1400,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "A2",
+                "name": "Oh Sweet Beaverette",
+                "points": 70.0,
+                "rating": 1600,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "B1",
+                "name": "Shave Beaver!",
+                "points": 30.0,
+                "rating": 1700,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "B2",
+                "name": "Shave Beaver!",
+                "points": 70.0,
+                "rating": 1900,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "C1",
+                "name": "The Great Julya Calendar",
+                "points": 20.0,
+                "rating": 1200,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "C2",
+                "name": "The Great Julya Calendar",
+                "points": 20.0,
+                "rating": 2400,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "C3",
+                "name": "The Great Julya Calendar",
+                "points": 60.0,
+                "rating": 2500,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "D1",
+                "name": "Escaping on Beaveractor",
+                "points": 30.0,
+                "rating": 2300,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "D2",
+                "name": "Escaping on Beaveractor",
+                "points": 30.0,
+                "rating": 2600,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "D3",
+                "name": "Escaping on Beaveractor",
+                "points": 40.0,
+                "rating": 2900,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "E1",
+                "name": "Deja Vu",
+                "points": 50.0,
+                "rating": 3000,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 324,
+                "index": "E2",
+                "name": "Deja Vu",
+                "points": 50.0,
+                "rating": 3000,
+                "tags": [],
+                "type": "PROGRAMMING"
+            }
+        ],
+        "rows": [
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Egor"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 486,
+                "points": 380.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1180,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1251,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3322,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3343,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2089,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2108,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2131,
+                        "points": 60.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6655,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5011,
+                        "points": 50.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 1,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "KADR"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 512,
+                "points": 360.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 442,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 455,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2389,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3197,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 635,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5210,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5216,
+                        "points": 60.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6534,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 7002,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 2,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "yeputons"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 364,
+                "points": 330.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 511,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 523,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2225,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2566,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 810,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6017,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6026,
+                        "points": 60.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2170,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 3,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "burunduk3"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 221,
+                "points": 300.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 553,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 569,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1420,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1444,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 773,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3701,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3806,
+                        "points": 60.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 4,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Petr"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 277,
+                "points": 300.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 2679,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2732,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3325,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3341,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 311,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2149,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2300,
+                        "points": 60.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 3,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 5,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "RAD"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 254,
+                "points": 280.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 888,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 897,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1483,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1773,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 523,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 4965,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5032,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 9,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 6,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Mimino"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 281,
+                "points": 250.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 667,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 686,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2625,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 4039,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 895,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6959,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 7,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Milanin"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 223,
+                "points": 240.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 836,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 850,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1642,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3548,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1192,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5510,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 8,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "abacabadabacaba"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 106,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 817,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 834,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1392,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1452,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2022,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 9,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Edvard"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 117,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 753,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 761,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2383,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2395,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 937,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 10,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "niyaznigmatul"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 119,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 718,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 734,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1881,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1899,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 895,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 11,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Fefer_Ivan"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 129,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 507,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 520,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1696,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3189,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 724,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 12,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "IlyaLos"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 136,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 885,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 901,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1625,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3747,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1102,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 13,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "sexyprincess91"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 144,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 646,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 668,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3195,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3216,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1022,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 14,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Igor_Kudryashov"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 152,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 643,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 658,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3447,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3458,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1096,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 3,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 15,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Avalanche"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 153,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1143,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1160,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2156,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3312,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1546,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 16,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "kickbutt"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 173,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 652,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 672,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3566,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3596,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 867,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 17,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "e-maxx"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 284,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1881,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 4,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1894,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3286,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3297,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2065,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 18,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Abra"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 361,
+                "points": 220.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1791,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1809,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 5187,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6160,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2046,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 19,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "IgorKoval"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 367,
+                "points": 170.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1577,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1596,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 7027,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1995,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3929,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 20,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "HolkinPV"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 149,
+                "points": 150.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 867,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 2617,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3335,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1078,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 21,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Avitella"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 244,
+                "points": 150.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1421,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1436,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1866,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 6444,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 3,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 22,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "aRSeniy"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 246,
+                "points": 150.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 3373,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 3386,
+                        "points": 70.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 4246,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "bestSubmissionTimeSeconds": 1455,
+                        "points": 20.0,
+                        "rejectedAttemptCount": 1,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 23,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 324,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "nekrald"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1374043200
+                },
+                "penalty": 198,
+                "points": 30.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 7130,
+                        "points": 30.0,
+                        "rejectedAttemptCount": 4,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 2,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    },
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 24,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            }
+        ]
+    },
+    "status": "OK"
+}

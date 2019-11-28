@@ -1,0 +1,68 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 7200,
+            "frozen": false,
+            "id": 398,
+            "name": "Codeforces Round #233 (Div. 1)",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 181239766,
+            "startTimeSeconds": 1393687800,
+            "type": "CF"
+        },
+        "problems": [
+            {
+                "contestId": 398,
+                "index": "A",
+                "name": "Cards",
+                "points": 500.0,
+                "tags": [
+                    "constructive algorithms",
+                    "implementation"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 398,
+                "index": "B",
+                "name": "Painting The Wall",
+                "points": 1000.0,
+                "tags": [
+                    "dp",
+                    "probabilities"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 398,
+                "index": "C",
+                "name": "Tree and Array",
+                "points": 1500.0,
+                "tags": [
+                    "constructive algorithms"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 398,
+                "index": "D",
+                "name": "Instant Messanger",
+                "points": 2000.0,
+                "tags": [
+                    "data structures"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 398,
+                "index": "E",
+                "name": "Sorting Permutations",
+                "points": 2500.0,
+                "tags": [],
+                "type": "PROGRAMMING"
+            }
+        ],
+        "rows": []
+    },
+    "status": "OK"
+}

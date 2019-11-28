@@ -1,0 +1,2973 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 604800,
+            "frozen": false,
+            "id": 927,
+            "name": "VK Cup 2018 - Wild-card Round 2",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 50777344,
+            "startTimeSeconds": 1524152100,
+            "type": "IOI"
+        },
+        "problems": [
+            {
+                "contestId": 927,
+                "index": "A",
+                "name": "BuberPool Taxi Optimization",
+                "rating": 2800,
+                "tags": [],
+                "type": "PROGRAMMING"
+            }
+        ],
+        "rows": [
+            {
+                "lastSubmissionTimeSeconds": 491737,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "RemmargorP"
+                        },
+                        {
+                            "handle": "dengaleev"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38655,
+                    "teamName": "adinadin"
+                },
+                "penalty": 0,
+                "points": 86088.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 601223,
+                        "points": 86088.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 1,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603837,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "basfor2022"
+                        },
+                        {
+                            "handle": "BelowTheBottom"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38230,
+                    "teamName": "AUrum"
+                },
+                "penalty": 0,
+                "points": 86006.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603837,
+                        "points": 86006.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 2,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 591459,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "shanin"
+                        },
+                        {
+                            "handle": "Mustang98"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39424,
+                    "teamName": "VS_in_VK"
+                },
+                "penalty": 0,
+                "points": 85966.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604685,
+                        "points": 85966.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 3,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603890,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "XRater"
+                        },
+                        {
+                            "handle": "a-n-cl-r-e-y"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39769,
+                    "teamName": "GreatAgainTeam"
+                },
+                "penalty": 0,
+                "points": 85905.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603890,
+                        "points": 85905.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 4,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603651,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "LizaVasilenko"
+                        },
+                        {
+                            "handle": "IgorL"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40404,
+                    "teamName": "Hackinbush"
+                },
+                "penalty": 0,
+                "points": 85856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603651,
+                        "points": 85856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 5,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 516020,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Vosatorp"
+                        },
+                        {
+                            "handle": "UnstoppableSolveMachine"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39529,
+                    "teamName": "~(￣▽￣~)"
+                },
+                "penalty": 0,
+                "points": 85821.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604633,
+                        "points": 85821.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 6,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 602528,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Eran"
+                        },
+                        {
+                            "handle": "itukh"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38354,
+                    "teamName": "SPbAU #-1"
+                },
+                "penalty": 0,
+                "points": 85816.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604398,
+                        "points": 85816.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 7,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604408,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "madn"
+                        },
+                        {
+                            "handle": "Artmat"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38205,
+                    "teamName": "Expected value of convex polynomial"
+                },
+                "penalty": 0,
+                "points": 85809.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604408,
+                        "points": 85809.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 8,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 587422,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "maximumSHOT"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38219,
+                    "teamName": "SPbAU: maximumSHOT team"
+                },
+                "penalty": 0,
+                "points": 85805.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 597877,
+                        "points": 85805.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 9,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 590065,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "NikitaMikhaylov"
+                        },
+                        {
+                            "handle": "Musin"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39763,
+                    "teamName": "heh"
+                },
+                "penalty": 0,
+                "points": 85791.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 590065,
+                        "points": 85791.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 10,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 430320,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Squantus"
+                        },
+                        {
+                            "handle": "Kniaz"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41394,
+                    "teamName": "Girth in O(V+E)"
+                },
+                "penalty": 0,
+                "points": 85726.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 430320,
+                        "points": 85726.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 11,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 602629,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Ximera"
+                        },
+                        {
+                            "handle": "AwIDoK"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39805,
+                    "teamName": "ITMO 3"
+                },
+                "penalty": 0,
+                "points": 85721.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 602629,
+                        "points": 85721.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 12,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 551919,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "vbobrov"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38430,
+                    "teamName": "MPSU: MOPS-1"
+                },
+                "penalty": 0,
+                "points": 85696.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 551919,
+                        "points": 85696.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 13,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 483157,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "RubenAshughyan"
+                        },
+                        {
+                            "handle": "sparik"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40668,
+                    "teamName": "Valodik"
+                },
+                "penalty": 0,
+                "points": 85692.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 598908,
+                        "points": 85692.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 14,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 596315,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "crossopt"
+                        },
+                        {
+                            "handle": "SoMuchDrama"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37949,
+                    "teamName": "Innocence"
+                },
+                "penalty": 0,
+                "points": 85679.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 596315,
+                        "points": 85679.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 15,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 586633,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "drunya"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39859,
+                    "teamName": "aqaq"
+                },
+                "penalty": 0,
+                "points": 85654.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 589482,
+                        "points": 85654.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 16,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603469,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Good.Morning"
+                        },
+                        {
+                            "handle": "stormtrooper1859"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38996,
+                    "teamName": "Одноглазый ёжик и слепой крот"
+                },
+                "penalty": 0,
+                "points": 85643.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603469,
+                        "points": 85643.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 17,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 326473,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Roka"
+                        },
+                        {
+                            "handle": "gultai4ukr"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39700,
+                    "teamName": "Phoenix 0.(6)"
+                },
+                "penalty": 0,
+                "points": 85622.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604795,
+                        "points": 85622.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 18,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 276014,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "alkr"
+                        },
+                        {
+                            "handle": "mike_live"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37944,
+                    "teamName": "2K"
+                },
+                "penalty": 0,
+                "points": 85615.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604459,
+                        "points": 85615.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 19,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 541955,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "AndreaB330"
+                        },
+                        {
+                            "handle": "chdn"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38967,
+                    "teamName": "Квазиарный предикат"
+                },
+                "penalty": 0,
+                "points": 85553.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 541955,
+                        "points": 85553.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 20,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603304,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Awa149"
+                        },
+                        {
+                            "handle": "Mano"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39566,
+                    "teamName": "LevelVoo"
+                },
+                "penalty": 0,
+                "points": 85542.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603904,
+                        "points": 85542.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 21,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 543140,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "JustLive"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40989,
+                    "teamName": "JustLive"
+                },
+                "penalty": 0,
+                "points": 85460.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 543140,
+                        "points": 85460.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 22,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603606,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "platypus179"
+                        },
+                        {
+                            "handle": "hey_boris"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38345,
+                    "teamName": "SPb AU Semiconductor Bistructures"
+                },
+                "penalty": 0,
+                "points": 85456.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603606,
+                        "points": 85456.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 23,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604629,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "akim"
+                        },
+                        {
+                            "handle": "Tima"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39235,
+                    "teamName": "IITU ART 0.666"
+                },
+                "penalty": 0,
+                "points": 85426.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604629,
+                        "points": 85426.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 24,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 407879,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Meleh"
+                        },
+                        {
+                            "handle": "ShavelV"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39044,
+                    "teamName": "Log-team"
+                },
+                "penalty": 0,
+                "points": 85337.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 501327,
+                        "points": 85337.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 25,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 600931,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "LoDThe"
+                        },
+                        {
+                            "handle": "DarkKeks"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37951,
+                    "teamName": "(ツ) Опять Бшка (ツ)"
+                },
+                "penalty": 0,
+                "points": 85169.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 600931,
+                        "points": 85169.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 26,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 353450,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Onexx"
+                        },
+                        {
+                            "handle": "Volkov_Ivan"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41277,
+                    "teamName": "#501 in Qualification"
+                },
+                "penalty": 0,
+                "points": 85140.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 440140,
+                        "points": 85140.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 27,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 517551,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "sand-martin"
+                        },
+                        {
+                            "handle": "miha715lev"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39019,
+                    "teamName": "Fast animals"
+                },
+                "penalty": 0,
+                "points": 85002.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 517551,
+                        "points": 85002.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 28,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 488085,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "DmitryGrigorev"
+                        },
+                        {
+                            "handle": "DebNatkh"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39863,
+                    "teamName": "Кровать Макаревича"
+                },
+                "penalty": 0,
+                "points": 84956.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 488085,
+                        "points": 84956.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 29,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 460418,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "venikman1"
+                        },
+                        {
+                            "handle": "ice_tea"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40077,
+                    "teamName": "Magic and friendship"
+                },
+                "penalty": 0,
+                "points": 84901.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604407,
+                        "points": 84901.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 30,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 591709,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "xolm"
+                        },
+                        {
+                            "handle": "aleex"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38433,
+                    "teamName": "Lun 2"
+                },
+                "penalty": 0,
+                "points": 84699.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 591709,
+                        "points": 84699.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 31,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 597327,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "hotckiss"
+                        },
+                        {
+                            "handle": "Vasily_PML30"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38534,
+                    "teamName": "AU_Yeah"
+                },
+                "penalty": 0,
+                "points": 84692.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604334,
+                        "points": 84692.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 32,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 292283,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Drag_On_Fly"
+                        },
+                        {
+                            "handle": "Mikhniuk"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40064,
+                    "teamName": "Ambulance"
+                },
+                "penalty": 0,
+                "points": 84528.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 394084,
+                        "points": 84528.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 33,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604687,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Moseshiga"
+                        },
+                        {
+                            "handle": "dastan"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39068,
+                    "teamName": "what, guys, anime?"
+                },
+                "penalty": 0,
+                "points": 84525.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604687,
+                        "points": 84525.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 34,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 307210,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "RSBat"
+                        },
+                        {
+                            "handle": "qrort"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40672,
+                    "teamName": "Ты забыл про бульон!"
+                },
+                "penalty": 0,
+                "points": 84342.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 591063,
+                        "points": 84342.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 35,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 350248,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Larichev"
+                        },
+                        {
+                            "handle": "foxermen"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40207,
+                    "teamName": "Ставропольские Нагибаторы"
+                },
+                "penalty": 0,
+                "points": 84268.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 397975,
+                        "points": 84268.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 36,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 184345,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "NegaTeeF"
+                        },
+                        {
+                            "handle": "Cyber"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38136,
+                    "teamName": "Society"
+                },
+                "penalty": 0,
+                "points": 83752.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604433,
+                        "points": 83752.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 37,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 594612,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Ancient_mage"
+                        },
+                        {
+                            "handle": "jk_qq"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37939,
+                    "teamName": "бротюни"
+                },
+                "penalty": 0,
+                "points": 83538.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 594612,
+                        "points": 83538.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 38,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 593396,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "aijey"
+                        },
+                        {
+                            "handle": "MishaPrigara"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38161,
+                    "teamName": "Outtesters"
+                },
+                "penalty": 0,
+                "points": 83436.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 593396,
+                        "points": 83436.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 39,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 596958,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "graf-m"
+                        },
+                        {
+                            "handle": "Iriskinn"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39076,
+                    "teamName": "Kekwastaken"
+                },
+                "penalty": 0,
+                "points": 82350.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 596958,
+                        "points": 82350.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 40,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 598208,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Ralsei"
+                        },
+                        {
+                            "handle": "murfel"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39419,
+                    "teamName": "Саша и Наташа"
+                },
+                "penalty": 0,
+                "points": 82304.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 598208,
+                        "points": 82304.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 41,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 574323,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "PinkUnicorn"
+                        },
+                        {
+                            "handle": "plain"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41429,
+                    "teamName": "Team Name"
+                },
+                "penalty": 0,
+                "points": 82009.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 574323,
+                        "points": 82009.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 42,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 600888,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Neodym"
+                        },
+                        {
+                            "handle": "Mogby"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38301,
+                    "teamName": "Just Memes"
+                },
+                "penalty": 0,
+                "points": 81773.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 601853,
+                        "points": 81773.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 43,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 548981,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "neither"
+                        },
+                        {
+                            "handle": "q707185547"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38735,
+                    "teamName": "gzotpa"
+                },
+                "penalty": 0,
+                "points": 81757.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 586752,
+                        "points": 81757.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 44,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 194493,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "kreker"
+                        },
+                        {
+                            "handle": "_kun_"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39133,
+                    "teamName": "Хочу в Японию"
+                },
+                "penalty": 0,
+                "points": 81303.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604736,
+                        "points": 81303.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 45,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 313130,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Alladdin"
+                        },
+                        {
+                            "handle": "Cavy_Alex"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39618,
+                    "teamName": "Maipt"
+                },
+                "penalty": 0,
+                "points": 80134.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 328449,
+                        "points": 80134.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 46,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 327391,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "kefaa2"
+                        },
+                        {
+                            "handle": "progmatic2"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37952,
+                    "teamName": "VilcheuskiTeam"
+                },
+                "penalty": 0,
+                "points": 78860.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 532022,
+                        "points": 78860.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 47,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604462,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "alexyz"
+                        },
+                        {
+                            "handle": "Igorjan94"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38060,
+                    "teamName": "2⁷⁷²³²⁹¹⁷-1"
+                },
+                "penalty": 0,
+                "points": 78269.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604462,
+                        "points": 78269.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 48,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 566602,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "AleksandraZh"
+                        },
+                        {
+                            "handle": "ZloyNegr"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39560,
+                    "teamName": "ДВФУ: Карманный динозавр"
+                },
+                "penalty": 0,
+                "points": 77317.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603174,
+                        "points": 77317.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 49,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 585134,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "golub"
+                        },
+                        {
+                            "handle": "Diego"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38792,
+                    "teamName": "MPS: Штангенциркуль"
+                },
+                "penalty": 0,
+                "points": 76024.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 585134,
+                        "points": 76024.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 50,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 603122,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Denisov"
+                        },
+                        {
+                            "handle": "perekopskiy"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39213,
+                    "teamName": "PAPKPM"
+                },
+                "penalty": 0,
+                "points": 73996.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 603122,
+                        "points": 73996.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 51,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604795,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "vsamsonov"
+                        },
+                        {
+                            "handle": "Kelang"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40730,
+                    "teamName": "Tensor Trolley"
+                },
+                "penalty": 0,
+                "points": 73104.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604795,
+                        "points": 73104.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 52,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 597138,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "skolandrik"
+                        },
+                        {
+                            "handle": "Pish4"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38928,
+                    "teamName": "(In The End) The Ghost Ran Out Of Memory"
+                },
+                "penalty": 0,
+                "points": 72936.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 602736,
+                        "points": 72936.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 53,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 557559,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "zhang9302001"
+                        },
+                        {
+                            "handle": "mengbierr"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38129,
+                    "teamName": "fc ak ioi 2020"
+                },
+                "penalty": 0,
+                "points": 68430.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 557559,
+                        "points": 68430.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 54,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 591141,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Mushegh"
+                        },
+                        {
+                            "handle": "_LeMur_"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38458,
+                    "teamName": "LeMush"
+                },
+                "penalty": 0,
+                "points": 67788.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 591141,
+                        "points": 67788.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 55,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 442866,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "danilserov"
+                        },
+                        {
+                            "handle": "jaguar1996"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38584,
+                    "teamName": "KFU #TTT:TheTasherTeam"
+                },
+                "penalty": 0,
+                "points": 67296.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 445786,
+                        "points": 67296.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 56,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 337557,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Avonazhrets"
+                        },
+                        {
+                            "handle": "DoomzGay"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38423,
+                    "teamName": "Фыр Фыр"
+                },
+                "penalty": 0,
+                "points": 65681.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 337557,
+                        "points": 65681.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 57,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 604798,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "belkka"
+                        },
+                        {
+                            "handle": "dendi239"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38651,
+                    "teamName": "Karazin KhNU: Voyager"
+                },
+                "penalty": 0,
+                "points": 63337.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 604798,
+                        "points": 63337.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 58,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 586130,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "lukomskiy"
+                        },
+                        {
+                            "handle": "Daryusz"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38471,
+                    "teamName": "OnTheWayToVSU"
+                },
+                "penalty": 0,
+                "points": 60686.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 586130,
+                        "points": 60686.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 59,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 277308,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "mashasandrikova"
+                        },
+                        {
+                            "handle": "stefan_naumovich"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40691,
+                    "teamName": "Face is the place"
+                },
+                "penalty": 0,
+                "points": 60468.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 277308,
+                        "points": 60468.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 60,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 249439,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "magnickolas"
+                        },
+                        {
+                            "handle": "maxxaon"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37992,
+                    "teamName": "Марина с Кролей"
+                },
+                "penalty": 0,
+                "points": 57485.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 249439,
+                        "points": 57485.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 61,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 558035,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Alexponomarev7"
+                        },
+                        {
+                            "handle": "SerezhaE"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38818,
+                    "teamName": "буду твоим пёсиком"
+                },
+                "penalty": 0,
+                "points": 53363.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 558035,
+                        "points": 53363.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 62,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 175845,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "SpeedOfMagic"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37881,
+                    "teamName": "SpeedOfMagic"
+                },
+                "penalty": 0,
+                "points": 49825.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 175845,
+                        "points": 49825.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 63,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 345731,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Minnakhmetov"
+                        },
+                        {
+                            "handle": "GorosheK"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39314,
+                    "teamName": "Лицей 131"
+                },
+                "penalty": 0,
+                "points": 49418.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 345731,
+                        "points": 49418.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 64,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 337460,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "AgMA"
+                        },
+                        {
+                            "handle": "0AGMA1"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37953,
+                    "teamName": "Hrumka and Yomi"
+                },
+                "penalty": 0,
+                "points": 48845.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 417515,
+                        "points": 48845.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 65,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 160141,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "sharepoLOVEDDD"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41833,
+                    "teamName": "ButyaTeam"
+                },
+                "penalty": 0,
+                "points": 48780.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 431676,
+                        "points": 48780.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 66,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 238486,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Murek179"
+                        },
+                        {
+                            "handle": "gerind"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39259,
+                    "teamName": "Unikum228"
+                },
+                "penalty": 0,
+                "points": 48780.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 238486,
+                        "points": 48780.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 66,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 335333,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "PikMike"
+                        },
+                        {
+                            "handle": "Vovuh"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39274,
+                    "teamName": "Choose Life"
+                },
+                "penalty": 0,
+                "points": 48617.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 335333,
+                        "points": 48617.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 68,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 294086,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "pro100leo"
+                        },
+                        {
+                            "handle": "philologist"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41374,
+                    "teamName": "LNU TM"
+                },
+                "penalty": 0,
+                "points": 46542.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 516856,
+                        "points": 46542.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 69,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 80818,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "maxim12321"
+                        },
+                        {
+                            "handle": "Subaru"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39111,
+                    "teamName": "2 курагана из 3"
+                },
+                "penalty": 0,
+                "points": 46391.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 84914,
+                        "points": 46391.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 70,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 482461,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Sonechko"
+                        },
+                        {
+                            "handle": "danya.smelskiy"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41109,
+                    "teamName": "Кактусики"
+                },
+                "penalty": 0,
+                "points": 46303.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 482461,
+                        "points": 46303.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 71,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 259054,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "kolwot"
+                        },
+                        {
+                            "handle": "astral17"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39205,
+                    "teamName": "BruteLand"
+                },
+                "penalty": 0,
+                "points": 45658.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 259054,
+                        "points": 45658.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 72,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 333855,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "tmwilliamlin168"
+                        },
+                        {
+                            "handle": "RockyB"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38749,
+                    "teamName": "#RoadToIOI"
+                },
+                "penalty": 0,
+                "points": 44310.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 415045,
+                        "points": 44310.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 73,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 364220,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Pollux"
+                        },
+                        {
+                            "handle": "SuperMegaUltraEpicHacker"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39020,
+                    "teamName": "CocoJambo"
+                },
+                "penalty": 0,
+                "points": 39548.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 403918,
+                        "points": 39548.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 74,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 508946,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Dynatron_12"
+                        },
+                        {
+                            "handle": "MR_Freeman"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39411,
+                    "teamName": "labadaba_dub_dub"
+                },
+                "penalty": 0,
+                "points": 34431.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 523127,
+                        "points": 34431.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 75,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 101152,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Shudi"
+                        },
+                        {
+                            "handle": "jarakcyc"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39372,
+                    "teamName": "Fortune"
+                },
+                "penalty": 0,
+                "points": 24249.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 443049,
+                        "points": 24249.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 76,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 515347,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Glebodin"
+                        },
+                        {
+                            "handle": "KiKoS"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38079,
+                    "teamName": "Always grey"
+                },
+                "penalty": 0,
+                "points": 16274.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 515347,
+                        "points": 16274.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 77,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 408663,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "WiBk"
+                        },
+                        {
+                            "handle": "alex700"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 41692,
+                    "teamName": "Panda eats, shoots and leaves"
+                },
+                "penalty": 0,
+                "points": 13924.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 408663,
+                        "points": 13924.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 78,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 583765,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "balalaika"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40151,
+                    "teamName": "The balalaika duck"
+                },
+                "penalty": 0,
+                "points": 13322.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 590522,
+                        "points": 13322.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 79,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 596495,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Vladik"
+                        },
+                        {
+                            "handle": "klinchuh"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39200,
+                    "teamName": "Простите, но нам выше"
+                },
+                "penalty": 0,
+                "points": 13063.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 596495,
+                        "points": 13063.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 80,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 535909,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Moskupols"
+                        },
+                        {
+                            "handle": "Skird"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38461,
+                    "teamName": "My Pity"
+                },
+                "penalty": 0,
+                "points": 1499.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 537173,
+                        "points": 1499.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 81,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 72663,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "wilcot"
+                        },
+                        {
+                            "handle": "TheConfessor"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38034,
+                    "teamName": "Пишу на вижле, но сдаю под ГНУ"
+                },
+                "penalty": 0,
+                "points": 1357.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 72663,
+                        "points": 1357.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 82,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 556894,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Anuar"
+                        },
+                        {
+                            "handle": "accidentallygivenfuck"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40695,
+                    "teamName": "rtz fanbois"
+                },
+                "penalty": 0,
+                "points": 1063.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 556894,
+                        "points": 1063.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 83,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 69496,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "inaFSTream"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37876,
+                    "teamName": "11111"
+                },
+                "penalty": 0,
+                "points": 860.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 69496,
+                        "points": 860.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 84,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 1680,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "iakovlev.zakhar"
+                        },
+                        {
+                            "handle": "Pennyroyal_Tea"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39168,
+                    "teamName": "Лицей ФТШ: Travelling Salesmen"
+                },
+                "penalty": 0,
+                "points": 856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 1680,
+                        "points": 856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 85,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 53129,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Hellscythe"
+                        },
+                        {
+                            "handle": "akmintro"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 39070,
+                    "teamName": "Phantom Streak"
+                },
+                "penalty": 0,
+                "points": 856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 577557,
+                        "points": 856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 85,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 69388,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Darui99"
+                        },
+                        {
+                            "handle": "Gorix"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37936,
+                    "teamName": "SKATERS AND ANIME HATERS"
+                },
+                "penalty": 0,
+                "points": 856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 69388,
+                        "points": 856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 85,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 154021,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "fivut"
+                        },
+                        {
+                            "handle": "Jungarr1k"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40738,
+                    "teamName": "PENTESTERS FROM MOGILEV"
+                },
+                "penalty": 0,
+                "points": 856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 167694,
+                        "points": 856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 85,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 601327,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "Scomip"
+                        },
+                        {
+                            "handle": "misterfourtytwo"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40820,
+                    "teamName": "no_use_for_a_name"
+                },
+                "penalty": 0,
+                "points": 856.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 601327,
+                        "points": 856.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 85,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "lastSubmissionTimeSeconds": 394721,
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "curlink"
+                        },
+                        {
+                            "handle": "Staket"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 37854,
+                    "teamName": "owiwi"
+                },
+                "penalty": 0,
+                "points": 102.0,
+                "problemResults": [
+                    {
+                        "bestSubmissionTimeSeconds": 394721,
+                        "points": 102.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 90,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "alexandre"
+                        },
+                        {
+                            "handle": "gskhirtladze"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38687,
+                    "teamName": "¯_(ツ)_¯"
+                },
+                "penalty": 0,
+                "points": 0.0,
+                "problemResults": [
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 91,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "applese"
+                        },
+                        {
+                            "handle": "Samsara_Karma"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 40406,
+                    "teamName": "Priority_Flea"
+                },
+                "penalty": 0,
+                "points": 0.0,
+                "problemResults": [
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 91,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            },
+            {
+                "party": {
+                    "contestId": 927,
+                    "ghost": false,
+                    "members": [
+                        {
+                            "handle": "xen"
+                        },
+                        {
+                            "handle": "GreenGrape"
+                        }
+                    ],
+                    "participantType": "CONTESTANT",
+                    "startTimeSeconds": 1524152100,
+                    "teamId": 38971,
+                    "teamName": "Roundabout"
+                },
+                "penalty": 0,
+                "points": 0.0,
+                "problemResults": [
+                    {
+                        "points": 0.0,
+                        "rejectedAttemptCount": 0,
+                        "type": "FINAL"
+                    }
+                ],
+                "rank": 91,
+                "successfulHackCount": 0,
+                "unsuccessfulHackCount": 0
+            }
+        ]
+    },
+    "status": "OK"
+}

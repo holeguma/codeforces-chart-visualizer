@@ -1,0 +1,62 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 7200,
+            "frozen": false,
+            "id": 399,
+            "name": "Codeforces Round #233 (Div. 2)",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 181239767,
+            "startTimeSeconds": 1393687800,
+            "type": "CF"
+        },
+        "problems": [
+            {
+                "contestId": 399,
+                "index": "A",
+                "name": "Pages",
+                "points": 500.0,
+                "tags": [
+                    "implementation"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 399,
+                "index": "B",
+                "name": "Red and Blue Balls",
+                "points": 1000.0,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 399,
+                "index": "C",
+                "name": "Cards",
+                "points": 1500.0,
+                "tags": [
+                    "number theory"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 399,
+                "index": "D",
+                "name": "Painting The Wall",
+                "points": 2000.0,
+                "tags": [],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 399,
+                "index": "E",
+                "name": "Tree and Array",
+                "points": 2500.0,
+                "tags": [],
+                "type": "PROGRAMMING"
+            }
+        ],
+        "rows": []
+    },
+    "status": "OK"
+}

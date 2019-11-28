@@ -1,0 +1,17 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 18000,
+            "frozen": false,
+            "id": 589,
+            "name": "2015-2016 ACM-ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 129859324,
+            "startTimeSeconds": 1445068800,
+            "type": "ICPC"
+        },
+        "problems": [],
+        "rows": []
+    },
+    "status": "OK"
+}

@@ -1,0 +1,72 @@
+{
+    "result": {
+        "contest": {
+            "durationSeconds": 7200,
+            "frozen": false,
+            "id": 394,
+            "name": "Codeforces Round #231 (Div. 2)",
+            "phase": "FINISHED",
+            "relativeTimeSeconds": 182017360,
+            "startTimeSeconds": 1392910200,
+            "type": "CF"
+        },
+        "problems": [
+            {
+                "contestId": 394,
+                "index": "A",
+                "name": "Counting Sticks",
+                "points": 500.0,
+                "tags": [
+                    "brute force",
+                    "implementation"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 394,
+                "index": "B",
+                "name": "Very Beautiful Number",
+                "points": 1000.0,
+                "tags": [
+                    "math"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 394,
+                "index": "C",
+                "name": "Dominoes",
+                "points": 1500.0,
+                "tags": [
+                    "constructive algorithms",
+                    "greedy"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 394,
+                "index": "D",
+                "name": "Physical Education and Buns",
+                "points": 2000.0,
+                "tags": [
+                    "brute force",
+                    "implementation",
+                    "math"
+                ],
+                "type": "PROGRAMMING"
+            },
+            {
+                "contestId": 394,
+                "index": "E",
+                "name": "Lightbulb for Minister",
+                "points": 2500.0,
+                "tags": [
+                    "geometry"
+                ],
+                "type": "PROGRAMMING"
+            }
+        ],
+        "rows": []
+    },
+    "status": "OK"
+}
