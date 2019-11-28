@@ -160,6 +160,7 @@
             showRaderChart();
         }
 
+        //テキストボックスに書かれたユーザーの情報をRadar Chart用に保持
         function addUserInRadarChart(name) {
             max_rating = 0;
             newSeries = {};
@@ -172,7 +173,8 @@
             }
             data.push(newSeries);
         }
-
+        
+        //Radar Chartを表示
         function showRaderChart() {
             var margin = { top: 50, right: 80, bottom: 50, left: 80 };
             var radarChartOptions = {
