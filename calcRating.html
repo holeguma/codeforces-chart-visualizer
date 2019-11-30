@@ -34,6 +34,23 @@
         <input type="text" id="Rivals" value=""><br>
         <input type="button" onclick="button_clicked()" value="Enter">
     </form>
+    <form action="#" method="GET">
+        <select name="form2" id="form2">
+            <option value="solved">solved >=</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <input type="button" name="apply" onclick="apply_clicked()" value="apply" />
+    </form>
     <br><br><br>
     <div class="radarChart" style="display: inline-flex;"></div>
     <script type="text/javascript">
@@ -45,7 +62,7 @@
         let n_contests = 1260;
 
         //自分のrating,問題のdifficulty,解けたかどうか, から新しいratingを計算する
-        function updateRating(rating, difficulty, result, K = 64) {
+        function updateRating(rating, difficulty, result, K = 128) {
             //if(rating-difficulty>400&&result==0)return rating;
             var winProbability = 1.0 / (Math.pow(10.0, (difficulty - rating) / 400.0) + 1.0);
             var newRating = rating + K * (result - winProbability);
@@ -202,15 +219,37 @@
             showRaderChart();
             //showBarGraph();
         }
+        function apply_clicked() {
+            var minSolveCount = document.getElementById("form2").value;
+            console.log(minSolveCount);
+            data = [];
+            selected_tags = {};
+            var you = document.getElementById("You").value;
+            var rivals = (document.getElementById("Rivals").value).split(',');
+            for (var tag in hash[you]) {
+                if (hash[you][tag] == you) continue;
+                if (hash[you][tag].solveCount >= minSolveCount) {
+                    //console.log(tag)
+                    selected_tags[tag] = true;
+                }
+            }
+            addUserInRadarChart(you, selected = true);
+            for (let rival of rivals) {
+                addUserInRadarChart(rival, selected = true);
+            }
+            showRaderChart();
+            //console.log(selected_tag);
+        }
 
         //テキストボックスに書かれたユーザーの情報をRadar Chart用に保持
-        function addUserInRadarChart(name) {
+        function addUserInRadarChart(name, selected = false) {
             max_rating = 0;
             newSeries = {};
             newSeries.name = name;
             newSeries.axes = [];
             for (let tag in hash[name]) {
                 if (hash[name][tag] == name) continue;
+                if (selected && !selected_tags[tag]) continue;
                 if (max_rating < hash[name][tag].value) max_rating = hash[name][tag].value;
                 newSeries.axes.push({ "axis": tag, "value": hash[name][tag].value });
             }
