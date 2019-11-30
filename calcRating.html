@@ -15,19 +15,19 @@
 <body>
     <style>
         body {
-				font-family: 'Open Sans', sans-serif;
-				font-size: 11px;
-				font-weight: 300;
-				fill: #242424;
-				text-align: center;
-				text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-				cursor: default;
-			}
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            fill: #242424;
+            text-align: center;
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+            cursor: default;
+        }
 
-			.legend {
-				font-family: 'Raleway', sans-serif;
-				fill: #333333;
-			}
+        .legend {
+            font-family: 'Raleway', sans-serif;
+            fill: #333333;
+        }
     </style>
     <form id="form1" action="#">
         <input type="text" id="You" value=""><br>
@@ -38,11 +38,14 @@
     <div class="radarChart" style="display: inline-flex;"></div>
     <script type="text/javascript">
         //このファイルと同じディレクトリに「lib/d3.js」と「contest_data」(これはGoogle Driveで共有します)を置いてください
+
+
+
         var cnt = 0;
         let n_contests = 1260;
 
         //自分のrating,問題のdifficulty,解けたかどうか, から新しいratingを計算する
-        function updateRating(rating, difficulty, result, K = 32) {
+        function updateRating(rating, difficulty, result, K = 64) {
             //if(rating-difficulty>400&&result==0)return rating;
             var winProbability = 1.0 / (Math.pow(10.0, (difficulty - rating) / 400.0) + 1.0);
             var newRating = rating + K * (result - winProbability);
@@ -51,56 +54,62 @@
         //ユーザーネーム→各タグのrating のハッシュを用意する
         var hash = {};
         //デフォルトのハッシュ
-        var Status = {
+        const Status = {
             userID: "sample",
-            "bitmasks": 1500,
-            "divide and conquer": 1500,
-            "math": 1500,
-            "data structures": 1500,
-            "trees": 1500,
-            "dp": 1500,
-            "greedy": 1500,
-            "binary search": 1500,
-            "sortings": 1500,
-            "number theory": 1500,
-            "fft": 1500,
-            "brute force": 1500,
-            "hashing": 1500,
-            "meet-in-the-middle": 1500,
-            "two pointers": 1500,
-            "implementation": 1500,
-            "strings": 1500,
-            "constructive algorithms": 1500,
-            "graphs": 1500,
-            "combinatorics": 1500,
-            "dfs and similar": 1500,
-            "dsu": 1500,
-            "probabilities": 1500,
-            "geometry": 1500,
-            "interactive": 1500,
-            "ternary search": 1500,
-            "shortest paths": 1500,
-            "flows": 1500,
-            "matrices": 1500,
-            "2-sat": 1500,
-            "graph matchings": 1500,
-            "games": 1500,
-            "*special": 1500,
-            "string suffix structures": 1500,
-            "expression parsing": 1500,
-            "chinese remainder theorem": 1500,
-            "schedules": 1500
-        }
+            "bitmasks": { value: 1500, solveCount: 0 },
+            "divide and conquer": { value: 1500, solveCount: 0 },
+            "math": { value: 1500, solveCount: 0 },
+            "data structures": { value: 1500, solveCount: 0 },
+            "trees": { value: 1500, solveCount: 0 },
+            "dp": { value: 1500, solveCount: 0 },
+            "greedy": { value: 1500, solveCount: 0 },
+            "binary search": { value: 1500, solveCount: 0 },
+            "sortings": { value: 1500, solveCount: 0 },
+            "number theory": { value: 1500, solveCount: 0 },
+            "fft": { value: 1500, solveCount: 0 },
+            "brute force": { value: 1500, solveCount: 0 },
+            "hashing": { value: 1500, solveCount: 0 },
+            "meet-in-the-middle": { value: 1500, solveCount: 0 },
+            "two pointers": { value: 1500, solveCount: 0 },
+            "implementation": { value: 1500, solveCount: 0 },
+            "strings": { value: 1500, solveCount: 0 },
+            "constructive algorithms": { value: 1500, solveCount: 0 },
+            "graphs": { value: 1500, solveCount: 0 },
+            "combinatorics": { value: 1500, solveCount: 0 },
+            "dfs and similar": { value: 1500, solveCount: 0 },
+            "dsu": { value: 1500, solveCount: 0 },
+            "probabilities": { value: 1500, solveCount: 0 },
+            "geometry": { value: 1500, solveCount: 0 },
+            "interactive": { value: 1500, solveCount: 0 },
+            "ternary search": { value: 1500, solveCount: 0 },
+            "shortest paths": { value: 1500, solveCount: 0 },
+            "flows": { value: 1500, solveCount: 0 },
+            "matrices": { value: 1500, solveCount: 0 },
+            "2-sat": { value: 1500, solveCount: 0 },
+            "graph matchings": { value: 1500, solveCount: 0 },
+            "games": { value: 1500, solveCount: 0 },
+            "*special": { value: 1500, solveCount: 0 },
+            "string suffix structures": { value: 1500, solveCount: 0 },
+            "expression parsing": { value: 1500, solveCount: 0 },
+            "chinese remainder theorem": { value: 1500, solveCount: 0 },
+            "schedules": { value: 1500, solveCount: 0 }
+        };
 
+        var DEBUG = false;
+        var showID = "tourist";
         //コンテストIDから、参加者全員のratingを更新する
         function calcRating(contestID) {
             return new Promise((resolve, reject) => {
                 var filename = "./contest_data/" + contestID + ".json";
                 d3.json(filename).then(function (data) {
+                    //console.log(data);
                     //コンテストデータがなければスキップ
                     if (data.status == "FAILED") {
                         console.log(contestID + ":FAILED");
                         return resolve();
+                    }
+                    else {
+                        console.log(contestID + ":OK");
                     }
                     let problems = data.result.problems;
                     let n_problems = problems.length;
@@ -110,30 +119,42 @@
                     if (!n_contestants) return resolve();
                     for (let i = 0; i < n_contestants; i++) {
                         let name = ranks[i].party.members[0].handle;
-
+                        if (ranks[i].party.participantType != 'CONTESTANT') continue;// Contestantでなければスキップ
                         //もしハッシュに名前が登録されてなければ新しく作る
                         if (!hash[name]) {
-                            hash[name] = Object.create(Status);
+                            hash[name] = JSON.parse(JSON.stringify(Status));
                             hash[name].userID = name;
                         }
+                        if (DEBUG && name == showID) {
+                            console.log(data.result.problems);
+                            console.log(ranks[i].problemResults);
+                            console.log(hash[name]);
+                        }
                         for (let j = 0; j < n_problems; j++) {
-                            if (ranks[i].party.participantType != 'CONTESTANT') continue;// Contestantでなければスキップ
                             let result = ranks[i].problemResults[j].points ? 1 : 0;
                             let difficulty = problems[j].rating;
                             if (!difficulty) continue;//問題にdifficultyが設定されてなければスキップ
                             for (let tag of problems[j].tags) {
-                                let rating = hash[name][tag];
-                                hash[name][tag] = updateRating(rating, difficulty, result);
+                                if (tag == name) continue;
+                                let rating = hash[name][tag].value;
+                                var K = 64;
+                                //そのタグの問題を解いた回数が少なければレート変化を大きくする
+                                if (hash[name][tag].solveCount < 5) K *= (5 - hash[name][tag].solveCount);
+                                hash[name][tag].value = updateRating(rating, difficulty, result, K);
+                                if (DEBUG && name == showID) {
+                                    console.log(tag + ":" + rating + "->" + hash[name][tag].value);
+                                }
+                                if (result) hash[name][tag].solveCount++;
                             }
                         }
-                        resolve();
                     }
+                    resolve();
                 })
             })
         }
 
         async function calc_all() {
-            for (let i = 1; i <= n_contests; i++) {
+            for (let i = 1100; i <= n_contests; i++) {
                 var result = await calcRating(i);
             }
         }
@@ -149,6 +170,27 @@
             console.log(hash["Rubikun"]);
         })
 
+        function showBarGraph() {
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", 1200)
+                .attr("height", 1000);
+            svg.selectAll("rect")
+                .data(data[0].axes)
+                .enter()
+                .append("rect")
+                .attr("x", function (d, i) {
+                    return i * (20 + 1);
+                })
+                .attr("y", function (d, i) {
+                    return 500 - d.value / 10;
+                })
+                .attr("width", 20)
+                .attr("height", function (d) {
+                    return d.value / 10;
+                });
+            console.log("done");
+        }
         function button_clicked() {
             data = [];
             var you = document.getElementById("You").value;
@@ -158,6 +200,7 @@
                 addUserInRadarChart(rival);
             }
             showRaderChart();
+            //showBarGraph();
         }
 
         //テキストボックスに書かれたユーザーの情報をRadar Chart用に保持
@@ -168,12 +211,12 @@
             newSeries.axes = [];
             for (let tag in hash[name]) {
                 if (hash[name][tag] == name) continue;
-                if (max_rating < hash[name][tag]) max_rating = hash[name][tag];
-                newSeries.axes.push({ "axis": tag, "value": hash[name][tag] });
+                if (max_rating < hash[name][tag].value) max_rating = hash[name][tag].value;
+                newSeries.axes.push({ "axis": tag, "value": hash[name][tag].value });
             }
             data.push(newSeries);
         }
-        
+
         //Radar Chartを表示
         function showRaderChart() {
             var margin = { top: 50, right: 80, bottom: 50, left: 80 };
