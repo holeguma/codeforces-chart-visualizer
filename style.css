@@ -1,0 +1,89 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    fill: #242424;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+    cursor: default;
+}
+
+.legend {
+    font-family: 'Raleway', sans-serif;
+    fill: #333333;
+}
+
+.tab_wrap {
+    width: 500px;
+    margin: 80px auto;
+    opacity: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab_area {
+    font-size: 0;
+    margin: 0 10px;
+}
+
+.tab_area label {
+    width: 150px;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 12px 0;
+    color: #999;
+    background: #ddd;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: ease 0.2s opacity;
+}
+
+.tab_area label:hover {
+    opacity: 0.5;
+}
+
+.panel_area {
+    background: #fff;
+}
+
+.tab_panel {
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+}
+
+.tab_panel p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#tab1:checked~.tab_area .tab1_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab1:checked~.panel_area #panel1 {
+    display: block;
+}
+
+#tab2:checked~.tab_area .tab2_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab2:checked~.panel_area #panel2 {
+    display: block;
+}
+
+#tab3:checked~.tab_area .tab3_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab3:checked~.panel_area #panel3 {
+    display: block;
+}

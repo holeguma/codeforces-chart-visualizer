@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>D3 Test</title>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
@@ -13,22 +14,6 @@
 </head>
 
 <body>
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 11px;
-            font-weight: 300;
-            fill: #242424;
-            text-align: center;
-            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-            cursor: default;
-        }
-
-        .legend {
-            font-family: 'Raleway', sans-serif;
-            fill: #333333;
-        }
-    </style>
     <form id="form1" action="#">
         <input type="text" id="You" value=""><br>
         <input type="text" id="Rivals" value=""><br>
@@ -52,7 +37,32 @@
         <input type="button" name="apply" onclick="apply_clicked()" value="apply" />
     </form>
     <br><br><br>
-    <div class="radarChart" style="display: inline-flex;"></div>
+    <div class="tab_wrap">
+        <input id="tab1" type="radio" name="tab_btn" checked>
+        <input id="tab2" type="radio" name="tab_btn">
+        <input id="tab3" type="radio" name="tab_btn">
+
+        <div class="tab_area">
+            <label class="tab1_label" for="tab1">Radar Chart</label>
+            <label class="tab2_label" for="tab2">tab2</label>
+            <label class="tab3_label" for="tab3">tab3</label>
+        </div>
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <svg id="legend-div"></svg>
+                <div class="radarChart" style="display: inline-flex;"></div>
+            </div>
+            <div id="panel2" class="tab_panel">
+                <p>panel2</p>
+            </div>
+            <div id="panel3" class="tab_panel">
+                <p>panel3</p>
+            </div>
+        </div>
+    </div>
+
+
+
     <script type="text/javascript">
         //このファイルと同じディレクトリに「lib/d3.js」と「contest_data」(これはGoogle Driveで共有します)を置いてください
 
@@ -73,44 +83,157 @@
         //デフォルトのハッシュ
         const Status = {
             userID: "sample",
-            "bitmasks": { value: 1500, solveCount: 0 },
-            "divide and conquer": { value: 1500, solveCount: 0 },
-            "math": { value: 1500, solveCount: 0 },
-            "data structures": { value: 1500, solveCount: 0 },
-            "trees": { value: 1500, solveCount: 0 },
-            "dp": { value: 1500, solveCount: 0 },
-            "greedy": { value: 1500, solveCount: 0 },
-            "binary search": { value: 1500, solveCount: 0 },
-            "sortings": { value: 1500, solveCount: 0 },
-            "number theory": { value: 1500, solveCount: 0 },
-            "fft": { value: 1500, solveCount: 0 },
-            "brute force": { value: 1500, solveCount: 0 },
-            "hashing": { value: 1500, solveCount: 0 },
-            "meet-in-the-middle": { value: 1500, solveCount: 0 },
-            "two pointers": { value: 1500, solveCount: 0 },
-            "implementation": { value: 1500, solveCount: 0 },
-            "strings": { value: 1500, solveCount: 0 },
-            "constructive algorithms": { value: 1500, solveCount: 0 },
-            "graphs": { value: 1500, solveCount: 0 },
-            "combinatorics": { value: 1500, solveCount: 0 },
-            "dfs and similar": { value: 1500, solveCount: 0 },
-            "dsu": { value: 1500, solveCount: 0 },
-            "probabilities": { value: 1500, solveCount: 0 },
-            "geometry": { value: 1500, solveCount: 0 },
-            "interactive": { value: 1500, solveCount: 0 },
-            "ternary search": { value: 1500, solveCount: 0 },
-            "shortest paths": { value: 1500, solveCount: 0 },
-            "flows": { value: 1500, solveCount: 0 },
-            "matrices": { value: 1500, solveCount: 0 },
-            "2-sat": { value: 1500, solveCount: 0 },
-            "graph matchings": { value: 1500, solveCount: 0 },
-            "games": { value: 1500, solveCount: 0 },
-            "*special": { value: 1500, solveCount: 0 },
-            "string suffix structures": { value: 1500, solveCount: 0 },
-            "expression parsing": { value: 1500, solveCount: 0 },
-            "chinese remainder theorem": { value: 1500, solveCount: 0 },
-            "schedules": { value: 1500, solveCount: 0 }
+            "bitmasks": {
+                value: 1500,
+                solveCount: 0
+            },
+            "divide and conquer": {
+                value: 1500,
+                solveCount: 0
+            },
+            "math": {
+                value: 1500,
+                solveCount: 0
+            },
+            "data structures": {
+                value: 1500,
+                solveCount: 0
+            },
+            "trees": {
+                value: 1500,
+                solveCount: 0
+            },
+            "dp": {
+                value: 1500,
+                solveCount: 0
+            },
+            "greedy": {
+                value: 1500,
+                solveCount: 0
+            },
+            "binary search": {
+                value: 1500,
+                solveCount: 0
+            },
+            "sortings": {
+                value: 1500,
+                solveCount: 0
+            },
+            "number theory": {
+                value: 1500,
+                solveCount: 0
+            },
+            "fft": {
+                value: 1500,
+                solveCount: 0
+            },
+            "brute force": {
+                value: 1500,
+                solveCount: 0
+            },
+            "hashing": {
+                value: 1500,
+                solveCount: 0
+            },
+            "meet-in-the-middle": {
+                value: 1500,
+                solveCount: 0
+            },
+            "two pointers": {
+                value: 1500,
+                solveCount: 0
+            },
+            "implementation": {
+                value: 1500,
+                solveCount: 0
+            },
+            "strings": {
+                value: 1500,
+                solveCount: 0
+            },
+            "constructive algorithms": {
+                value: 1500,
+                solveCount: 0
+            },
+            "graphs": {
+                value: 1500,
+                solveCount: 0
+            },
+            "combinatorics": {
+                value: 1500,
+                solveCount: 0
+            },
+            "dfs and similar": {
+                value: 1500,
+                solveCount: 0
+            },
+            "dsu": {
+                value: 1500,
+                solveCount: 0
+            },
+            "probabilities": {
+                value: 1500,
+                solveCount: 0
+            },
+            "geometry": {
+                value: 1500,
+                solveCount: 0
+            },
+            "interactive": {
+                value: 1500,
+                solveCount: 0
+            },
+            "ternary search": {
+                value: 1500,
+                solveCount: 0
+            },
+            "shortest paths": {
+                value: 1500,
+                solveCount: 0
+            },
+            "flows": {
+                value: 1500,
+                solveCount: 0
+            },
+            "matrices": {
+                value: 1500,
+                solveCount: 0
+            },
+            "2-sat": {
+                value: 1500,
+                solveCount: 0
+            },
+            "graph matchings": {
+                value: 1500,
+                solveCount: 0
+            },
+            "games": {
+                value: 1500,
+                solveCount: 0
+            },
+            "*special": {
+                value: 1500,
+                solveCount: 0
+            },
+            "string suffix structures": {
+                value: 1500,
+                solveCount: 0
+            },
+            "expression parsing": {
+                value: 1500,
+                solveCount: 0
+            },
+            "chinese remainder theorem": {
+                value: 1500,
+                solveCount: 0
+            },
+            "schedules": {
+                value: 1500,
+                solveCount: 0
+            }
         };
+
+        var legendVals = []; //凡例用のリスト
 
         var DEBUG = false;
         var showID = "tourist";
@@ -118,14 +241,13 @@
         function calcRating(contestID) {
             return new Promise((resolve, reject) => {
                 var filename = "./contest_data/" + contestID + ".json";
-                d3.json(filename).then(function (data) {
+                d3.json(filename).then(function(data) {
                     //console.log(data);
                     //コンテストデータがなければスキップ
                     if (data.status == "FAILED") {
                         console.log(contestID + ":FAILED");
                         return resolve();
-                    }
-                    else {
+                    } else {
                         console.log(contestID + ":OK");
                     }
                     let problems = data.result.problems;
@@ -136,7 +258,7 @@
                     if (!n_contestants) return resolve();
                     for (let i = 0; i < n_contestants; i++) {
                         let name = ranks[i].party.members[0].handle;
-                        if (ranks[i].party.participantType != 'CONTESTANT') continue;// Contestantでなければスキップ
+                        if (ranks[i].party.participantType != 'CONTESTANT') continue; // Contestantでなければスキップ
                         //もしハッシュに名前が登録されてなければ新しく作る
                         if (!hash[name]) {
                             hash[name] = JSON.parse(JSON.stringify(Status));
@@ -150,7 +272,7 @@
                         for (let j = 0; j < n_problems; j++) {
                             let result = ranks[i].problemResults[j].points ? 1 : 0;
                             let difficulty = problems[j].rating;
-                            if (!difficulty) continue;//問題にdifficultyが設定されてなければスキップ
+                            if (!difficulty) continue; //問題にdifficultyが設定されてなければスキップ
                             for (let tag of problems[j].tags) {
                                 if (tag == name) continue;
                                 let rating = hash[name][tag].value;
@@ -176,7 +298,7 @@
             }
         }
 
-        calc_all().then(function () {
+        calc_all().then(function() {
             console.log(hash["Mojumbo"]);
             console.log(hash["holeguma"]);
             console.log(hash["tourist"]);
@@ -196,20 +318,24 @@
                 .data(data[0].axes)
                 .enter()
                 .append("rect")
-                .attr("x", function (d, i) {
+                .attr("x", function(d, i) {
                     return i * (20 + 1);
                 })
-                .attr("y", function (d, i) {
+                .attr("y", function(d, i) {
                     return 500 - d.value / 10;
                 })
                 .attr("width", 20)
-                .attr("height", function (d) {
+                .attr("height", function(d) {
                     return d.value / 10;
                 });
             console.log("done");
         }
+
         function button_clicked() {
+            var tab = document.getElementsByClassName("tab_wrap")[0];
+            tab.style.opacity = 1;
             data = [];
+            legendVals = [];
             var you = document.getElementById("You").value;
             var rivals = (document.getElementById("Rivals").value).split(',');
             addUserInRadarChart(you);
@@ -217,8 +343,10 @@
                 addUserInRadarChart(rival);
             }
             showRaderChart();
+            showLegend();
             //showBarGraph();
         }
+
         function apply_clicked() {
             var minSolveCount = document.getElementById("form2").value;
             console.log(minSolveCount);
@@ -238,6 +366,7 @@
                 addUserInRadarChart(rival, selected = true);
             }
             showRaderChart();
+
             //console.log(selected_tag);
         }
 
@@ -251,26 +380,73 @@
                 if (hash[name][tag] == name) continue;
                 if (selected && !selected_tags[tag]) continue;
                 if (max_rating < hash[name][tag].value) max_rating = hash[name][tag].value;
-                newSeries.axes.push({ "axis": tag, "value": hash[name][tag].value });
+                newSeries.axes.push({
+                    "axis": tag,
+                    "value": hash[name][tag].value
+                });
             }
             data.push(newSeries);
+            legendVals.push(name);
         }
 
         //Radar Chartを表示
         function showRaderChart() {
-            var margin = { top: 50, right: 80, bottom: 50, left: 80 };
+            var margin = {
+                top: 50,
+                right: 80,
+                bottom: 80,
+                left: 80
+            };
             var radarChartOptions = {
                 w: 300,
                 h: 300,
                 margin: margin,
                 maxValue: max_rating,
                 levels: 6,
-                roundStrokes: true,
-                color: d3.scaleOrdinal().range(["#26AF32", "#762712", "#2a2fd4"]),
+                roundStrokes: false,
+                color: d3.scaleOrdinal(d3.schemeCategory10),
                 format: '.0f'
             };
             console.log(data);
+
             let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+
+        function showLegend() {
+            let legend = d3.select("#legend-div")
+                .attr("width", 500)
+                .attr("height", 50)
+                .selectAll('g')
+                .data(legendVals)
+                .enter()
+                .append('g')
+                .attr("class", "legends");
+
+            legend.append('rect')
+                .attr("x", 0)
+                .attr("y", 10)
+                .attr("width", 10)
+                .attr("height", 10)
+                .style("fill", function(d, i) {
+                    return d3.schemeCategory10[i];
+                });
+
+            legend.append('text')
+                .attr("x", 20)
+                .attr("y", 20)
+                .text(function(d, i) {
+                    return d;
+                })
+                .attr("class", "textselected")
+                .style("text-anchor", "start")
+                .style("font-size", 15);
+
+            var padding = 20;
+            legend.attr("transform", function(d, i) {
+                {
+                    return "translate(" + (80 + padding) * i + ",0)";
+                }
+            });
         }
     </script>
 </body>
