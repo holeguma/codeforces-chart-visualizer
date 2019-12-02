@@ -22,7 +22,7 @@ async function makeRanking() {
             if (!ranking[tag]) {
                 ranking[tag] = [];
             }
-            ranking[tag].push({ rank: 0, userID: names[i], rating: hash[names[i]]["tags"][tag].value });
+            ranking[tag].push({ rank: 0, userID: names[i], rating: Math.round(hash[names[i]]["tags"][tag].value) });
             //console.log(ranking[tag]);
         }
         //console.log(hash[names[i]]);Node 
