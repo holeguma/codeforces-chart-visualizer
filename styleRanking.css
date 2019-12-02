@@ -5,16 +5,17 @@ table{
 th,td {
     border: solid 1px;
     padding: 3px;
-    border-color: black;
+    border-color: #EBEBEB;
 }
 th{
     font-size: larger;
+    color:#337AB7;
 }
 td.legendary-grandmaster:first-letter{
     color:black;
 }
 tr:nth-child(even){
-    background-color: #ddd;
+    background-color: #F9F9F9;
 }
 td:nth-of-type(2){
     font-weight: bold;
