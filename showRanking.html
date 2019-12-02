@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1>DP Ranking</h1>
+    <h1 id="title">Ranking</h1>
     <table>
         <thead></thead>
         <tbody></tbody>
@@ -81,6 +81,8 @@
             d3.selectAll("table").remove();
 
             var tag = document.getElementById("form2").value;
+            var title = document.getElementById("title");
+            title.innerHTML = (tag + " Ranking");
             list = ranking_data[tag];
             var titles = []; //タイトルのリスト
             for (title in list[0]) {
