@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <head>
     <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
     <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
@@ -22,80 +21,137 @@
         <thead></thead>
         <tbody></tbody>
     </table>
+    <form action="#" method="GET">
+        <select name="form2" id="form2">
+            <option value="bitmasks">bitmasks</option>
+            <option value="divide and conquer">divide and conquer</option>
+            <option value="math">math</option>
+            <option value="data structures">data structures</option>
+            <option value="trees">trees</option>
+            <option value="dp">dp</option>
+            <option value="greedy">greedy</option>
+            <option value="binary search">binary search</option>
+            <option value="sortings">sortings</option>
+            <option value="number theory">number theory</option>
+            <option value="brute force">brute force</option>
+            <option value="hashing">hashing</option>
+            <option value="meet-in-the-middle">meet-in-the-middle</option>
+            <option value="two pointers">two pointers</option>
+            <option value="implementation">implementation</option>
+            <option value="strings">strings</option>
+            <option value="constructive algorithms">constructive algorithms</option>
+            <option value="graphs">graphs</option>
+            <option value="combinatorics">combinatorics</option>
+            <option value="dfs and similar">dfs and similar</option>
+            <option value="dsu">dsu</option>
+            <option value="probabilities">probabilities</option>
+            <option value="geometry">geometry</option>
+            <option value="interactive">interactive</option>
+            <option value="ternary search">ternary search</option>
+            <option value="shortest paths">shortest paths</option>
+            <option value="matrices">matrices</option>
+            <option value="2-sat">2-sat</option>
+            <option value="graph matchings">graph matchings</option>
+            <option value="games">*special</option>
+            <option value="string suffix structures">string suffix structures</option>
+            <option value="expression parsing">expression parsing</option>
+            <option value="chinese remainder theorem">chinese remainder theorem</option>
+            <option value="schedules">schedules</option>
+        </select>
+        <input type="button" name="apply" onclick="makeTable()" value="apply" />
+    </form>
     <script type="text/javascript">
-        d3.json("./user_data/user_info.json").then(function (user_info) {
-            console.log("here");
-            d3.json("./user_data/small_ranking_data.json").then(function (ranking_data) {
-                //console.log(user_info);
-                list = ranking_data.dp;
-                var titles = []; //タイトルのリスト
-                for (title in list[0]) {
-                    titles.push(title);
-                }
-                console.log(titles);
-                var table = d3.select("body")
-                    .append("table")
-                    .attr("class", "table table-bordered")
-                    .attr("id", "dp-table");
+        var user_info = {};
+        var ranking_data = {};
+        var prev_tag = "";
+        d3.json("./user_data/user_info.json").then(function (userInfo) {
+            user_info = JSON.parse(JSON.stringify(userInfo));
+            console.log("user_info loaded");
+        });
+        d3.json("./user_data/small_ranking_data.json").then(function (rankingData) {
+            ranking_data = JSON.parse(JSON.stringify(rankingData));
+            console.log("ranking_data loaded");
+        });
+        function makeTable() {
 
-                //タイトルを追加する
-                table.append("thead")
-                    .append("tr")
-                    .selectAll("th")
-                    .data(titles)
-                    .enter()
-                    .append("th")
-                    .text(function (d) {
-                        return d;
-                    });
+            if ($.fn.DataTable.isDataTable("#" + "ranking-table")) {
+                $("#" + "ranking-table").DataTable().destroy();
+            }
+            $("#" + "ranking-table tbody").empty();
+            d3.selectAll("table").remove();
 
-                table.append("tbody")
-                    .selectAll("tr")
-                    .data(list)
-                    .enter()
-                    .append("tr")
-                    .selectAll("td")
-                    .data(function (row) {
-                        return d3.entries(row);
-                    })
-                    .enter()
-                    .append("td")
-                    .text(function (d, i) {
-                        return d.value;
-                    })
-                    .style("color", function (d, i) {
-                        if (i == 1) {
-                            var name = d.value;
-                            if (user_info[name]) return decideColor(user_info[name].rating);
-                            else return "black";
-                        }
-                        else return "black";
-                    })
-                    .attr("class", function (d, i) {
-                        if (i == 1) {
-                            var name = d.value;
-                            if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster";
-                            else return "expert";
-                        }
-                        else return "expert";
-                    });
+            var tag = document.getElementById("form2").value;
+            list = ranking_data[tag];
+            var titles = []; //タイトルのリスト
+            for (title in list[0]) {
+                titles.push(title);
+            }
+            console.log(titles);
+            var id = "ranking-table";
+            var className = "table table-bordered";
+            var table = d3.select("body")
+                .append("table")
+                .attr("class", className)
+                .attr("id", id);
 
-                var legendary = document.getElementsByClassName("legendary-grandmaster");
-                console.log(legendary);
-                function decideColor(rating) {
-                    if (rating >= 2400) return "#FF0000";
-                    else if (rating >= 2200) return "#FF8C00";
-                    else if (rating >= 1900) return "#AA00AA";
-                    else if (rating >= 1600) return "#0000FF";
-                    else if (rating >= 1400) return "#03A89E";
-                    else if (rating >= 1200) return "#008000";
-                    else return "#808080";
-                }
-                jQuery(function ($) {
-                    $("#dp-table").DataTable();
+            //タイトルを追加する
+            table.append("thead")
+                .append("tr")
+                .selectAll("th")
+                .data(titles)
+                .enter()
+                .append("th")
+                .text(function (d) {
+                    return d;
                 });
-            })
-        })
+
+            table.append("tbody")
+                .selectAll("tr")
+                .data(list)
+                .enter()
+                .append("tr")
+                .selectAll("td")
+                .data(function (row) {
+                    return d3.entries(row);
+                })
+                .enter()
+                .append("td")
+                .text(function (d, i) {
+                    return d.value;
+                })
+                .style("color", function (d, i) {
+                    if (i == 1) {
+                        var name = d.value;
+                        if (user_info[name]) return decideColor(user_info[name].rating);
+                        else return "black";
+                    }
+                    else return "black";
+                })
+                .attr("class", function (d, i) {
+                    if (i == 1) {
+                        var name = d.value;
+                        if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster";
+                        else return "expert";
+                    }
+                    else return "expert";
+                });
+
+            var legendary = document.getElementsByClassName("legendary-grandmaster");
+            console.log(legendary);
+            function decideColor(rating) {
+                if (rating >= 2400) return "#FF0000";
+                else if (rating >= 2200) return "#FF8C00";
+                else if (rating >= 1900) return "#AA00AA";
+                else if (rating >= 1600) return "#0000FF";
+                else if (rating >= 1400) return "#03A89E";
+                else if (rating >= 1200) return "#008000";
+                else return "#808080";
+            }
+            jQuery(function ($) {
+                $("#" + "ranking-table").DataTable();
+            });
+            prev_tag = tag;
+        }
     </script>
 </body>
 
