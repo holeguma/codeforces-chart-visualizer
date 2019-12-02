@@ -205,23 +205,23 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .attr("class", "radarArea")
         .attr("d", d => radarLine(d.axes))
         .style("fill", (d, i) => d3.schemeCategory10[i])
-        .style("fill-opacity", cfg.opacityArea)
-        .on('mouseover', function(d, i) {
-            //Dim all blobs
-            parent.selectAll(".radarArea")
-                .transition().duration(200)
-                .style("fill-opacity", 0.1);
-            //Bring back the hovered over blob
-            d3.select(this)
-                .transition().duration(200)
-                .style("fill-opacity", 0.7);
-        })
-        .on('mouseout', () => {
-            //Bring back all blobs
-            parent.selectAll(".radarArea")
-                .transition().duration(200)
-                .style("fill-opacity", cfg.opacityArea);
-        });
+        .style("fill-opacity", cfg.opacityArea);
+    // .on('mouseenter', function(d, i) {
+    //     //Dim all blobs
+    //     parent.selectAll(".radarArea")
+    //         .transition().duration(200)
+    //         .style("fill-opacity", 0.1);
+    //     //Bring back the hovered over blob
+    //     d3.select(this)
+    //         .transition().duration(200)
+    //         .style("fill-opacity", 0.7);
+    // })
+    // .on('mouseleave', () => {
+    //     //Bring back all blobs
+    //     parent.selectAll(".radarArea")
+    //         .transition().duration(200)
+    //         .style("fill-opacity", cfg.opacityArea);
+    // });
 
     //Create the outlines
     blobWrapper.append("path")
@@ -264,7 +264,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .attr("cy", (d, i) => rScale(d.value) * sin(angleSlice * i - HALF_PI))
         .style("fill", "none")
         .style("pointer-events", "all")
-        .on("mouseover", function(d, i) {
+        .on("mouseenter", function(d, i) {
             tooltip
                 .attr('x', this.cx.baseVal.value - 10)
                 .attr('y', this.cy.baseVal.value - 10)
@@ -272,7 +272,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
                 .style('display', 'block')
                 .text(Format(d.value) + cfg.unit);
         })
-        .on("mouseout", function() {
+        .on("mouseleft", function() {
             tooltip.transition()
                 .style('display', 'none').text('');
         });
