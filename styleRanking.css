@@ -1,13 +1,21 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 300;
-    fill: #242424;
-    text-align: center;
-    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-    cursor: default;
-}
 
-td {
-    color: black;
+table{
+    border-collapse: collapse;
+}
+th,td {
+    border: solid 1px;
+    padding: 3px;
+    border-color: black;
+}
+th{
+    font-size: larger;
+}
+td.legendary-grandmaster:first-letter{
+    color:black;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+td:nth-of-type(2){
+    font-weight: bold;
 }
