@@ -59,15 +59,26 @@
                             else return "black";
                         }
                         else return "black";
+                    })
+                    .attr("class", function (d, i) {
+                        if (i == 1) {
+                            var name = d.value;
+                            if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster";
+                            else return "expert";
+                        }
+                        else return "expert";
                     });
+
+                var legendary = document.getElementsByClassName("legendary-grandmaster");
+                console.log(legendary);
                 function decideColor(rating) {
-                    if (rating >= 2400) return "red";
-                    else if (rating >= 2200) return "orange";
-                    else if (rating >= 1900) return "violet";
-                    else if (rating >= 1600) return "blue";
-                    else if (reting >= 1400) return "cyan";
-                    else if (rating >= 1200) return "green";
-                    else return "gray";
+                    if (rating >= 2400) return "#FF0000";
+                    else if (rating >= 2200) return "#FF8C00";
+                    else if (rating >= 1900) return "#AA00AA";
+                    else if (rating >= 1600) return "#0000FF";
+                    else if (rating >= 1400) return "#03A89E";
+                    else if (rating >= 1200) return "#008000";
+                    else return "#808080";
                 }
             })
         })
