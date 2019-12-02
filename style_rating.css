@@ -1,0 +1,168 @@
+body {
+    background-color: white;
+}
+
+.tab_wrap {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 1000;
+    fill: #242424;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+    cursor: default;
+    width: 1500px;
+    height: 1000px;
+    margin-right: auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab_area {
+    font-size: 0;
+    margin: 0 10px;
+}
+
+.tab_area label {
+    width: 150px;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 12px 0;
+    color: darkgray;
+    background: #ddd;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.tab_area label:hover {
+    opacity: 0.5;
+}
+
+.panel_area {
+    background: #fff;
+}
+
+.tab_panel {
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+}
+
+.tab_panel p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 200px;
+}
+
+#tab1:checked~.tab_area .tab1_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab1:checked~.panel_area #panel1 {
+    display: block;
+}
+
+#tab2:checked~.tab_area .tab2_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab2:checked~.panel_area #panel2 {
+    display: block;
+}
+
+#tab3:checked~.tab_area .tab3_label {
+    background: #fff;
+    color: #000;
+}
+
+#tab3:checked~.panel_area #panel3 {
+    display: block;
+}
+
+.cp_iptxt {
+    position: relative;
+    width: 400px;
+    margin: 40px 15px;
+}
+
+.cp_iptxt input[type=text] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 300px;
+    margin: 8px 0;
+    padding: 0.3em;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    outline: none;
+}
+
+.cp_iptxt input[type=text]:focus {
+    border-color: #da3c41;
+}
+
+.cp_iptxt input[type=text] {
+    padding-left: 40px;
+}
+
+.cp_iptxt i {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 9px 8px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+
+.cp_iptxt input[type=text]:focus+i {
+    color: #da3c41;
+}
+
+.box_1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    color: black;
+    width: 375px;
+    height: 1000px;
+    margin: auto auto auto 70px;
+    padding: auto auto auto 90px;
+    background-color: white;
+}
+
+.box_2 {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    width: 450px;
+    height: 1000px;
+    padding: auto auto auto 0px;
+    background-color: white;
+}
+
+.box_3 {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    width: 100px;
+    height: 1000px;
+    margin: auto auto auto 20px;
+    padding: auto auto auto auto;
+    background-color: white;
+}
+
+.textselected {
+    color: pink;
+    font-family: 'Raleway', sans-serif;
+    fill: #333333;
+}
+
+span.sample1 {
+    font-weight: 500;
+    font-size: 1.5em;
+}
