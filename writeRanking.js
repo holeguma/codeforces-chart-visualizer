@@ -5,7 +5,7 @@ let n_contests = 1260;
 
 var hash = {};
 var ranking = {};
-var data = JSON.parse(fs.readFileSync("./user_data/mini_hash_data.json", 'utf8'));
+var data = JSON.parse(fs.readFileSync("./user_data/small_hash_data.json", 'utf8'));
 hash = JSON.parse(JSON.stringify(data));
 var n_users = Object.keys(hash).length;
 //console.log(n_users);
@@ -36,7 +36,7 @@ async function makeRanking() {
     }
 }
 
-makeRanking().then(function() {
+makeRanking().then(function () {
     var json_data = JSON.stringify(ranking);
-    fs.writeFileSync('mini_ranking_data.json', json_data);
+    fs.writeFileSync('./user_data/small_ranking_data.json', json_data);
 })
