@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Table sort example in D3</title>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <h1>DP Ranking</h1>
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <script type="text/javascript">
+        d3.json("./user_data/small_ranking_data.json").then(function(ranking_data) {
+            list = ranking_data.dp;
+            console.log(list);
+            for (var i = 0; i < list.length; i++) {
+                list[i].rank = i + 1;
+            }
+            var titles = []; //タイトルのリスト
+            for (title in list[0]) {
+                titles.push(title);
+            }
+            console.log(titles);
+            var table = d3.select("body")
+                .append("table")
+                .attr("border", 1); //枠線を付ける
+            //タイトルを追加する
+            table.append("thead")
+                .append("tr")
+                .selectAll("th")
+                .data(titles)
+                .enter()
+                .append("th")
+                .text(function(d) {
+                    return d;
+                });
+
+            table.append("tbody")
+                .selectAll("tr")
+                .data(list)
+                .enter()
+                .append("tr")
+                .selectAll("td")
+                .data(function(row) {
+                    return d3.entries(row);
+                })
+                .enter()
+                .append("td")
+                .text(function(d) {
+                    return d.value;
+                });
+        })
+    </script>
+</body>
+
+</html>
