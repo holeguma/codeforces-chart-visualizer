@@ -1,12 +1,8 @@
-// var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
 
-// var script = document.createElement('script');
-// script.src = "./bower_components/d3/d3.js";
-// document.head.appendChild(script);
+var SMALL = false;//小さいデータセットを作る時はtrueにする
+
 var fs = require('fs');
-
 let n_contests = 1260;
-
 //自分のrating,問題のdifficulty,解けたかどうか, から新しいratingを計算する
 function updateRating(rating, difficulty, result, K = 64) {
     if (rating - difficulty > 800 && result == 0) return rating;
@@ -16,14 +12,12 @@ function updateRating(rating, difficulty, result, K = 64) {
 }
 //ユーザーネーム→国名のハッシュ
 country_hash = {};
-user_info = {};
 //ユーザーネーム→各タグのrating のハッシュを用意する
 var hash = {};
-//デフォルトのハッシュ
+
 const Status = {
     userID: "sample",
     country: "unknown",
-    rating: "unknown",
     tags: {
         "bitmasks": {
             value: 1500,
@@ -176,8 +170,6 @@ const Status = {
     }
 };
 
-var legendVals = []; //凡例用のリスト
-
 var DEBUG = false;
 var showID = "tourist";
 //コンテストIDから、参加者全員のratingを更新する
@@ -199,17 +191,15 @@ function calcRating(contestID) {
         let ranks = data.result.rows;
         let n_contestants = ranks.length;
         if (!n_contestants) return resolve();
-        for (let i = 0; i < n_contestants; i++) {
-            if (i >= 100) break;
+        for (let i = 0; i < (SMALL) ? 100 : n_contestants; i++) {
             let name = ranks[i].party.members[0].handle;
             if (ranks[i].party.participantType != 'CONTESTANT') continue; // Contestantでなければスキップ
             //もしハッシュに名前が登録されてなければ新しく作る
             if (!hash[name]) {
                 hash[name] = JSON.parse(JSON.stringify(Status));
                 hash[name].userID = name;
-                if (user_info[name]) {
-                    hash[name].country = user_info[name].country;
-                    hash[name].rating = user_info[name].rating;
+                if (country_hash[name]) {
+                    hash[name].country = country_hash[name];
                 }
             }
             if (DEBUG && name == showID) {
@@ -240,25 +230,28 @@ function calcRating(contestID) {
 }
 
 async function calc_all() {
-    for (let i = 1200; i <= n_contests; i++) {
+    for (let i = (SMALL) ? 1230 : 1; i <= n_contests; i++) {
         var result = await calcRating(i);
     }
 }
 
 var data = JSON.parse(fs.readFileSync("./user_data/user_info.json", 'utf8'));
-console.log(data["Mojumbo"]);
-user_info = JSON.parse(JSON.stringify(data));
-calc_all().then(function() {
-        console.log(hash["Mojumbo"]);
-        console.log(hash["holeguma"]);
-        console.log(hash["tourist"]);
-        console.log(hash["rng_58"]);
-        console.log(hash["ransewhale"]);
-        console.log(hash["QWE_QWE"]);
-        console.log(hash["totori0908"]);
-        console.log(hash["Rubikun"]);
+
+country_hash = JSON.parse(JSON.stringify(data));
+calc_all().then(function () {
+    console.log(hash["Mojumbo"]);
+    console.log(hash["holeguma"]);
+    console.log(hash["tourist"]);
+    console.log(hash["rng_58"]);
+    console.log(hash["ransewhale"]);
+    console.log(hash["QWE_QWE"]);
+    console.log(hash["totori0908"]);
+    console.log(hash["Rubikun"]);
+})
+    .then(function () {
+        var filename = './user_data/' + ((SMALL) ? "small_" : "") + "hash_data.json";
+        var json_data = JSON.stringify(hash);
+        fs.writeFileSync(filename, json_data);
     })
-    .then(function() {
-        var json_data = JSON.stringify(hash, null, '   ');
-        fs.writeFileSync('mini_hash_data.json', json_data);
-    })
+
+
