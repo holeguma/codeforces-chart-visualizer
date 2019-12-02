@@ -18,9 +18,6 @@
         d3.json("./user_data/small_ranking_data.json").then(function(ranking_data) {
             list = ranking_data.dp;
             console.log(list);
-            for (var i = 0; i < list.length; i++) {
-                list[i].rank = i + 1;
-            }
             var titles = []; //タイトルのリスト
             for (title in list[0]) {
                 titles.push(title);
