@@ -2,11 +2,18 @@
 
 
 <head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Table sort example in D3</title>
     <link rel="stylesheet" type="text/css" href="styleRanking.css">
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+
+    <script>
+
+    </script>
 </head>
 
 <body>
@@ -17,6 +24,7 @@
     </table>
     <script type="text/javascript">
         d3.json("./user_data/user_info.json").then(function (user_info) {
+            console.log("here");
             d3.json("./user_data/small_ranking_data.json").then(function (ranking_data) {
                 //console.log(user_info);
                 list = ranking_data.dp;
@@ -27,6 +35,9 @@
                 console.log(titles);
                 var table = d3.select("body")
                     .append("table")
+                    .attr("class", "table table-bordered")
+                    .attr("id", "dp-table");
+
                 //タイトルを追加する
                 table.append("thead")
                     .append("tr")
@@ -80,6 +91,9 @@
                     else if (rating >= 1200) return "#008000";
                     else return "#808080";
                 }
+                jQuery(function ($) {
+                    $("#dp-table").DataTable();
+                });
             })
         })
     </script>
