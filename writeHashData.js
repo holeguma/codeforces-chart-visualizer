@@ -1,5 +1,5 @@
 
-var SMALL = false;//小さいデータセットを作る時はtrueにする
+var SMALL = true;//小さいデータセットを作る時はtrueにする
 
 var fs = require('fs');
 let n_contests = 1260;
@@ -191,7 +191,8 @@ function calcRating(contestID) {
         let ranks = data.result.rows;
         let n_contestants = ranks.length;
         if (!n_contestants) return resolve();
-        for (let i = 0; i < (SMALL) ? 100 : n_contestants; i++) {
+        for (let i = 0; i < n_contestants; i++) {
+            if (SMALL && i >= 100) break;
             let name = ranks[i].party.members[0].handle;
             if (ranks[i].party.participantType != 'CONTESTANT') continue; // Contestantでなければスキップ
             //もしハッシュに名前が登録されてなければ新しく作る
@@ -230,7 +231,7 @@ function calcRating(contestID) {
 }
 
 async function calc_all() {
-    for (let i = (SMALL) ? 1230 : 1; i <= n_contests; i++) {
+    for (let i = ((SMALL) ? 1200 : 1); i <= n_contests; i++) {
         var result = await calcRating(i);
     }
 }
