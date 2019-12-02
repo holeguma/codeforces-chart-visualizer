@@ -14,29 +14,6 @@
 </head>
 
 <body>
-    <form id="form1" action="#">
-        <input type="text" id="You" value=""><br>
-        <input type="text" id="Rivals" value=""><br>
-        <input type="button" onclick="button_clicked()" value="Enter">
-    </form>
-    <form action="#" method="GET">
-        <select name="form2" id="form2">
-            <option value="solved">solved >=</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <input type="button" name="apply" onclick="apply_clicked()" value="apply" />
-    </form>
-    <br><br><br>
     <div class="tab_wrap">
         <input id="tab1" type="radio" name="tab_btn" checked>
         <input id="tab2" type="radio" name="tab_btn">
@@ -49,8 +26,39 @@
         </div>
         <div class="panel_area">
             <div id="panel1" class="tab_panel">
-                <svg id="legend-div"></svg>
-                <div class="radarChart" style="display: inline-flex;"></div>
+                <div class="box_1">
+                    <br><br>
+                    <h1>&nbsp;&nbsp;User</h1>
+                    <form id="form1" action="#" method="GET" class="cp_iptxt">
+                        <input type="text" id="You" alue="" placeholder="You"><br>
+                        <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br></span>
+                        <input type="text" id="Rivals" value="" placeholder="Rival(s)"><br><br>
+                        <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
+                        <select name="form2" id="form2">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <br><br>
+                        <input type="button" name="Enter" onclick="enter_clicked()" value="Enter" />
+                    </form>
+                </div>
+
+
+                <div class="box_2">
+                    <div class="radarChart" style="display: inline-flex;"></div>
+                </div>
+                <div class="box_3">
+                    <svg id="legend-div"></svg>
+                </div>
             </div>
             <div id="panel2" class="tab_panel">
                 <p>panel2</p>
@@ -63,14 +71,16 @@
 
 
 
+
     <script type="text/javascript">
         //このファイルと同じディレクトリに「lib/d3.js」と「contest_data」(これはGoogle Driveで共有します)を置いてください
 
         var cnt = 0;
         let n_contests = 1260;
+        var legendVals = []
 
         var hash = {};
-        d3.json("./user_data/hash_data.json").then(function (data) {
+        d3.json("./user_data/small_hash_data.json").then(function(data) {
             hash = JSON.parse(JSON.stringify(data));
             console.log(hash["Mojumbo"]);
             console.log(hash["holeguma"]);
@@ -92,39 +102,24 @@
                 .data(data[0].axes)
                 .enter()
                 .append("rect")
-                .attr("x", function (d, i) {
+                .attr("x", function(d, i) {
                     return i * (20 + 1);
                 })
-                .attr("y", function (d, i) {
+                .attr("y", function(d, i) {
                     return 500 - d.value / 10;
                 })
                 .attr("width", 20)
-                .attr("height", function (d) {
+                .attr("height", function(d) {
                     return d.value / 10;
                 });
             console.log("done");
         }
 
-        function button_clicked() {
-            var tab = document.getElementsByClassName("tab_wrap")[0];
-            tab.style.opacity = 1;
-            data = [];
-            legendVals = [];
-            var you = document.getElementById("You").value;
-            var rivals = (document.getElementById("Rivals").value).split(',');
-            addUserInRadarChart(you);
-            for (let rival of rivals) {
-                addUserInRadarChart(rival);
-            }
-            showLegend();
-            showRaderChart();
-            //showBarGraph();
-        }
-
-        function apply_clicked() {
+        function enter_clicked() {
             var minSolveCount = document.getElementById("form2").value;
             console.log(minSolveCount);
             data = [];
+            legendVals = [];
             selected_tags = {};
             var you = document.getElementById("You").value;
             var rivals = (document.getElementById("Rivals").value).split(',');
@@ -135,24 +130,24 @@
                     selected_tags[tag] = true;
                 }
             }
-            addUserInRadarChart(you, selected = true);
+            addUserInRadarChart(you);
             for (let rival of rivals) {
-                addUserInRadarChart(rival, selected = true);
+                addUserInRadarChart(rival);
             }
+            d3.selectAll("g").remove();
+            showLegend();
             showRaderChart();
-
-            //console.log(selected_tag);
         }
 
         //テキストボックスに書かれたユーザーの情報をRadar Chart用に保持
-        function addUserInRadarChart(name, selected = false) {
+        function addUserInRadarChart(name) {
             max_rating = 0;
             newSeries = {};
             newSeries.name = name;
             newSeries.axes = [];
             for (let tag in hash[name]["tags"]) {
                 if (hash[name]["tags"][tag] == name) continue;
-                if (selected && !selected_tags[tag]) continue;
+                if (!selected_tags[tag]) continue;
                 if (max_rating < hash[name]["tags"][tag].value) max_rating = hash[name]["tags"][tag].value;
                 newSeries.axes.push({
                     "axis": tag,
@@ -160,7 +155,7 @@
                 });
             }
             data.push(newSeries);
-            if (!selected) legendVals.push(name);
+            legendVals.push(name);
         }
 
         //Radar Chartを表示
@@ -176,6 +171,7 @@
                 h: 300,
                 margin: margin,
                 maxValue: max_rating,
+                opacityArea: 0.1,
                 levels: 6,
                 roundStrokes: false,
                 color: d3.scaleOrdinal(d3.schemeCategory10),
@@ -187,15 +183,13 @@
         }
 
         function showLegend() {
-            d3.selectAll('g').remove();
-
             let legend = d3.select("#legend-div")
-                .attr("width", 500)
-                .attr("height", 50)
-                .selectAll('g')
+                .attr("width", 100)
+                .attr("height", 1000)
+                .selectAll("g")
                 .data(legendVals)
                 .enter()
-                .append('g')
+                .append("g")
                 .attr("class", "legends");
 
             legend.append('rect')
@@ -203,24 +197,23 @@
                 .attr("y", 10)
                 .attr("width", 10)
                 .attr("height", 10)
-                .style("fill", function (d, i) {
+                .style("fill", function(d, i) {
                     return d3.schemeCategory10[i];
                 });
 
             legend.append('text')
                 .attr("x", 20)
                 .attr("y", 20)
-                .text(function (d, i) {
+                .text(function(d, i) {
                     return d;
                 })
                 .attr("class", "textselected")
                 .style("text-anchor", "start")
                 .style("font-size", 15);
 
-            var padding = 20;
-            legend.attr("transform", function (d, i) {
+            legend.attr("transform", function(d, i) {
                 {
-                    return "translate(" + (80 + padding) * i + ",0)";
+                    return "translate(0," + (i + 1) * 40 + ")";
                 }
             });
         }
