@@ -22,7 +22,12 @@ async function makeRanking() {
             if (!ranking[tag]) {
                 ranking[tag] = [];
             }
-            ranking[tag].push({ rank: 0, userID: names[i], rating: Math.round(hash[names[i]]["tags"][tag].value) });
+            ranking[tag].push({
+                rank: 0,
+                userID: names[i],
+                rating: Math.round(hash[names[i]]["tags"][tag].value),
+                solved: hash[names[i]]["tags"][tag].solveCount
+            });
             //console.log(ranking[tag]);
         }
         //console.log(hash[names[i]]);Node 
@@ -36,7 +41,7 @@ async function makeRanking() {
     }
 }
 
-makeRanking().then(function () {
+makeRanking().then(function() {
     var json_data = JSON.stringify(ranking);
-    fs.writeFileSync('./user_data/small_ranking_data.json', json_data);
+    fs.writeFileSync('./user_data/small_ranking_data-2.json', json_data);
 })
