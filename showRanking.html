@@ -11,7 +11,6 @@
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
 
     <script>
-
     </script>
 </head>
 
@@ -21,7 +20,7 @@
         <thead></thead>
         <tbody></tbody>
     </table>
-    <form action="#" method="GET">
+    <form action="#" method="GET" onchange="makeTable()">
         <select name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
             <option value="divide and conquer">divide and conquer</option>
@@ -64,14 +63,15 @@
         var user_info = {};
         var ranking_data = {};
         var prev_tag = "";
-        d3.json("./user_data/user_info.json").then(function (userInfo) {
+        d3.json("./user_data/user_info.json").then(function(userInfo) {
             user_info = JSON.parse(JSON.stringify(userInfo));
             console.log("user_info loaded");
         });
-        d3.json("./user_data/small_ranking_data.json").then(function (rankingData) {
+        d3.json("./user_data/small_ranking_data.json").then(function(rankingData) {
             ranking_data = JSON.parse(JSON.stringify(rankingData));
             console.log("ranking_data loaded");
         });
+
         function makeTable() {
 
             if ($.fn.DataTable.isDataTable("#" + "ranking-table")) {
@@ -103,7 +103,7 @@
                 .data(titles)
                 .enter()
                 .append("th")
-                .text(function (d) {
+                .text(function(d) {
                     return d;
                 });
 
@@ -113,33 +113,56 @@
                 .enter()
                 .append("tr")
                 .selectAll("td")
-                .data(function (row) {
+                .data(function(row) {
                     return d3.entries(row);
                 })
                 .enter()
                 .append("td")
-                .text(function (d, i) {
+                .append("div")
+                .text(function(d, i) {
                     return d.value;
                 })
-                .style("color", function (d, i) {
+                .style("color", function(d, i) {
                     if (i == 1) {
                         var name = d.value;
                         if (user_info[name]) return decideColor(user_info[name].rating);
                         else return "black";
-                    }
-                    else return "black";
+                    } else return "black";
                 })
-                .attr("class", function (d, i) {
+                .attr("class", function(d, i) {
                     if (i == 1) {
                         var name = d.value;
-                        if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster";
-                        else return "expert";
+                        if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
+                        else return d.key;
+                    } else return d.key;
+                })
+                .style("display", function(d, i) {
+                    if (i == 1) {
+                        return "inline-block";
                     }
-                    else return "expert";
                 });
+            // table.selectAll("td")
+            //     .attr("class", function(d) {
+            //         return d.key;
+            //     })
 
             var legendary = document.getElementsByClassName("legendary-grandmaster");
             console.log(legendary);
+            //.append("text");
+            table.selectAll("div.userID")
+                .on("mouseover", function(d) {
+                    d3.select(this).style("cursor", "pointer");
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).style("cursor", "default");
+                })
+                .on("click", function(d) {
+                    window.open("https://codeforces.com/profile/" + d.value, '_blank');
+                });
+            // .attr("href", function(d) {
+            //     return "https://codeforces.com/profile/Mojumbo";
+            // });
+
             function decideColor(rating) {
                 if (rating >= 2400) return "#FF0000";
                 else if (rating >= 2200) return "#FF8C00";
@@ -149,7 +172,7 @@
                 else if (rating >= 1200) return "#008000";
                 else return "#808080";
             }
-            jQuery(function ($) {
+            jQuery(function($) {
                 $("#" + "ranking-table").DataTable();
             });
             prev_tag = tag;
