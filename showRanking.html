@@ -20,6 +20,8 @@
         <thead></thead>
         <tbody></tbody>
     </table>
+    <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()">user</label>
+    <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
     <form action="#" method="GET" onchange="makeTable()">
         <select name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
@@ -62,16 +64,20 @@
     <script type="text/javascript">
         var user_info = {};
         var ranking_data = {};
+        var country_ranking_data = {};
         var prev_tag = "";
-        d3.json("./user_data/user_info.json").then(function(userInfo) {
+        d3.json("./user_data/user_info.json").then(function (userInfo) {
             user_info = JSON.parse(JSON.stringify(userInfo));
             console.log("user_info loaded");
         });
-        d3.json("./user_data/small_ranking_data.json").then(function(rankingData) {
+        d3.json("./user_data/ranking_data_1000.json").then(function (rankingData) {
             ranking_data = JSON.parse(JSON.stringify(rankingData));
             console.log("ranking_data loaded");
         });
-
+        d3.json("./user_data/country_ranking_data.json").then(function (rankingData) {
+            country_ranking_data = JSON.parse(JSON.stringify(rankingData));
+            console.log("country_ranking_data loaded");
+        });
         function makeTable() {
 
             if ($.fn.DataTable.isDataTable("#" + "ranking-table")) {
@@ -79,103 +85,157 @@
             }
             $("#" + "ranking-table tbody").empty();
             d3.selectAll("table").remove();
+            console.log(document.getElementById("radio_user"));
+            if (document.getElementById("radio_user").checked) showUser();
+            else showCountry();
+            function showCountry() {
+                var tag = document.getElementById("form2").value;
+                var title = document.getElementById("title");
+                title.innerHTML = (tag + " Ranking");
 
-            var tag = document.getElementById("form2").value;
-            var title = document.getElementById("title");
-            title.innerHTML = (tag + " Ranking");
-            list = ranking_data[tag];
-            var titles = []; //タイトルのリスト
-            for (title in list[0]) {
-                titles.push(title);
+                list = country_ranking_data[tag];
+                var titles = []; //タイトルのリスト
+                for (title in list[0]) {
+                    titles.push(title);
+                }
+                console.log(titles);
+                var id = "ranking-table";
+                var className = "table table-bordered";
+                var table = d3.select("body")
+                    .append("table")
+                    .attr("class", className)
+                    .attr("id", id);
+
+                //タイトルを追加する
+                table.append("thead")
+                    .append("tr")
+                    .selectAll("th")
+                    .data(titles)
+                    .enter()
+                    .append("th")
+                    .text(function (d) {
+                        return d;
+                    });
+
+                table.append("tbody")
+                    .selectAll("tr")
+                    .data(list)
+                    .enter()
+                    .append("tr")
+                    .selectAll("td")
+                    .data(function (row) {
+                        return d3.entries(row);
+                    })
+                    .enter()
+                    .append("td")
+                    .append("div")
+                    .text(function (d, i) {
+                        return d.value;
+                    })
+                    .style("display", function (d, i) {
+                        if (i == 1) {
+                            return "inline-block";
+                        }
+                    });
+                jQuery(function ($) {
+                    $("#" + "ranking-table").DataTable();
+                });
+                prev_tag = tag;
             }
-            console.log(titles);
-            var id = "ranking-table";
-            var className = "table table-bordered";
-            var table = d3.select("body")
-                .append("table")
-                .attr("class", className)
-                .attr("id", id);
 
-            //タイトルを追加する
-            table.append("thead")
-                .append("tr")
-                .selectAll("th")
-                .data(titles)
-                .enter()
-                .append("th")
-                .text(function(d) {
-                    return d;
+            function showUser() {
+                var tag = document.getElementById("form2").value;
+                var title = document.getElementById("title");
+                title.innerHTML = (tag + " Ranking");
+
+                list = ranking_data[tag];
+                var titles = []; //タイトルのリスト
+                for (title in list[0]) {
+                    titles.push(title);
+                }
+                console.log(titles);
+                var id = "ranking-table";
+                var className = "table table-bordered";
+                var table = d3.select("body")
+                    .append("table")
+                    .attr("class", className)
+                    .attr("id", id);
+
+                //タイトルを追加する
+                table.append("thead")
+                    .append("tr")
+                    .selectAll("th")
+                    .data(titles)
+                    .enter()
+                    .append("th")
+                    .text(function (d) {
+                        return d;
+                    });
+
+                table.append("tbody")
+                    .selectAll("tr")
+                    .data(list)
+                    .enter()
+                    .append("tr")
+                    .selectAll("td")
+                    .data(function (row) {
+                        return d3.entries(row);
+                    })
+                    .enter()
+                    .append("td")
+                    .append("div")
+                    .text(function (d, i) {
+                        return d.value;
+                    })
+                    .style("color", function (d, i) {
+                        if (i == 1) {
+                            var name = d.value;
+                            if (user_info[name]) return decideColor(user_info[name].rating);
+                            else return "black";
+                        } else return "black";
+                    })
+                    .attr("class", function (d, i) {
+                        if (i == 1) {
+                            var name = d.value;
+                            if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
+                            else return d.key;
+                        } else return d.key;
+                    })
+                    .style("display", function (d, i) {
+                        if (i == 1) {
+                            return "inline-block";
+                        }
+                    });
+
+                var legendary = document.getElementsByClassName("legendary-grandmaster");
+                console.log(legendary);
+                //.append("text");
+                table.selectAll("div.userID")
+                    .on("mouseover", function (d) {
+                        d3.select(this).style("cursor", "pointer");
+                    })
+                    .on("mouseout", function (d) {
+                        d3.select(this).style("cursor", "default");
+                    })
+                    .on("click", function (d) {
+                        window.open("https://codeforces.com/profile/" + d.value, '_blank');
+                    });
+
+                function decideColor(rating) {
+                    if (rating >= 2400) return "#FF0000";
+                    else if (rating >= 2100) return "#FF8C00";
+                    else if (rating >= 1900) return "#AA00AA";
+                    else if (rating >= 1600) return "#0000FF";
+                    else if (rating >= 1400) return "#03A89E";
+                    else if (rating >= 1200) return "#008000";
+                    else return "#808080";
+                }
+                jQuery(function ($) {
+                    $("#" + "ranking-table").DataTable();
                 });
-
-            table.append("tbody")
-                .selectAll("tr")
-                .data(list)
-                .enter()
-                .append("tr")
-                .selectAll("td")
-                .data(function(row) {
-                    return d3.entries(row);
-                })
-                .enter()
-                .append("td")
-                .append("div")
-                .text(function(d, i) {
-                    return d.value;
-                })
-                .style("color", function(d, i) {
-                    if (i == 1) {
-                        var name = d.value;
-                        if (user_info[name]) return decideColor(user_info[name].rating);
-                        else return "black";
-                    } else return "black";
-                })
-                .attr("class", function(d, i) {
-                    if (i == 1) {
-                        var name = d.value;
-                        if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
-                        else return d.key;
-                    } else return d.key;
-                })
-                .style("display", function(d, i) {
-                    if (i == 1) {
-                        return "inline-block";
-                    }
-                });
-            // table.selectAll("td")
-            //     .attr("class", function(d) {
-            //         return d.key;
-            //     })
-
-            var legendary = document.getElementsByClassName("legendary-grandmaster");
-            console.log(legendary);
-            //.append("text");
-            table.selectAll("div.userID")
-                .on("mouseover", function(d) {
-                    d3.select(this).style("cursor", "pointer");
-                })
-                .on("mouseout", function(d) {
-                    d3.select(this).style("cursor", "default");
-                })
-                .on("click", function(d) {
-                    window.open("https://codeforces.com/profile/" + d.value, '_blank');
-                });
-            // .attr("href", function(d) {
-            //     return "https://codeforces.com/profile/Mojumbo";
-            // });
-
-            function decideColor(rating) {
-                if (rating >= 2400) return "#FF0000";
-                else if (rating >= 2200) return "#FF8C00";
-                else if (rating >= 1900) return "#AA00AA";
-                else if (rating >= 1600) return "#0000FF";
-                else if (rating >= 1400) return "#03A89E";
-                else if (rating >= 1200) return "#008000";
-                else return "#808080";
+                prev_tag = tag;
             }
-            jQuery(function($) {
-                $("#" + "ranking-table").DataTable();
-            });
-            prev_tag = tag;
+
         }
     </script>
 </body>
