@@ -21,20 +21,19 @@
 
         <div class="tab_area">
             <label class="tab1_label" for="tab1">Radar Chart</label>
-            <label class="tab2_label" for="tab2">tab2</label>
+            <label class="tab2_label" for="tab2">Tag Ranking</label>
             <label class="tab3_label" for="tab3">tab3</label>
         </div>
         <div class="panel_area">
             <div id="panel1" class="tab_panel">
                 <div class="box_1">
                     <br><br>
-                    <h1>&nbsp;&nbsp;User</h1>
                     <form id="form1" action="#" method="GET" class="cp_iptxt">
-                        <input type="text" id="You" alue="" placeholder="You"><br>
-                        <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br></span>
-                        <input type="text" id="Rivals" value="" placeholder="Rival(s)"><br><br>
+                        <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
+                        <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
+                        <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br>
                         <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
-                        <select name="form2" id="form2">
+                        <select name="form2" onchange="enter_clicked()" id="form2">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -48,7 +47,7 @@
                             <option value="10">10</option>
                         </select>
                         <br><br>
-                        <input type="button" name="Enter" onclick="enter_clicked()" value="Enter" />
+                        <input type="button" class="btn-primary" name="Enter" onclick="enter_clicked()" value="Enter" />
                     </form>
                 </div>
 
@@ -61,7 +60,7 @@
                 </div>
             </div>
             <div id="panel2" class="tab_panel">
-                <p>panel2</p>
+
             </div>
             <div id="panel3" class="tab_panel">
                 <p>panel3</p>
@@ -80,7 +79,7 @@
         var legendVals = []
 
         var hash = {};
-        d3.json("./user_data/small_hash_data.json").then(function(data) {
+        d3.json("./user_data/hash_data.json").then(function(data) {
             hash = JSON.parse(JSON.stringify(data));
             console.log(hash["Mojumbo"]);
             console.log(hash["holeguma"]);
@@ -184,8 +183,6 @@
 
         function showLegend() {
             let legend = d3.select("#legend-div")
-                .attr("width", 100)
-                .attr("height", 1000)
                 .selectAll("g")
                 .data(legendVals)
                 .enter()

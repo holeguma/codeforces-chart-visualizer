@@ -1,5 +1,6 @@
 body {
-    background-color: white;
+    width: 1100px;
+    height: 600px;
 }
 
 .tab_wrap {
@@ -9,8 +10,6 @@ body {
     fill: #242424;
     text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
     cursor: default;
-    width: 1500px;
-    height: 1000px;
     margin-right: auto;
 }
 
@@ -28,12 +27,13 @@ input[type="radio"] {
     margin: 0 5px;
     display: inline-block;
     padding: 12px 0;
-    color: darkgray;
-    background: #ddd;
+    color: white;
+    background: gray;
     text-align: center;
     font-size: 13px;
     cursor: pointer;
     transition: ease 0.2s;
+    text-shadow: none;
 }
 
 .tab_area label:hover {
@@ -45,7 +45,8 @@ input[type="radio"] {
 }
 
 .tab_panel {
-    width: 100%;
+    width: 1050px;
+    height: 550px;
     padding: 10px 0;
     display: none;
 }
@@ -58,7 +59,7 @@ input[type="radio"] {
 }
 
 #tab1:checked~.tab_area .tab1_label {
-    background: #fff;
+    background: gainsboro;
     color: #000;
 }
 
@@ -67,7 +68,7 @@ input[type="radio"] {
 }
 
 #tab2:checked~.tab_area .tab2_label {
-    background: #fff;
+    background: gainsboro;
     color: #000;
 }
 
@@ -76,7 +77,7 @@ input[type="radio"] {
 }
 
 #tab3:checked~.tab_area .tab3_label {
-    background: #fff;
+    background: gainsboro;
     color: #000;
 }
 
@@ -87,27 +88,25 @@ input[type="radio"] {
 .cp_iptxt {
     position: relative;
     width: 400px;
-    margin: 40px 15px;
+    margin: 40px 3%;
 }
 
 .cp_iptxt input[type=text] {
     font: 15px/24px sans-serif;
     box-sizing: border-box;
-    width: 300px;
-    margin: 8px 0;
+    width: 350px;
     padding: 0.3em;
     transition: 0.3s;
     border: 1px solid #1b2538;
     border-radius: 4px;
     outline: none;
+    padding-left: 10px;
 }
 
 .cp_iptxt input[type=text]:focus {
-    border-color: #da3c41;
-}
-
-.cp_iptxt input[type=text] {
-    padding-left: 40px;
+    border: 1px solid #da3c41;
+    outline: none;
+    box-shadow: 0 0 5px 1px rgba(218, 60, 65, .5);
 }
 
 .cp_iptxt i {
@@ -129,7 +128,7 @@ input[type="radio"] {
     text-align: left;
     color: black;
     width: 375px;
-    height: 1000px;
+    height: 550px;
     margin: auto auto auto 70px;
     padding: auto auto auto 90px;
     background-color: white;
@@ -139,8 +138,8 @@ input[type="radio"] {
     display: inline-block;
     vertical-align: middle;
     color: black;
-    width: 450px;
-    height: 1000px;
+    width: 500px;
+    height: 550px;
     padding: auto auto auto 0px;
     background-color: white;
 }
@@ -150,7 +149,7 @@ input[type="radio"] {
     vertical-align: middle;
     color: black;
     width: 100px;
-    height: 1000px;
+    height: 550px;
     margin: auto auto auto 20px;
     padding: auto auto auto auto;
     background-color: white;
@@ -163,6 +162,30 @@ input[type="radio"] {
 }
 
 span.sample1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.42857143;
+    color: #333;
     font-weight: 500;
-    font-size: 1.5em;
+    margin: 100px auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    cursor: pointer;
+    touch-action: manipulation;
+    text-shadow: none;
+    margin: auto auto auto 300px
+}
+
+#legend-div {
+    width: 100px;
 }

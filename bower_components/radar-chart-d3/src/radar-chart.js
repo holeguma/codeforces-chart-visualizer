@@ -83,10 +83,18 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         Format = d3.format(cfg.format), //Formatting
         angleSlice = Math.PI * 2 / total; //The width in radians of each "slice"
 
+
+    const exp = 2;
+
     //Scale for the radius
-    const rScale = d3.scaleLinear()
-        .range([0, radius])
-        .domain([0, maxValue]);
+    const rScale = d3.scalePow()
+        .exponent(exp)
+        .domain([1, maxValue])
+        .range([0, radius]);
+
+    const linearScale = d3.scaleLinear()
+        .domain([0, maxValue])
+        .range([0, radius]);
 
     /////////////////////////////////////////////////////////
     //////////// Create the container SVG and g /////////////
@@ -146,7 +154,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .attr("dy", "0.4em")
         .style("font-size", "10px")
         .attr("fill", "#737373")
-        .text(d => Format(maxValue * d / cfg.levels) + cfg.unit);
+        .text(d => Format(1.0 * maxValue * Math.sqrt(d) / Math.sqrt(cfg.levels)) + cfg.unit);
 
     /////////////////////////////////////////////////////////
     //////////////////// Draw the axes //////////////////////
@@ -174,8 +182,8 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .style("font-size", "11px")
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
-        .attr("x", (d, i) => rScale(maxValue * cfg.labelFactor) * cos(angleSlice * i - HALF_PI))
-        .attr("y", (d, i) => rScale(maxValue * cfg.labelFactor) * sin(angleSlice * i - HALF_PI))
+        .attr("x", (d, i) => linearScale(maxValue * cfg.labelFactor) * cos(angleSlice * i - HALF_PI))
+        .attr("y", (d, i) => linearScale(maxValue * cfg.labelFactor) * sin(angleSlice * i - HALF_PI))
         .text(d => d)
         .call(wrap, cfg.wrapWidth);
 
