@@ -5,7 +5,7 @@ let n_contests = 1260;
 
 var hash = {};
 var ranking = {};
-var data = JSON.parse(fs.readFileSync("./user_data/small_hash_data.json", 'utf8'));
+var data = JSON.parse(fs.readFileSync("./user_data/hash_data.json", 'utf8'));
 hash = JSON.parse(JSON.stringify(data));
 var n_users = Object.keys(hash).length;
 //console.log(n_users);
@@ -17,8 +17,9 @@ function compare(u1, u2) {
 }
 async function makeRanking() {
     for (var i = 0; i < n_users; i++) {
+        if (i % 1000 == 0) console.log(i);
         for (tag in hash[names[i]].tags) {
-            //console.log(tag);
+            //console.log(tag); 
             if (!ranking[tag]) {
                 ranking[tag] = [];
             }
@@ -35,13 +36,15 @@ async function makeRanking() {
     for (tag in ranking) {
         console.log(tag);
         ranking[tag].sort(compare);
-        for (var i = 0; i < ranking[tag].length; i++) {
+        console.log("sorted");
+        for (var i = 0, N = ranking[tag].length; i < N; i++) {
             ranking[tag][i].rank = i + 1;
+            if (i % 10000 == 0) console.log(i);
         }
     }
 }
 
 makeRanking().then(function() {
     var json_data = JSON.stringify(ranking);
-    fs.writeFileSync('./user_data/small_ranking_data-2.json', json_data);
+    fs.writeFileSync('./user_data/ranking_data.json', json_data);
 })
