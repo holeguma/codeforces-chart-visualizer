@@ -263,6 +263,15 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .enter().append("g")
         .attr("class", "radarCircleWrapper");
 
+    const tooltip = g.append("text")
+        .attr("class", "tooltip")
+        .attr('x', 0)
+        .attr('y', 0)
+        .style("font-size", "12px")
+        .style('display', 'none')
+        .attr("text-anchor", "middle")
+        .attr("dy", "0.35em");
+
     //Append a set of invisible circles on top for the mouseover pop-up
     blobCircleWrapper.selectAll(".radarInvisibleCircle")
         .data(d => d.axes)
@@ -278,6 +287,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
                 .attr('y', this.cy.baseVal.value - 10)
                 .transition()
                 .style('display', 'block')
+                .style("opacity", 1.0)
                 .attr('fill', function() {
                     if (d.value >= 2400) return "#FF0000";
                     else if (d.value >= 2100) return "#FF8C00";
@@ -291,17 +301,12 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         })
         .on("mouseleft", function() {
             tooltip.transition()
-                .style('display', 'none').text('');
+                .style('display', 'none')
+                .style("opacity", 0.0)
+                .text('');
         });
 
-    const tooltip = g.append("text")
-        .attr("class", "tooltip")
-        .attr('x', 0)
-        .attr('y', 0)
-        .style("font-size", "12px")
-        .style('display', 'none')
-        .attr("text-anchor", "middle")
-        .attr("dy", "0.35em");
+
 
     if (cfg.legend !== false && typeof cfg.legend === "object") {
         let legendZone = svg.append('g');

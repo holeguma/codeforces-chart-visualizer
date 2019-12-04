@@ -1,88 +1,10 @@
 body {
-    width: 1100px;
+    width: 1200px;
     height: 600px;
-}
-
-.tab_wrap {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 1000;
-    fill: #242424;
-    /* text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff; */
-    cursor: default;
-    margin-right: auto;
 }
 
 input[type="radio"] {
     display: none;
-}
-
-.tab_area {
-    font-size: 0;
-    margin: 0 10px;
-}
-
-.tab_area label {
-    width: 150px;
-    margin: 0 5px;
-    display: inline-block;
-    padding: 12px 0;
-    color: white;
-    background: gray;
-    text-align: center;
-    font-size: 13px;
-    cursor: pointer;
-    transition: ease 0.2s;
-    text-shadow: none;
-}
-
-.tab_area label:hover {
-    opacity: 0.5;
-}
-
-.panel_area {
-    background: #fff;
-}
-
-.tab_panel {
-    width: 1200px;
-    height: 550px;
-    padding: 10px 0;
-    display: none;
-}
-
-.tab_panel p {
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-align: center;
-    width: 200px;
-}
-
-#tab1:checked~.tab_area .tab1_label {
-    background: gainsboro;
-    color: #000;
-}
-
-#tab1:checked~.panel_area #panel1 {
-    display: block;
-}
-
-#tab2:checked~.tab_area .tab2_label {
-    background: gainsboro;
-    color: #000;
-}
-
-#tab2:checked~.panel_area #panel2 {
-    display: block;
-}
-
-#tab3:checked~.tab_area .tab3_label {
-    background: gainsboro;
-    color: #000;
-}
-
-#tab3:checked~.panel_area #panel3 {
-    display: block;
 }
 
 .cp_iptxt {
@@ -131,17 +53,17 @@ input[type="radio"] {
     height: 550px;
     margin: auto auto auto 70px;
     padding: auto auto auto 90px;
-    background-color: white;
 }
 
 .box_2 {
     display: inline-block;
     vertical-align: middle;
     color: black;
-    width: 500px;
+    width: 450px;
     height: 550px;
     padding: auto auto auto 0px;
-    background-color: white;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 
 .box_3 {
@@ -150,9 +72,8 @@ input[type="radio"] {
     color: black;
     width: 100px;
     height: 550px;
-    margin: auto auto auto 20px;
+    margin-top: 100px;
     padding: auto auto auto auto;
-    background-color: white;
 }
 
 span.sample1 {
