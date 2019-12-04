@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_ranking.css')}}">
-    <script>
-    </script>
 </head>
 
 <body>
@@ -34,14 +32,18 @@
         </div>
     </nav>
     <h1 id="title">Ranking</h1>
-    <table>
+    <table style="width:80%">
         <thead></thead>
         <tbody></tbody>
     </table>
-    <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()">user</label>
-    <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
-    <form action="#" method="GET" onchange="makeTable()">
-        <select name="form2" id="form2">
+    <div class="form-group">
+        <label>&nbsp;&nbsp;</label>
+        <label><input type="radio" class="radio-inline" id="radio_user" name="d5" onchange="makeTable()">user</label>
+        <label><input type="radio" class="radio-inline" id="radio_country" name="d5" onchange="makeTable()">country</label>
+        <form action="#" method="GET" onchange="makeTable()">
+            <div class="setwidth">
+                <div class="col-xs-3">
+                    <select class="form-control" name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
             <option value="divide and conquer">divide and conquer</option>
             <option value="math">math</option>
@@ -77,17 +79,20 @@
             <option value="chinese remainder theorem">chinese remainder theorem</option>
             <option value="schedules">schedules</option>
         </select>
-        <input type="button" name="apply" onclick="makeTable()" value="apply" />
-    </form>
+                </div>
+                <div class="col-xs-offset-2 col-xs-10">
+                    <input type="button" id="rankingbtn" class="btn btn-primary" name="apply" onclick="makeTable()" value="apply" />
+                </div>
+            </div>
+        </form>
+    </div>
     <script type="text/javascript">
         var prev_tag = "";
-        var user_info = JSON.parse('{{user_info|tojson|safe}}');
-
-        var ranking_data = JSON.parse('{{ranking_data|tojson|safe}}');
-
+        var user_info = JSON.parse('{{user_info|tojson}}');
+        var ranking_data = JSON.parse('{{ranking_data|tojson}}');
+        console.log(user_info['jcvb']);
 
         function makeTable() {
-
             if ($.fn.DataTable.isDataTable("#" + "ranking-table")) {
                 $("#" + "ranking-table").DataTable().destroy();
             }
@@ -113,7 +118,6 @@
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
-
                 //タイトルを追加する
                 table.append("thead")
                     .append("tr")
@@ -124,7 +128,6 @@
                     .text(function(d) {
                         return d;
                     });
-
                 table.append("tbody")
                     .selectAll("tr")
                     .data(list)
@@ -141,7 +144,7 @@
                         return d.value;
                     })
                     .style("display", function(d, i) {
-                        if (i == 1) {
+                        if (i == 3) {
                             return "inline-block";
                         }
                     });
@@ -155,8 +158,8 @@
                 var tag = document.getElementById("form2").value;
                 var title = document.getElementById("title");
                 title.innerHTML = (tag + " Ranking");
-
                 list = ranking_data[tag];
+                console.log(list);
                 var titles = []; //タイトルのリスト
                 for (title in list[0]) {
                     titles.push(title);
@@ -168,7 +171,6 @@
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
-
                 //タイトルを追加する
                 table.append("thead")
                     .append("tr")
@@ -179,7 +181,6 @@
                     .text(function(d) {
                         return d;
                     });
-
                 table.append("tbody")
                     .selectAll("tr")
                     .data(list)
@@ -196,25 +197,24 @@
                         return d.value;
                     })
                     .style("color", function(d, i) {
-                        if (i == 1) {
+                        if (i == 3) {
                             var name = d.value;
                             if (user_info[name]) return decideColor(user_info[name].rating);
                             else return "black";
                         } else return "black";
                     })
                     .attr("class", function(d, i) {
-                        if (i == 1) {
+                        if (i == 3) {
                             var name = d.value;
                             if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
                             else return d.key;
                         } else return d.key;
                     })
                     .style("display", function(d, i) {
-                        if (i == 1) {
+                        if (i == 3) {
                             return "inline-block";
                         }
                     });
-
                 var legendary = document.getElementsByClassName("legendary-grandmaster");
                 console.log(legendary);
                 //.append("text");
@@ -243,7 +243,6 @@
                 });
                 prev_tag = tag;
             }
-
         }
     </script>
 </body>

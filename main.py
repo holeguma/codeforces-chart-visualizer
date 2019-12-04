@@ -16,7 +16,7 @@ def index():
 
 @app.route('/ranking')
 def ranking():
-    with open("./user_data/small_hash_data.json") as f:
+    with open("./user_data/user_info.json") as f:
         user_info = json.load(f)
     with open("./user_data/ranking_data_1000.json") as f:
         ranking_data = json.load(f)

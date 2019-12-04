@@ -2,6 +2,10 @@ table {
     /* border-collapse: collapse; */
 }
 
+#title {
+    margin-top: 30px;
+}
+
 th,
 td {
     /* border: solid 1px; */
@@ -25,3 +29,24 @@ tr:nth-child(even) {
 td:nth-of-type(2) {
     font-weight: bold;
 }
+
+div {
+    display: block !important;
+}
+
+div.form-group {
+    padding-left: 10px !important;
+}
+
+div.col-xs-offset-2 {
+    margin-bottom: 20px !important;
+}
+
+h1#title {
+    padding-left: 20px !important;
+}
+
+
+/* #rankingbtn {
+    margin-bottom: 10px !important;
+} */
