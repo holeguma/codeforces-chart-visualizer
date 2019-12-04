@@ -12,6 +12,7 @@ const HALF_PI = Math.PI / 2;
 
 const RadarChart = function RadarChart(parent_selector, data, options) {
     //Wraps SVG text - Taken from http://bl.ocks.org/mbostock/7555321
+
     const wrap = (text, width) => {
             text.each(function() {
                 var text = d3.select(this),
@@ -273,11 +274,19 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
         .style("fill", "none")
         .style("pointer-events", "all")
         .on("mouseenter", function(d, i) {
-            tooltip
-                .attr('x', this.cx.baseVal.value - 10)
+            tooltip.attr('x', this.cx.baseVal.value - 10)
                 .attr('y', this.cy.baseVal.value - 10)
                 .transition()
                 .style('display', 'block')
+                .attr('fill', function() {
+                    if (d.value >= 2400) return "#FF0000";
+                    else if (d.value >= 2100) return "#FF8C00";
+                    else if (d.value >= 1900) return "#AA00AA";
+                    else if (d.value >= 1600) return "#0000FF";
+                    else if (d.value >= 1400) return "#03A89E";
+                    else if (d.value >= 1200) return "#008000";
+                    else return "#808080";
+                })
                 .text(Format(d.value) + cfg.unit);
         })
         .on("mouseleft", function() {

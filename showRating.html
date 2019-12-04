@@ -31,10 +31,9 @@
                     <form id="form1" action="#" method="GET" class="cp_iptxt">
                         <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
                         <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
-                        <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br>
+                        <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br><br>
                         <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
                         <select name="form2" onchange="enter_clicked()" id="form2">
-                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -60,7 +59,7 @@
                 </div>
             </div>
             <div id="panel2" class="tab_panel">
-
+                <iframe src="./showRanking.html" height="600" width="1100" scrolling="no" frameborder="0"></iframe>
             </div>
             <div id="panel3" class="tab_panel">
                 <p>panel3</p>
@@ -79,7 +78,7 @@
         var legendVals = []
 
         var hash = {};
-        d3.json("./user_data/hash_data.json").then(function(data) {
+        d3.json("./user_data/small_hash_data.json").then(function(data) {
             hash = JSON.parse(JSON.stringify(data));
             console.log(hash["Mojumbo"]);
             console.log(hash["holeguma"]);
@@ -92,11 +91,14 @@
 
         })
 
+        d3.json("./user_data/user_info.json").then(function(data) {
+            userInfo = JSON.parse(JSON.stringify(data));
+            console.log(userInfo["Mojumbo"]);
+        })
+
         function showBarGraph() {
             var svg = d3.select("body")
                 .append("svg")
-                .attr("width", 1200)
-                .attr("height", 1000);
             svg.selectAll("rect")
                 .data(data[0].axes)
                 .enter()
@@ -204,9 +206,24 @@
                 .text(function(d, i) {
                     return d;
                 })
-                .attr("class", "textselected")
+                .attr('class', function(d) {
+                    if (userInfo[d]['rating'] >= 3000) return "legendary-grandmaster";
+
+                })
+                .attr('fill', function(d) {
+                    if (userInfo[d]['rating'] >= 2400) return "#FF0000";
+                    else if (userInfo[d]['rating'] >= 2100) return "#FF8C00";
+                    else if (userInfo[d]['rating'] >= 1900) return "#AA00AA";
+                    else if (userInfo[d]['rating'] >= 1600) return "#0000FF";
+                    else if (userInfo[d]['rating'] >= 1400) return "#03A89E";
+                    else if (userInfo[d]['rating'] >= 1200) return "#008000";
+                    else return "#808080";
+                })
                 .style("text-anchor", "start")
-                .style("font-size", 15);
+                .style("font-size", 15)
+                .attr("class", function(d) {
+                    if (userInfo[d]['rating'] >= 3000) return "legendary-grandmaster";
+                });
 
             legend.attr("transform", function(d, i) {
                 {
