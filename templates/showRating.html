@@ -32,7 +32,10 @@
     </header>
 
     <div class="box_1">
-        <br><br><br><br>
+        <br><br>
+        <label><input type="radio" id="radio_user" name="d5" checked>user</label>
+        <label><input type="radio" id="radio_country" name="d5">country</label>
+        <br><br>
         <form id="form1" action="#" method="GET" class="cp_iptxt">
             <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
             <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
@@ -73,6 +76,8 @@
 
         var userInfo = JSON.parse('{{user_info|tojson|safe}}');
 
+        var country_hash = JSON.parse('{{country_hash|tojson|safe}}');
+
         jQuery(function($) {
             $(function() {
                 var $header = $('#top-head');
@@ -112,27 +117,51 @@
         }
 
         function enter_clicked() {
-            var minSolveCount = document.getElementById("form2").value;
-            console.log(minSolveCount);
-            data = [];
-            legendVals = [];
-            selected_tags = {};
-            var you = document.getElementById("You").value;
-            var rivals = (document.getElementById("Rivals").value).split(',');
-            for (var tag in hash[you]["tags"]) {
-                if (hash[you]["tags"][tag] == you) continue;
-                if (hash[you]["tags"][tag].solveCount >= minSolveCount) {
-                    //console.log(tag)
-                    selected_tags[tag] = true;
+            if (document.getElementById("radio_user").checked) {
+                var minSolveCount = document.getElementById("form2").value;
+                console.log(minSolveCount);
+                data = [];
+                legendVals = [];
+                selected_tags = {};
+                var you = document.getElementById("You").value;
+                var rivals = (document.getElementById("Rivals").value).split(',');
+                for (var tag in hash[you]["tags"]) {
+                    if (hash[you]["tags"][tag] == you) continue;
+                    if (hash[you]["tags"][tag].solveCount >= minSolveCount) {
+                        //console.log(tag)
+                        selected_tags[tag] = true;
+                    }
                 }
+                addUserInRadarChart(you);
+                for (let rival of rivals) {
+                    addUserInRadarChart(rival);
+                }
+                d3.selectAll("g").remove();
+                showUserLegend();
+                showUserRaderChart();
+            } else {
+                var minSolveCount = document.getElementById("form2").value;
+                console.log(minSolveCount);
+                data = [];
+                legendVals = [];
+                selected_tags = {};
+                var you = document.getElementById("You").value;
+                var rivals = (document.getElementById("Rivals").value).split(',');
+                for (var tag in country_hash[you]["tags"]) {
+                    if (country_hash[you]["tags"][tag] == you) continue;
+                    if (country_hash[you]["tags"][tag].solveCount >= minSolveCount) {
+                        //console.log(tag)
+                        selected_tags[tag] = true;
+                    }
+                }
+                addCountryInRadarChart(you);
+                for (let rival of rivals) {
+                    addCountryInRadarChart(rival);
+                }
+                d3.selectAll("g").remove();
+                showCountryLegend();
+                showCountryRaderChart();
             }
-            addUserInRadarChart(you);
-            for (let rival of rivals) {
-                addUserInRadarChart(rival);
-            }
-            d3.selectAll("g").remove();
-            showLegend();
-            showRaderChart();
         }
 
         //テキストボックスに書かれたユーザーの情報をRadar Chart用に保持
@@ -154,8 +183,26 @@
             legendVals.push(name);
         }
 
+        function addCountryInRadarChart(name) {
+            max_rating = 0;
+            newSeries = {};
+            newSeries.name = name;
+            newSeries.axes = [];
+            for (let tag in country_hash[name]["tags"]) {
+                if (country_hash[name]["tags"][tag] == name) continue;
+                if (!selected_tags[tag]) continue;
+                if (max_rating < country_hash[name]["tags"][tag].value) max_rating = country_hash[name]["tags"][tag].value;
+                newSeries.axes.push({
+                    "axis": tag,
+                    "value": country_hash[name]["tags"][tag].value
+                });
+            }
+            data.push(newSeries);
+            legendVals.push(name);
+        }
+
         //Radar Chartを表示
-        function showRaderChart() {
+        function showUserRaderChart() {
             var margin = {
                 top: 50,
                 right: 80,
@@ -178,7 +225,7 @@
             let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
         }
 
-        function showLegend() {
+        function showUserLegend() {
             let legend = d3.select("#legend-div")
                 .selectAll("g")
                 .data(legendVals)
@@ -219,6 +266,62 @@
                 .attr("class", function(d) {
                     if (userInfo[d]['rating'] >= 3000) return "legendary-grandmaster";
                 });
+
+            legend.attr("transform", function(d, i) {
+                {
+                    return "translate(0," + (i + 1) * 40 + ")";
+                }
+            });
+        }
+        //Radar Chartを表示
+        function showCountryRaderChart() {
+            var margin = {
+                top: 50,
+                right: 80,
+                bottom: 80,
+                left: 80
+            };
+            var radarChartOptions = {
+                w: 300,
+                h: 300,
+                margin: margin,
+                maxValue: max_rating,
+                opacityArea: 0.1,
+                levels: 6,
+                roundStrokes: false,
+                color: d3.scaleOrdinal(d3.schemeCategory10),
+                format: '.0f'
+            };
+            console.log(data);
+
+            let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+
+        function showCountryLegend() {
+            let legend = d3.select("#legend-div")
+                .selectAll("g")
+                .data(legendVals)
+                .enter()
+                .append("g")
+                .attr("class", "legends");
+
+            legend.append('rect')
+                .attr("x", 0)
+                .attr("y", 10)
+                .attr("width", 10)
+                .attr("height", 10)
+                .style("fill", function(d, i) {
+                    return d3.schemeCategory10[i];
+                });
+
+            legend.append('text')
+                .attr("x", 20)
+                .attr("y", 20)
+                .text(function(d, i) {
+                    return d;
+                })
+                .style("text-anchor", "start")
+                .style("font-size", 15);
 
             legend.attr("transform", function(d, i) {
                 {

@@ -11,7 +11,9 @@ def index():
         hash = json.load(f)
     with open("./user_data/user_info.json") as f:
         user_info = json.load(f)
-    return render_template('showRating.html', hash=hash, user_info=user_info)
+    with open("./user_data/country_hash_data.json") as f:
+        country_hash = json.load(f)
+    return render_template('showRating.html', hash=hash, user_info=user_info, country_hash=country_hash)
 
 
 @app.route('/ranking')
