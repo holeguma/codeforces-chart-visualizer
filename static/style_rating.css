@@ -3,10 +3,6 @@ body {
     height: 600px;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
 .cp_iptxt {
     position: relative;
     width: 400px;
@@ -111,15 +107,18 @@ text.legendary-grandmaster:first-letter {
 
 .inner {
     width: 980px;
-    margin:0 auto 0 30px;
+    margin: 0 auto 0 30px;
 }
+
 .inner:after {
     content: "";
     clear: both;
     display: block;
 }
- 
+
+
 /* header */
+
 #top-head {
     top: 0px;
     position: absolute;
@@ -132,19 +131,23 @@ text.legendary-grandmaster:first-letter {
     z-index: 999;
     background-color: #007bff;
 }
+
 #top-head a,
 #top-head {
     color: #fff;
     text-decoration: none;
 }
+
 #top-head .inner {
     position: relative;
 }
+
 #top-head .logo {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     float: left;
     font-size: 18px;
 }
+
 #global-nav ul {
     font-family: 'Lato', sans-serif;
     list-style: none;
@@ -153,14 +156,18 @@ text.legendary-grandmaster:first-letter {
     bottom: 0;
     font-size: 14px;
 }
+
 #global-nav ul li {
     float: left;
 }
+
 #global-nav ul li a {
     padding: 0 30px;
 }
- 
+
+
 /* Fixed */
+
 #top-head.fixed {
     margin-top: 0;
     top: 0;
@@ -168,22 +175,26 @@ text.legendary-grandmaster:first-letter {
     padding-top: 10px;
     height: 55px;
     background: #fff;
-    background: rgba(255,255,255,.7);
+    background: rgba(255, 255, 255, .7);
     transition: top 0.65s ease-in;
     -webkit-transition: top 0.65s ease-in;
     -moz-transition: top 0.65s ease-in;
 }
+
 #top-head.fixed .logo {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
     color: #333;
 }
+
 #top-head.fixed #global-nav ul li a {
     color: #333;
     padding: 0 20px;
 }
- 
+
+
 /* Toggle Button */
+
 #nav-toggle {
     display: none;
     position: absolute;
@@ -194,9 +205,11 @@ text.legendary-grandmaster:first-letter {
     cursor: pointer;
     z-index: 101;
 }
+
 #nav-toggle div {
     position: relative;
 }
+
 #nav-toggle span {
     display: block;
     position: absolute;
@@ -208,12 +221,15 @@ text.legendary-grandmaster:first-letter {
     -moz-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
 }
+
 #nav-toggle span:nth-child(1) {
     top: 0;
 }
+
 #nav-toggle span:nth-child(2) {
     top: 11px;
 }
+
 #nav-toggle span:nth-child(3) {
     top: 22px;
 }
