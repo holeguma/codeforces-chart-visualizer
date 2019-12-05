@@ -2,48 +2,40 @@
 <html lang="en">
 
 <head>
-
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Table sort example in D3</title>
-
-    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_ranking.css')}}">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md  navbar-dark bg-primary fixed-top">
-        <a href="/" class="navbar-brand">Codeforces Chart Visualizer(kari)</a>
-
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav1">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav1">
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a href="/" class="nav-link">Radar Chart</a></li>
-                <li class="nav-item "><a href="/ranking" class="nav-link">Ranking</a></li>
-            </ul>
+    <header id="top-head">
+        <div class="inner">
+            <div id="mobile-head">
+                <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+            </div>
+            <nav id="global-nav">
+                <ul>
+                    <li><a href="/">Radar Chart</a></li>
+                    <li><a href="/ranking">Ranking</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
+    <br><br><br>
     <h1 id="title">Ranking</h1>
-    <table style="width:80%">
+    <table>
         <thead></thead>
         <tbody></tbody>
     </table>
-    <div class="form-group">
-        <label>&nbsp;&nbsp;</label>
-        <label><input type="radio" class="radio-inline" id="radio_user" name="d5" onchange="makeTable()">user</label>
-        <label><input type="radio" class="radio-inline" id="radio_country" name="d5" onchange="makeTable()">country</label>
-        <form action="#" method="GET" onchange="makeTable()">
-            <div class="setwidth">
-                <div class="col-xs-3">
-                    <select class="form-control" name="form2" id="form2">
+    <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()">user</label>
+    <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
+    <form action="#" method="GET" onchange="makeTable()">
+        <select name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
             <option value="divide and conquer">divide and conquer</option>
             <option value="math">math</option>
@@ -79,13 +71,9 @@
             <option value="chinese remainder theorem">chinese remainder theorem</option>
             <option value="schedules">schedules</option>
         </select>
-                </div>
-                <div class="col-xs-offset-2 col-xs-10">
-                    <input type="button" id="rankingbtn" class="btn btn-primary" name="apply" onclick="makeTable()" value="apply" />
-                </div>
-            </div>
-        </form>
-    </div>
+        <input type="button" name="apply" onclick="makeTable()" value="apply" />
+        <br><br>
+    </form>
     <script type="text/javascript">
         var prev_tag = "";
         var user_info = JSON.parse('{{user_info|tojson}}');
@@ -246,5 +234,7 @@
         }
     </script>
 </body>
+
+</html>
 
 </html>
