@@ -19,7 +19,7 @@ th {
 }
 
 .legendary-grandmaster:first-letter {
-    color: black;
+    color: black !important;
 }
 
 tr:nth-child(even) {
@@ -49,6 +49,7 @@ h1#title {
 div.userID {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+    display: inline !important;
 }
 
 #rankingbtn {
@@ -185,3 +186,9 @@ div.userID {
     top: 22px;
 }
 
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .1em 0 .1em;
+  /* vertical-align: -0.1em; */
+}
