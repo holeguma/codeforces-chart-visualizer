@@ -1,1 +1,1061 @@
-{"Ascension Island": ["u{1F1E6}", "u{1F1E8}"], "Andorra": ["u{1F1E6}", "u{1F1E9}"], "United Arab Emirates": ["u{1F1E6}", "u{1F1EA}"], "Afghanistan": ["u{1F1E6}", "u{1F1EB}"], "Antigua and Barbuda": ["u{1F1E6}", "u{1F1EC}"], "Anguilla": ["u{1F1E6}", "u{1F1EE}"], "Albania": ["u{1F1E6}", "u{1F1F1}"], "Armenia": ["u{1F1E6}", "u{1F1F2}"], "Angola": ["u{1F1E6}", "u{1F1F4}"], "Antarctica": ["u{1F1E6}", "u{1F1F6}"], "Argentine": ["u{1F1E6}", "u{1F1F7}"], "American Samoa": ["u{1F1E6}", "u{1F1F8}"], "Austria": ["u{1F1E6}", "u{1F1F9}"], "Australia": ["u{1F1E6}", "u{1F1FA}"], "Aruba": ["u{1F1E6}", "u{1F1FC}"], "\u00c5land Islands": ["u{1F1E6}", "u{1F1FD}"], "Azerbaijan": ["u{1F1E6}", "u{1F1FF}"], "Bosnia and Herzegovina": ["u{1F1E7}", "u{1F1E6}"], "Barbados": ["u{1F1E7}", "u{1F1E7}"], "Bangladesh": ["u{1F1E7}", "u{1F1E9}"], "Belgium": ["u{1F1E7}", "u{1F1EA}"], "Burkina Faso": ["u{1F1E7}", "u{1F1EB}"], "Bulgaria": ["u{1F1E7}", "u{1F1EC}"], "Bahrain": ["u{1F1E7}", "u{1F1ED}"], "Burundi": ["u{1F1E7}", "u{1F1EE}"], "Benin": ["u{1F1E7}", "u{1F1EF}"], "Saint Barth\u00e9lemy": ["u{1F1E7}", "u{1F1F1}"], "Bermuda": ["u{1F1E7}", "u{1F1F2}"], "Brunei Darussalam": ["u{1F1E7}", "u{1F1F3}"], "Bolivia": ["u{1F1E7}", "u{1F1F4}"], "Bonaire, Saint Eustatius and Saba": ["u{1F1E7}", "u{1F1F6}"], "Brazil": ["u{1F1E7}", "u{1F1F7}"], "Bahamas": ["u{1F1E7}", "u{1F1F8}"], "Bhutan": ["u{1F1E7}", "u{1F1F9}"], "Bouvet Island": ["u{1F1E7}", "u{1F1FB}"], "Botswana": ["u{1F1E7}", "u{1F1FC}"], "Belarus": ["u{1F1E7}", "u{1F1FE}"], "Belize": ["u{1F1E7}", "u{1F1FF}"], "Canada": ["u{1F1E8}", "u{1F1E6}"], "Cocos (Keeling) Islands": ["u{1F1E8}", "u{1F1E8}"], "Democratic Republic of the Congo": ["u{1F1E8}", "u{1F1E9}"], "Central African": ["u{1F1E8}", "u{1F1EB}"], "Republic of the Congo": ["u{1F1E8}", "u{1F1EC}"], "Switzerland": ["u{1F1E8}", "u{1F1ED}"], "Cote d'Ivoire": ["u{1F1E8}", "u{1F1EE}"], "Cook Islands": ["u{1F1E8}", "u{1F1F0}"], "Chile": ["u{1F1E8}", "u{1F1F1}"], "Cameroon": ["u{1F1E8}", "u{1F1F2}"], "China": ["u{1F1E8}", "u{1F1F3}"], "Colombia": ["u{1F1E8}", "u{1F1F4}"], "Clipperton Island": ["u{1F1E8}", "u{1F1F5}"], "Costa Rica": ["u{1F1E8}", "u{1F1F7}"], "Cuba": ["u{1F1E8}", "u{1F1FA}"], "Cape Verde": ["u{1F1E8}", "u{1F1FB}"], "Curacao": ["u{1F1E8}", "u{1F1FC}"], "Christmas Island": ["u{1F1E8}", "u{1F1FD}"], "Cyprus": ["u{1F1E8}", "u{1F1FE}"], "Czech": ["u{1F1E8}", "u{1F1FF}"], "Germany": ["u{1F1E9}", "u{1F1EA}"], "Diego Garcia": ["u{1F1E9}", "u{1F1EC}"], "Djibouti": ["u{1F1E9}", "u{1F1EF}"], "Denmark": ["u{1F1E9}", "u{1F1F0}"], "Dominica": ["u{1F1E9}", "u{1F1F2}"], "Dominican": ["u{1F1E9}", "u{1F1F4}"], "Algeria": ["u{1F1E9}", "u{1F1FF}"], "Ceuta and Melilla": ["u{1F1EA}", "u{1F1E6}"], "Ecuador": ["u{1F1EA}", "u{1F1E8}"], "Estonia": ["u{1F1EA}", "u{1F1EA}"], "Egypt": ["u{1F1EA}", "u{1F1EC}"], "Western Sahara": ["u{1F1EA}", "u{1F1ED}"], "Eritrea": ["u{1F1EA}", "u{1F1F7}"], "Spain": ["u{1F1EA}", "u{1F1F8}"], "Ethiopia": ["u{1F1EA}", "u{1F1F9}"], "European Union": ["u{1F1EA}", "u{1F1FA}"], "Finland": ["u{1F1EB}", "u{1F1EE}"], "Fiji ": ["u{1F1EB}", "u{1F1EF}"], "Falkland Islands": ["u{1F1EB}", "u{1F1F0}"], "Micronesia": ["u{1F1EB}", "u{1F1F2}"], "Faroe Islands": ["u{1F1EB}", "u{1F1F4}"], "French ": ["u{1F1EB}", "u{1F1F7}"], "Gabonese ": ["u{1F1EC}", "u{1F1E6}"], "United Kingdom": ["u{1F1EC}", "u{1F1E7}"], "Grenada": ["u{1F1EC}", "u{1F1E9}"], "Georgia": ["u{1F1EC}", "u{1F1EA}"], "French Guiana": ["u{1F1EC}", "u{1F1EB}"], "Guernsey": ["u{1F1EC}", "u{1F1EC}"], "Ghana": ["u{1F1EC}", "u{1F1ED}"], "Gibraltar": ["u{1F1EC}", "u{1F1EE}"], "Greenland": ["u{1F1EC}", "u{1F1F1}"], "Gambia": ["u{1F1EC}", "u{1F1F2}"], "Guinea": ["u{1F1EC}", "u{1F1F3}"], "Guadeloupe": ["u{1F1EC}", "u{1F1F5}"], "Equatorial Guinea": ["u{1F1EC}", "u{1F1F6}"], "Greece": ["u{1F1EC}", "u{1F1F7}"], "South Georgia and the South Sandwich Islands": ["u{1F1EC}", "u{1F1F8}"], "Guatemala": ["u{1F1EC}", "u{1F1F9}"], "Guam": ["u{1F1EC}", "u{1F1FA}"], "Guinea-Bissau": ["u{1F1EC}", "u{1F1FC}"], "Guyana": ["u{1F1EC}", "u{1F1FE}"], "Hong Kong ": ["u{1F1ED}", "u{1F1F0}"], "Heard Island and McDonald Islands": ["u{1F1ED}", "u{1F1F2}"], "Honduras": ["u{1F1ED}", "u{1F1F3}"], "Croatia": ["u{1F1ED}", "u{1F1F7}"], "Haiti": ["u{1F1ED}", "u{1F1F9}"], "Hungary": ["u{1F1ED}", "u{1F1FA}"], "Canary Islands": ["u{1F1EE}", "u{1F1E8}"], "Indonesia": ["u{1F1EE}", "u{1F1E9}"], "Ireland": ["u{1F1EE}", "u{1F1EA}"], "Israel": ["u{1F1EE}", "u{1F1F1}"], "Isle of Man": ["u{1F1EE}", "u{1F1F2}"], "India": ["u{1F1EE}", "u{1F1F3}"], "British Indian Ocean Territory": ["u{1F1EE}", "u{1F1F4}"], "Iraq": ["u{1F1EE}", "u{1F1F6}"], "Iran": ["u{1F1EE}", "u{1F1F7}"], "Iceland": ["u{1F1EE}", "u{1F1F8}"], "Italy": ["u{1F1EE}", "u{1F1F9}"], "Jersey": ["u{1F1EF}", "u{1F1EA}"], "Jamaica": ["u{1F1EF}", "u{1F1F2}"], "Jordan": ["u{1F1EF}", "u{1F1F4}"], "Japan": ["u{1F1EF}", "u{1F1F5}"], "Kenya": ["u{1F1F0}", "u{1F1EA}"], "Kyrgyz": ["u{1F1F0}", "u{1F1EC}"], "Cambodia": ["u{1F1F0}", "u{1F1ED}"], "Kiribati": ["u{1F1F0}", "u{1F1EE}"], "Comoros": ["u{1F1F0}", "u{1F1F2}"], "Saint Christopher and Nevis": ["u{1F1F0}", "u{1F1F3}"], "North Korea": ["u{1F1F0}", "u{1F1F5}"], "South Korea": ["u{1F1F0}", "u{1F1F7}"], "Kuwait": ["u{1F1F0}", "u{1F1FC}"], "Cayman Islands": ["u{1F1F0}", "u{1F1FE}"], "Kazakhstan": ["u{1F1F0}", "u{1F1FF}"], "Laos": ["u{1F1F1}", "u{1F1E6}"], "Lebanon": ["u{1F1F1}", "u{1F1E7}"], "Saint Lucia": ["u{1F1F1}", "u{1F1E8}"], "Liechtenstein": ["u{1F1F1}", "u{1F1EE}"], "Sri Lanka": ["u{1F1F1}", "u{1F1F0}"], "Liberia": ["u{1F1F1}", "u{1F1F7}"], "Lesotho": ["u{1F1F1}", "u{1F1F8}"], "Lithuania": ["u{1F1F1}", "u{1F1F9}"], "Luxembourg": ["u{1F1F1}", "u{1F1FA}"], "Latvia": ["u{1F1F1}", "u{1F1FB}"], "Libya": ["u{1F1F1}", "u{1F1FE}"], "Morocco": ["u{1F1F2}", "u{1F1E6}"], "Monaco": ["u{1F1F2}", "u{1F1E8}"], "Moldova": ["u{1F1F2}", "u{1F1E9}"], "Montenegro": ["u{1F1F2}", "u{1F1EA}"], "Saint Martin": ["u{1F1F2}", "u{1F1EB}"], "Madagascar": ["u{1F1F2}", "u{1F1EC}"], "Marshall": ["u{1F1F2}", "u{1F1ED}"], "Macedonia": ["u{1F1F2}", "u{1F1F0}"], "Mali": ["u{1F1F2}", "u{1F1F1}"], "Myanmar": ["u{1F1F2}", "u{1F1F2}"], "Mongolia": ["u{1F1F2}", "u{1F1F3}"], "Macao": ["u{1F1F2}", "u{1F1F4}"], "Northern Mariana": ["u{1F1F2}", "u{1F1F5}"], "Martinique": ["u{1F1F2}", "u{1F1F6}"], "Mauritania": ["u{1F1F2}", "u{1F1F7}"], "Montserrat": ["u{1F1F2}", "u{1F1F8}"], "Malta": ["u{1F1F2}", "u{1F1F9}"], "Mauritius": ["u{1F1F2}", "u{1F1FA}"], "Maldives": ["u{1F1F2}", "u{1F1FB}"], "Malawi": ["u{1F1F2}", "u{1F1FC}"], "Mexico": ["u{1F1F2}", "u{1F1FD}"], "Malaysia": ["u{1F1F2}", "u{1F1FE}"], "Mozambique": ["u{1F1F2}", "u{1F1FF}"], "Namibia": ["u{1F1F3}", "u{1F1E6}"], "New Caledonia": ["u{1F1F3}", "u{1F1E8}"], "Niger": ["u{1F1F3}", "u{1F1EA}"], "Norfolk Island": ["u{1F1F3}", "u{1F1EB}"], "Nigeria": ["u{1F1F3}", "u{1F1EC}"], "Nicaragua": ["u{1F1F3}", "u{1F1EE}"], "Netherlands": ["u{1F1F3}", "u{1F1F1}"], "Norway": ["u{1F1F3}", "u{1F1F4}"], "Nepal": ["u{1F1F3}", "u{1F1F5}"], "Nauru": ["u{1F1F3}", "u{1F1F7}"], "Niue": ["u{1F1F3}", "u{1F1FA}"], "New Zealand": ["u{1F1F3}", "u{1F1FF}"], "Oman": ["u{1F1F4}", "u{1F1F2}"], "Panama": ["u{1F1F5}", "u{1F1E6}"], "Peru": ["u{1F1F5}", "u{1F1EA}"], "French Polynesia": ["u{1F1F5}", "u{1F1EB}"], "Papua New Guinea": ["u{1F1F5}", "u{1F1EC}"], "Philippines": ["u{1F1F5}", "u{1F1ED}"], "Pakistan": ["u{1F1F5}", "u{1F1F0}"], "Poland": ["u{1F1F5}", "u{1F1F1}"], "St. Pierre and Miquelon": ["u{1F1F5}", "u{1F1F2}"], "Pitcairn": ["u{1F1F5}", "u{1F1F3}"], "Puerto Rico": ["u{1F1F5}", "u{1F1F7}"], "Palestine": ["u{1F1F5}", "u{1F1F8}"], "Portuguese": ["u{1F1F5}", "u{1F1F9}"], "Palau": ["u{1F1F5}", "u{1F1FC}"], "Paraguay": ["u{1F1F5}", "u{1F1FE}"], "Qatar": ["u{1F1F6}", "u{1F1E6}"], "Reunion": ["u{1F1F7}", "u{1F1EA}"], "Romania": ["u{1F1F7}", "u{1F1F4}"], "Serbia": ["u{1F1F7}", "u{1F1F8}"], "Russian": ["u{1F1F7}", "u{1F1FA}"], "Rwanda": ["u{1F1F7}", "u{1F1FC}"], "Saudi Arabia": ["u{1F1F8}", "u{1F1E6}"], "Solomon Islands": ["u{1F1F8}", "u{1F1E7}"], "Seychelles": ["u{1F1F8}", "u{1F1E8}"], "Sudan": ["u{1F1F8}", "u{1F1E9}"], "Sweden": ["u{1F1F8}", "u{1F1EA}"], "Singapore": ["u{1F1F8}", "u{1F1EC}"], "Saint Helena": ["u{1F1F8}", "u{1F1ED}"], "Slovenia": ["u{1F1F8}", "u{1F1EE}"], "Svalbard and Jan Mayen": ["u{1F1F8}", "u{1F1EF}"], "Slovakia": ["u{1F1F8}", "u{1F1F0}"], "Sierra Leone": ["u{1F1F8}", "u{1F1F1}"], "San Marino": ["u{1F1F8}", "u{1F1F2}"], "Senegal": ["u{1F1F8}", "u{1F1F3}"], "Somalia": ["u{1F1F8}", "u{1F1F4}"], "Suriname": ["u{1F1F8}", "u{1F1F7}"], "South Sudan": ["u{1F1F8}", "u{1F1F8}"], "Sao Tome and Principe": ["u{1F1F8}", "u{1F1F9}"], "El Salvador": ["u{1F1F8}", "u{1F1FB}"], "Sint Maarten": ["u{1F1F8}", "u{1F1FD}"], "Syrian": ["u{1F1F8}", "u{1F1FE}"], "Swaziland": ["u{1F1F8}", "u{1F1FF}"], "Tristan da Cunha": ["u{1F1F9}", "u{1F1E6}"], "Turks And Caicos": ["u{1F1F9}", "u{1F1E8}"], "Chad": ["u{1F1F9}", "u{1F1E9}"], "Terres australes et antarctiques fran\u00e7aises": ["u{1F1F9}", "u{1F1EB}"], "Togo": ["u{1F1F9}", "u{1F1EC}"], "Thailand": ["u{1F1F9}", "u{1F1ED}"], "Tajikistan": ["u{1F1F9}", "u{1F1EF}"], "Tokelau": ["u{1F1F9}", "u{1F1F0}"], "Timor-Leste": ["u{1F1F9}", "u{1F1F1}"], "Turkmenistan": ["u{1F1F9}", "u{1F1F2}"], "Tunisia": ["u{1F1F9}", "u{1F1F3}"], "Tonga": ["u{1F1F9}", "u{1F1F4}"], "Turkey": ["u{1F1F9}", "u{1F1F7}"], "Trinidad and Tobago": ["u{1F1F9}", "u{1F1F9}"], "Tuvalu": ["u{1F1F9}", "u{1F1FB}"], "Taiwan": ["u{1F1F9}", "u{1F1FC}"], "Tanzania": ["u{1F1F9}", "u{1F1FF}"], "Ukraine": ["u{1F1FA}", "u{1F1E6}"], "Uganda": ["u{1F1FA}", "u{1F1EC}"], "US Minor Outlying Is.": ["u{1F1FA}", "u{1F1F2}"], "United Nations": ["u{1F1FA}", "u{1F1F3}"], "United States of America": ["u{1F1FA}", "u{1F1F8}"], "Uruguay": ["u{1F1FA}", "u{1F1FE}"], "Uzbekistan": ["u{1F1FA}", "u{1F1FF}"], "Vatican": ["u{1F1FB}", "u{1F1E6}"], "Saint Vincent and the Grenadines": ["u{1F1FB}", "u{1F1E8}"], "Venezuela": ["u{1F1FB}", "u{1F1EA}"], "Virgin Is., British": ["u{1F1FB}", "u{1F1EC}"], "Virgin Is., U.S.": ["u{1F1FB}", "u{1F1EE}"], "Viet Nam": ["u{1F1FB}", "u{1F1F3}"], "Vanuatu": ["u{1F1FB}", "u{1F1FA}"], "Wallis And Futuna": ["u{1F1FC}", "u{1F1EB}"], "Samoa": ["u{1F1FC}", "u{1F1F8}"], "Kosovo": ["u{1F1FD}", "u{1F1F0}"], "Yemen": ["u{1F1FE}", "u{1F1EA}"], "Mayotte": ["u{1F1FE}", "u{1F1F9}"], "South Africa": ["u{1F1FF}", "u{1F1E6}"], "Zambia": ["u{1F1FF}", "u{1F1F2}"], "Zimbabwe": ["u{1F1FF}", "u{1F1FC}"], "England": ["u{1F3F4}", "u{E0067}", "u{E0062}", "u{E0065}", "u{E006E}", "u{E0067}", "u{E007F}"], "Scotland": ["u{1F3F4}", "u{E0067}", "u{E0062}", "u{E0073}", "u{E0063}", "u{E0074}", "u{E007F}"], "Wales": ["u{1F3F4}", "u{E0067}", "u{E0062}", "u{E0077}", "u{E006C}", "u{E0073}", "u{E007F}"]}
+{
+    "Ascension Island": [
+        "1F1E6",
+        "1F1E8"
+    ],
+    "Andorra": [
+        "1F1E6",
+        "1F1E9"
+    ],
+    "United Arab Emirates": [
+        "1F1E6",
+        "1F1EA"
+    ],
+    "Afghanistan": [
+        "1F1E6",
+        "1F1EB"
+    ],
+    "Antigua and Barbuda": [
+        "1F1E6",
+        "1F1EC"
+    ],
+    "Anguilla": [
+        "1F1E6",
+        "1F1EE"
+    ],
+    "Albania": [
+        "1F1E6",
+        "1F1F1"
+    ],
+    "Armenia": [
+        "1F1E6",
+        "1F1F2"
+    ],
+    "Angola": [
+        "1F1E6",
+        "1F1F4"
+    ],
+    "Antarctica": [
+        "1F1E6",
+        "1F1F6"
+    ],
+    "Argentina": [
+        "1F1E6",
+        "1F1F7"
+    ],
+    "American Samoa": [
+        "1F1E6",
+        "1F1F8"
+    ],
+    "Austria": [
+        "1F1E6",
+        "1F1F9"
+    ],
+    "Australia": [
+        "1F1E6",
+        "1F1FA"
+    ],
+    "Aruba": [
+        "1F1E6",
+        "1F1FC"
+    ],
+    "\u00c5land Islands": [
+        "1F1E6",
+        "1F1FD"
+    ],
+    "Azerbaijan": [
+        "1F1E6",
+        "1F1FF"
+    ],
+    "Bosnia and Herzegovina": [
+        "1F1E7",
+        "1F1E6"
+    ],
+    "Barbados": [
+        "1F1E7",
+        "1F1E7"
+    ],
+    "Bangladesh": [
+        "1F1E7",
+        "1F1E9"
+    ],
+    "Belgium": [
+        "1F1E7",
+        "1F1EA"
+    ],
+    "Burkina Faso": [
+        "1F1E7",
+        "1F1EB"
+    ],
+    "Bulgaria": [
+        "1F1E7",
+        "1F1EC"
+    ],
+    "Bahrain": [
+        "1F1E7",
+        "1F1ED"
+    ],
+    "Burundi": [
+        "1F1E7",
+        "1F1EE"
+    ],
+    "Benin": [
+        "1F1E7",
+        "1F1EF"
+    ],
+    "Saint Barthelemy": [
+        "1F1E7",
+        "1F1F1"
+    ],
+    "Bermuda": [
+        "1F1E7",
+        "1F1F2"
+    ],
+    "Brunei Darussalam": [
+        "1F1E7",
+        "1F1F3"
+    ],
+    "Bolivia": [
+        "1F1E7",
+        "1F1F4"
+    ],
+    "Bonaire, Saint Eustatius and Saba": [
+        "1F1E7",
+        "1F1F6"
+    ],
+    "Brazil": [
+        "1F1E7",
+        "1F1F7"
+    ],
+    "Bahamas": [
+        "1F1E7",
+        "1F1F8"
+    ],
+    "Bhutan": [
+        "1F1E7",
+        "1F1F9"
+    ],
+    "Bouvet Island": [
+        "1F1E7",
+        "1F1FB"
+    ],
+    "Botswana": [
+        "1F1E7",
+        "1F1FC"
+    ],
+    "Belarus": [
+        "1F1E7",
+        "1F1FE"
+    ],
+    "Belize": [
+        "1F1E7",
+        "1F1FF"
+    ],
+    "Canada": [
+        "1F1E8",
+        "1F1E6"
+    ],
+    "Cocos (Keeling) Islands": [
+        "1F1E8",
+        "1F1E8"
+    ],
+    "Democratic Republic of the Congo": [
+        "1F1E8",
+        "1F1E9"
+    ],
+    "Central African": [
+        "1F1E8",
+        "1F1EB"
+    ],
+    "Republic of the Congo": [
+        "1F1E8",
+        "1F1EC"
+    ],
+    "Switzerland": [
+        "1F1E8",
+        "1F1ED"
+    ],
+    "Cote d'Ivoire": [
+        "1F1E8",
+        "1F1EE"
+    ],
+    "Cook Islands": [
+        "1F1E8",
+        "1F1F0"
+    ],
+    "Chile": [
+        "1F1E8",
+        "1F1F1"
+    ],
+    "Cameroon": [
+        "1F1E8",
+        "1F1F2"
+    ],
+    "China": [
+        "1F1E8",
+        "1F1F3"
+    ],
+    "Colombia": [
+        "1F1E8",
+        "1F1F4"
+    ],
+    "Clipperton Island": [
+        "1F1E8",
+        "1F1F5"
+    ],
+    "Costa Rica": [
+        "1F1E8",
+        "1F1F7"
+    ],
+    "Cuba": [
+        "1F1E8",
+        "1F1FA"
+    ],
+    "Cape Verde": [
+        "1F1E8",
+        "1F1FB"
+    ],
+    "Curacao": [
+        "1F1E8",
+        "1F1FC"
+    ],
+    "Christmas Island": [
+        "1F1E8",
+        "1F1FD"
+    ],
+    "Cyprus": [
+        "1F1E8",
+        "1F1FE"
+    ],
+    "Czechia": [
+        "1F1E8",
+        "1F1FF"
+    ],
+    "Germany": [
+        "1F1E9",
+        "1F1EA"
+    ],
+    "Diego Garcia": [
+        "1F1E9",
+        "1F1EC"
+    ],
+    "Djibouti": [
+        "1F1E9",
+        "1F1EF"
+    ],
+    "Denmark": [
+        "1F1E9",
+        "1F1F0"
+    ],
+    "Dominica": [
+        "1F1E9",
+        "1F1F2"
+    ],
+    "Dominican": [
+        "1F1E9",
+        "1F1F4"
+    ],
+    "Algeria": [
+        "1F1E9",
+        "1F1FF"
+    ],
+    "Ceuta and Melilla": [
+        "1F1EA",
+        "1F1E6"
+    ],
+    "Ecuador": [
+        "1F1EA",
+        "1F1E8"
+    ],
+    "Estonia": [
+        "1F1EA",
+        "1F1EA"
+    ],
+    "Egypt": [
+        "1F1EA",
+        "1F1EC"
+    ],
+    "Western Sahara": [
+        "1F1EA",
+        "1F1ED"
+    ],
+    "Eritrea": [
+        "1F1EA",
+        "1F1F7"
+    ],
+    "Spain": [
+        "1F1EA",
+        "1F1F8"
+    ],
+    "Ethiopia": [
+        "1F1EA",
+        "1F1F9"
+    ],
+    "European Union": [
+        "1F1EA",
+        "1F1FA"
+    ],
+    "Finland": [
+        "1F1EB",
+        "1F1EE"
+    ],
+    "Fiji": [
+        "1F1EB",
+        "1F1EF"
+    ],
+    "Falkland Islands": [
+        "1F1EB",
+        "1F1F0"
+    ],
+    "Micronesia": [
+        "1F1EB",
+        "1F1F2"
+    ],
+    "Faroe Islands": [
+        "1F1EB",
+        "1F1F4"
+    ],
+    "France": [
+        "1F1EB",
+        "1F1F7"
+    ],
+    "Gabon": [
+        "1F1EC",
+        "1F1E6"
+    ],
+    "United Kingdom": [
+        "1F1EC",
+        "1F1E7"
+    ],
+    "Grenada": [
+        "1F1EC",
+        "1F1E9"
+    ],
+    "Georgia": [
+        "1F1EC",
+        "1F1EA"
+    ],
+    "French Guiana": [
+        "1F1EC",
+        "1F1EB"
+    ],
+    "Guernsey": [
+        "1F1EC",
+        "1F1EC"
+    ],
+    "Ghana": [
+        "1F1EC",
+        "1F1ED"
+    ],
+    "Gibraltar": [
+        "1F1EC",
+        "1F1EE"
+    ],
+    "Greenland": [
+        "1F1EC",
+        "1F1F1"
+    ],
+    "Gambia": [
+        "1F1EC",
+        "1F1F2"
+    ],
+    "Guinea": [
+        "1F1EC",
+        "1F1F3"
+    ],
+    "Guadeloupe": [
+        "1F1EC",
+        "1F1F5"
+    ],
+    "Equatorial Guinea": [
+        "1F1EC",
+        "1F1F6"
+    ],
+    "Greece": [
+        "1F1EC",
+        "1F1F7"
+    ],
+    "South Georgia and the South Sandwich Islands": [
+        "1F1EC",
+        "1F1F8"
+    ],
+    "Guatemala": [
+        "1F1EC",
+        "1F1F9"
+    ],
+    "Guam": [
+        "1F1EC",
+        "1F1FA"
+    ],
+    "Guinea-Bissau": [
+        "1F1EC",
+        "1F1FC"
+    ],
+    "Guyana": [
+        "1F1EC",
+        "1F1FE"
+    ],
+    "Hong Kong": [
+        "1F1ED",
+        "1F1F0"
+    ],
+    "Heard Island and McDonald Islands": [
+        "1F1ED",
+        "1F1F2"
+    ],
+    "Honduras": [
+        "1F1ED",
+        "1F1F3"
+    ],
+    "Croatia": [
+        "1F1ED",
+        "1F1F7"
+    ],
+    "Haiti": [
+        "1F1ED",
+        "1F1F9"
+    ],
+    "Hungary": [
+        "1F1ED",
+        "1F1FA"
+    ],
+    "Canary Islands": [
+        "1F1EE",
+        "1F1E8"
+    ],
+    "Indonesia": [
+        "1F1EE",
+        "1F1E9"
+    ],
+    "Ireland": [
+        "1F1EE",
+        "1F1EA"
+    ],
+    "Israel": [
+        "1F1EE",
+        "1F1F1"
+    ],
+    "Isle of Man": [
+        "1F1EE",
+        "1F1F2"
+    ],
+    "India": [
+        "1F1EE",
+        "1F1F3"
+    ],
+    "British Indian Ocean Territory": [
+        "1F1EE",
+        "1F1F4"
+    ],
+    "Iraq": [
+        "1F1EE",
+        "1F1F6"
+    ],
+    "Iran": [
+        "1F1EE",
+        "1F1F7"
+    ],
+    "Iceland": [
+        "1F1EE",
+        "1F1F8"
+    ],
+    "Italy": [
+        "1F1EE",
+        "1F1F9"
+    ],
+    "Jersey": [
+        "1F1EF",
+        "1F1EA"
+    ],
+    "Jamaica": [
+        "1F1EF",
+        "1F1F2"
+    ],
+    "Jordan": [
+        "1F1EF",
+        "1F1F4"
+    ],
+    "Japan": [
+        "1F1EF",
+        "1F1F5"
+    ],
+    "Kenya": [
+        "1F1F0",
+        "1F1EA"
+    ],
+    "Kyrgyz": [
+        "1F1F0",
+        "1F1EC"
+    ],
+    "Cambodia": [
+        "1F1F0",
+        "1F1ED"
+    ],
+    "Kiribati": [
+        "1F1F0",
+        "1F1EE"
+    ],
+    "Comoros": [
+        "1F1F0",
+        "1F1F2"
+    ],
+    "Saint Christopher and Nevis": [
+        "1F1F0",
+        "1F1F3"
+    ],
+    "North Korea": [
+        "1F1F0",
+        "1F1F5"
+    ],
+    "South Korea": [
+        "1F1F0",
+        "1F1F7"
+    ],
+    "Kuwait": [
+        "1F1F0",
+        "1F1FC"
+    ],
+    "Cayman Islands": [
+        "1F1F0",
+        "1F1FE"
+    ],
+    "Kazakhstan": [
+        "1F1F0",
+        "1F1FF"
+    ],
+    "Laos": [
+        "1F1F1",
+        "1F1E6"
+    ],
+    "Lebanon": [
+        "1F1F1",
+        "1F1E7"
+    ],
+    "Saint Lucia": [
+        "1F1F1",
+        "1F1E8"
+    ],
+    "Liechtenstein": [
+        "1F1F1",
+        "1F1EE"
+    ],
+    "Sri Lanka": [
+        "1F1F1",
+        "1F1F0"
+    ],
+    "Liberia": [
+        "1F1F1",
+        "1F1F7"
+    ],
+    "Lesotho": [
+        "1F1F1",
+        "1F1F8"
+    ],
+    "Lithuania": [
+        "1F1F1",
+        "1F1F9"
+    ],
+    "Luxembourg": [
+        "1F1F1",
+        "1F1FA"
+    ],
+    "Latvia": [
+        "1F1F1",
+        "1F1FB"
+    ],
+    "Libya": [
+        "1F1F1",
+        "1F1FE"
+    ],
+    "Morocco": [
+        "1F1F2",
+        "1F1E6"
+    ],
+    "Monaco": [
+        "1F1F2",
+        "1F1E8"
+    ],
+    "Moldova": [
+        "1F1F2",
+        "1F1E9"
+    ],
+    "Montenegro": [
+        "1F1F2",
+        "1F1EA"
+    ],
+    "Saint Martin": [
+        "1F1F2",
+        "1F1EB"
+    ],
+    "Madagascar": [
+        "1F1F2",
+        "1F1EC"
+    ],
+    "Marshall": [
+        "1F1F2",
+        "1F1ED"
+    ],
+    "Macedonia": [
+        "1F1F2",
+        "1F1F0"
+    ],
+    "Mali": [
+        "1F1F2",
+        "1F1F1"
+    ],
+    "Myanmar": [
+        "1F1F2",
+        "1F1F2"
+    ],
+    "Mongolia": [
+        "1F1F2",
+        "1F1F3"
+    ],
+    "Macao": [
+        "1F1F2",
+        "1F1F4"
+    ],
+    "Northern Mariana": [
+        "1F1F2",
+        "1F1F5"
+    ],
+    "Martinique": [
+        "1F1F2",
+        "1F1F6"
+    ],
+    "Mauritania": [
+        "1F1F2",
+        "1F1F7"
+    ],
+    "Montserrat": [
+        "1F1F2",
+        "1F1F8"
+    ],
+    "Malta": [
+        "1F1F2",
+        "1F1F9"
+    ],
+    "Mauritius": [
+        "1F1F2",
+        "1F1FA"
+    ],
+    "Maldives": [
+        "1F1F2",
+        "1F1FB"
+    ],
+    "Malawi": [
+        "1F1F2",
+        "1F1FC"
+    ],
+    "Mexico": [
+        "1F1F2",
+        "1F1FD"
+    ],
+    "Malaysia": [
+        "1F1F2",
+        "1F1FE"
+    ],
+    "Mozambique": [
+        "1F1F2",
+        "1F1FF"
+    ],
+    "Namibia": [
+        "1F1F3",
+        "1F1E6"
+    ],
+    "New Caledonia": [
+        "1F1F3",
+        "1F1E8"
+    ],
+    "Niger": [
+        "1F1F3",
+        "1F1EA"
+    ],
+    "Norfolk Island": [
+        "1F1F3",
+        "1F1EB"
+    ],
+    "Nigeria": [
+        "1F1F3",
+        "1F1EC"
+    ],
+    "Nicaragua": [
+        "1F1F3",
+        "1F1EE"
+    ],
+    "Netherlands": [
+        "1F1F3",
+        "1F1F1"
+    ],
+    "Norway": [
+        "1F1F3",
+        "1F1F4"
+    ],
+    "Nepal": [
+        "1F1F3",
+        "1F1F5"
+    ],
+    "Nauru": [
+        "1F1F3",
+        "1F1F7"
+    ],
+    "Niue": [
+        "1F1F3",
+        "1F1FA"
+    ],
+    "New Zealand": [
+        "1F1F3",
+        "1F1FF"
+    ],
+    "Oman": [
+        "1F1F4",
+        "1F1F2"
+    ],
+    "Panama": [
+        "1F1F5",
+        "1F1E6"
+    ],
+    "Peru": [
+        "1F1F5",
+        "1F1EA"
+    ],
+    "French Polynesia": [
+        "1F1F5",
+        "1F1EB"
+    ],
+    "Papua New Guinea": [
+        "1F1F5",
+        "1F1EC"
+    ],
+    "Philippines": [
+        "1F1F5",
+        "1F1ED"
+    ],
+    "Pakistan": [
+        "1F1F5",
+        "1F1F0"
+    ],
+    "Poland": [
+        "1F1F5",
+        "1F1F1"
+    ],
+    "St. Pierre and Miquelon": [
+        "1F1F5",
+        "1F1F2"
+    ],
+    "Pitcairn": [
+        "1F1F5",
+        "1F1F3"
+    ],
+    "Puerto Rico": [
+        "1F1F5",
+        "1F1F7"
+    ],
+    "Palestine": [
+        "1F1F5",
+        "1F1F8"
+    ],
+    "Portugal": [
+        "1F1F5",
+        "1F1F9"
+    ],
+    "Palau": [
+        "1F1F5",
+        "1F1FC"
+    ],
+    "Paraguay": [
+        "1F1F5",
+        "1F1FE"
+    ],
+    "Qatar": [
+        "1F1F6",
+        "1F1E6"
+    ],
+    "Reunion": [
+        "1F1F7",
+        "1F1EA"
+    ],
+    "Romania": [
+        "1F1F7",
+        "1F1F4"
+    ],
+    "Serbia": [
+        "1F1F7",
+        "1F1F8"
+    ],
+    "Russia": [
+        "1F1F7",
+        "1F1FA"
+    ],
+    "Rwanda": [
+        "1F1F7",
+        "1F1FC"
+    ],
+    "Saudi Arabia": [
+        "1F1F8",
+        "1F1E6"
+    ],
+    "Solomon Islands": [
+        "1F1F8",
+        "1F1E7"
+    ],
+    "Seychelles": [
+        "1F1F8",
+        "1F1E8"
+    ],
+    "Sudan": [
+        "1F1F8",
+        "1F1E9"
+    ],
+    "Sweden": [
+        "1F1F8",
+        "1F1EA"
+    ],
+    "Singapore": [
+        "1F1F8",
+        "1F1EC"
+    ],
+    "Saint Helena": [
+        "1F1F8",
+        "1F1ED"
+    ],
+    "Slovenia": [
+        "1F1F8",
+        "1F1EE"
+    ],
+    "Svalbard and Jan Mayen": [
+        "1F1F8",
+        "1F1EF"
+    ],
+    "Slovakia": [
+        "1F1F8",
+        "1F1F0"
+    ],
+    "Sierra Leone": [
+        "1F1F8",
+        "1F1F1"
+    ],
+    "San Marino": [
+        "1F1F8",
+        "1F1F2"
+    ],
+    "Senegal": [
+        "1F1F8",
+        "1F1F3"
+    ],
+    "Somalia": [
+        "1F1F8",
+        "1F1F4"
+    ],
+    "Suriname": [
+        "1F1F8",
+        "1F1F7"
+    ],
+    "South Sudan": [
+        "1F1F8",
+        "1F1F8"
+    ],
+    "Sao Tome and Principe": [
+        "1F1F8",
+        "1F1F9"
+    ],
+    "El Salvador": [
+        "1F1F8",
+        "1F1FB"
+    ],
+    "Sint Maarten": [
+        "1F1F8",
+        "1F1FD"
+    ],
+    "Syria": [
+        "1F1F8",
+        "1F1FE"
+    ],
+    "Swaziland": [
+        "1F1F8",
+        "1F1FF"
+    ],
+    "Tristan da Cunha": [
+        "1F1F9",
+        "1F1E6"
+    ],
+    "Turks And Caicos": [
+        "1F1F9",
+        "1F1E8"
+    ],
+    "Chad": [
+        "1F1F9",
+        "1F1E9"
+    ],
+    "Terres australes et antarctiques fran\u00e7aises": [
+        "1F1F9",
+        "1F1EB"
+    ],
+    "Togo": [
+        "1F1F9",
+        "1F1EC"
+    ],
+    "Thailand": [
+        "1F1F9",
+        "1F1ED"
+    ],
+    "Tajikistan": [
+        "1F1F9",
+        "1F1EF"
+    ],
+    "Tokelau": [
+        "1F1F9",
+        "1F1F0"
+    ],
+    "Timor-Leste": [
+        "1F1F9",
+        "1F1F1"
+    ],
+    "Turkmenistan": [
+        "1F1F9",
+        "1F1F2"
+    ],
+    "Tunisia": [
+        "1F1F9",
+        "1F1F3"
+    ],
+    "Tonga": [
+        "1F1F9",
+        "1F1F4"
+    ],
+    "Turkey": [
+        "1F1F9",
+        "1F1F7"
+    ],
+    "Trinidad and Tobago": [
+        "1F1F9",
+        "1F1F9"
+    ],
+    "Tuvalu": [
+        "1F1F9",
+        "1F1FB"
+    ],
+    "Taiwan": [
+        "1F1F9",
+        "1F1FC"
+    ],
+    "Tanzania": [
+        "1F1F9",
+        "1F1FF"
+    ],
+    "Ukraine": [
+        "1F1FA",
+        "1F1E6"
+    ],
+    "Uganda": [
+        "1F1FA",
+        "1F1EC"
+    ],
+    "US Minor Outlying Is.": [
+        "1F1FA",
+        "1F1F2"
+    ],
+    "United Nations": [
+        "1F1FA",
+        "1F1F3"
+    ],
+    "United States": [
+        "1F1FA",
+        "1F1F8"
+    ],
+    "Uruguay": [
+        "1F1FA",
+        "1F1FE"
+    ],
+    "Uzbekistan": [
+        "1F1FA",
+        "1F1FF"
+    ],
+    "Vatican": [
+        "1F1FB",
+        "1F1E6"
+    ],
+    "Saint Vincent and the Grenadines": [
+        "1F1FB",
+        "1F1E8"
+    ],
+    "Venezuela": [
+        "1F1FB",
+        "1F1EA"
+    ],
+    "British Virgin Islands": [
+        "1F1FB",
+        "1F1EC"
+    ],
+    "Virgin Is., U.S.": [
+        "1F1FB",
+        "1F1EE"
+    ],
+    "Vietnam": [
+        "1F1FB",
+        "1F1F3"
+    ],
+    "Vanuatu": [
+        "1F1FB",
+        "1F1FA"
+    ],
+    "Wallis And Futuna": [
+        "1F1FC",
+        "1F1EB"
+    ],
+    "Samoa": [
+        "1F1FC",
+        "1F1F8"
+    ],
+    "Kosovo": [
+        "1F1FD",
+        "1F1F0"
+    ],
+    "Yemen": [
+        "1F1FE",
+        "1F1EA"
+    ],
+    "Mayotte": [
+        "1F1FE",
+        "1F1F9"
+    ],
+    "South Africa": [
+        "1F1FF",
+        "1F1E6"
+    ],
+    "Zambia": [
+        "1F1FF",
+        "1F1F2"
+    ],
+    "Zimbabwe": [
+        "1F1FF",
+        "1F1FC"
+    ],
+    "England": [
+        "1F3F4",
+        "E0067",
+        "E0062",
+        "E0065",
+        "E006E",
+        "E0067",
+        "E007F"
+    ],
+    "Scotland": [
+        "1F3F4",
+        "E0067",
+        "E0062",
+        "E0073",
+        "E0063",
+        "E0074",
+        "E007F"
+    ],
+    "Wales": [
+        "1F3F4",
+        "E0067",
+        "E0062",
+        "E0077",
+        "E006C",
+        "E0073",
+        "E007F"
+    ]
+}
