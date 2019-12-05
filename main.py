@@ -24,7 +24,9 @@ def ranking():
         ranking_data = json.load(f)
     with open("./user_data/country_ranking_data.json") as f:
         country_ranking_data = json.load(f)
-    return render_template('showRanking.html', user_info=user_info, ranking_data=ranking_data, country_ranking_data=country_ranking_data)
+    with open("./user_data/country_code.json") as f:
+        country_code=json.load(f)
+    return render_template('showRanking.html', user_info=user_info, ranking_data=ranking_data, country_ranking_data=country_ranking_data, country_code=country_code)
 
 
 if __name__ == '__main__':
