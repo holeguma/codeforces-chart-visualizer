@@ -78,6 +78,7 @@
         var prev_tag = "";
         var user_info = JSON.parse('{{user_info|tojson}}');
         var ranking_data = JSON.parse('{{ranking_data|tojson}}');
+        var country_ranking_data = JSON.parse('{{country_ranking_data|tojson}}');
         console.log(user_info['jcvb']);
 
         function makeTable() {
@@ -94,7 +95,7 @@
                 var tag = document.getElementById("form2").value;
                 var title = document.getElementById("title");
                 title.innerHTML = (tag + " Ranking");
-                list = ranking_data[tag];
+                list = country_ranking_data[tag];
                 var titles = []; //タイトルのリスト
                 for (title in list[0]) {
                     titles.push(title);
