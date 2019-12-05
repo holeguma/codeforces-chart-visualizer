@@ -117,7 +117,7 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d;
                     });
                 table.append("tbody")
@@ -126,34 +126,34 @@
                     .enter()
                     .append("tr")
                     .selectAll("td")
-                    .data(function (row) {
+                    .data(function(row) {
                         return d3.entries(row);
                     })
                     .enter()
                     .append("td")
                     .append("div")
-                    .text(function (d, i) {
+                    .text(function(d, i) {
                         if (i == 3) {
                             var country = d.value;
                             if (country_code[country]) {
                                 var str = "";
                                 for (var i = 0; i < country_code[country].length; i++) {
-                                    console.log(country_code[country][i]);
+                                    //console.log(country_code[country][i]);
                                     str = str + String.fromCodePoint("0x" + country_code[country][i]);
                                 }
-                                console.log(str);
+                                //console.log(str);
                                 return str + d.value;
                             }
                         }
                         return d.value;
                     })
-                    .style("display", function (d, i) {
+                    .style("display", function(d, i) {
                         if (i == 3) {
                             return "inline-block";
                         }
                     });
                 twemoji.parse(document.body);
-                jQuery(function ($) {
+                jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
                 prev_tag = tag;
@@ -183,7 +183,7 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d;
                     });
                 table.append("tbody")
@@ -192,13 +192,13 @@
                     .enter()
                     .append("tr")
                     .selectAll("td")
-                    .data(function (row) {
+                    .data(function(row) {
                         return d3.entries(row);
                     })
                     .enter()
                     .append("td")
                     .append("div")
-                    .text(function (d, i) {
+                    .text(function(d, i) {
                         if (i == 3) {
                             var name = d.value;
                             var country = "unknown";
@@ -208,31 +208,31 @@
                             }
                             if (country_code[country]) {
                                 for (var i = 0; i < country_code[country].length; i++) {
-                                    console.log(country_code[country][i]);
+                                    //console.log(country_code[country][i]);
                                     str = str + String.fromCodePoint("0x" + country_code[country][i]);
                                 }
 
-                                console.log(str);
+                                //console.log(str);
                                 return str + d.value;
                             }
                         }
                         return d.value;
                     })
-                    .style("color", function (d, i) {
+                    .style("color", function(d, i) {
                         if (i == 3) {
                             var name = d.value;
                             if (user_info[name]) return decideColor(user_info[name].rating);
                             else return "black";
                         } else return "black";
                     })
-                    .attr("class", function (d, i) {
+                    .attr("class", function(d, i) {
                         if (i == 3) {
                             var name = d.value;
                             if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
                             else return d.key;
                         } else return d.key;
                     })
-                    .style("display", function (d, i) {
+                    .style("display", function(d, i) {
                         if (i == 3) {
                             return "inline-block";
                         }
@@ -242,13 +242,13 @@
                 console.log(legendary);
                 //.append("text");
                 table.selectAll("div.userID")
-                    .on("mouseover", function (d) {
+                    .on("mouseover", function(d) {
                         d3.select(this).style("cursor", "pointer");
                     })
-                    .on("mouseout", function (d) {
+                    .on("mouseout", function(d) {
                         d3.select(this).style("cursor", "default");
                     })
-                    .on("click", function (d) {
+                    .on("click", function(d) {
                         window.open("https://codeforces.com/profile/" + d.value, '_blank');
                     });
 
@@ -261,7 +261,7 @@
                     else if (rating >= 1200) return "#008000";
                     else return "#808080";
                 }
-                jQuery(function ($) {
+                jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
                 prev_tag = tag;
