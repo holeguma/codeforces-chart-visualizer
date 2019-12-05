@@ -8,6 +8,7 @@
     <title>Table sort example in D3</title>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_ranking.css')}}">
 </head>
@@ -27,7 +28,7 @@
         </div>
     </header>
     <br><br><br>
-    <h1 id="title">Ranking</h1>
+    <h1 id="title"> &#x1f1ef;&#x1f1f5; Ranking</h1>
     <table>
         <thead></thead>
         <tbody></tbody>
@@ -146,7 +147,7 @@
             function showUser() {
                 var tag = document.getElementById("form2").value;
                 var title = document.getElementById("title");
-                title.innerHTML = (tag + " Ranking");
+                title.textContent = (tag + " Ranking");
                 list = ranking_data[tag];
                 console.log(list);
                 var titles = []; //タイトルのリスト
@@ -183,6 +184,9 @@
                     .append("td")
                     .append("div")
                     .text(function(d, i) {
+                        if (i == 3) {
+                            return "\u{1F1EF}\u{1F1F5}" + d.value;
+                        }
                         return d.value;
                     })
                     .style("color", function(d, i) {
@@ -231,8 +235,13 @@
                     $("#" + "ranking-table").DataTable();
                 });
                 prev_tag = tag;
+                twemoji.parse(document.body);
             }
         }
+        twemoji.parse(document.body);
+    </script>
+    <script>
+        twemoji.parse(document.getElementsByTagName('div')
     </script>
 </body>
 
