@@ -77,7 +77,6 @@
         <br><br>
     </form>
     <script type="text/javascript">
-        var prev_tag = "";
         var user_info = JSON.parse('{{user_info|tojson}}');
         var ranking_data = JSON.parse('{{ranking_data|tojson}}');
         var country_ranking_data = JSON.parse('{{country_ranking_data|tojson}}');
@@ -99,10 +98,9 @@
                 var title = document.getElementById("title");
                 title.innerHTML = (tag + " Ranking");
                 list = country_ranking_data[tag];
-                var titles = []; //タイトルのリスト
-                for (title in list[0]) {
-                    titles.push(title);
-                }
+                console.log(list);
+                var titles = ["rank", "country", "rating", "solved"]; //タイトルのリスト
+
                 console.log(titles);
                 var id = "ranking-table";
                 var className = "table table-bordered";
@@ -110,7 +108,8 @@
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
-                //タイトルを追加する
+
+                var tr = table.selectAll("tr").data(list).enter().append("tr");
                 table.append("thead")
                     .append("tr")
                     .selectAll("th")
@@ -120,43 +119,52 @@
                     .text(function(d) {
                         return d;
                     });
-                table.append("tbody")
-                    .selectAll("tr")
-                    .data(list)
-                    .enter()
-                    .append("tr")
-                    .selectAll("td")
-                    .data(function(row) {
-                        return d3.entries(row);
+                tr.append("td")
+                    .attr("class", "rank")
+                    .html(function(d) {
+                        return d.rank;
                     })
-                    .enter()
-                    .append("td")
-                    .append("div")
-                    .text(function(d, i) {
-                        if (i == 3) {
-                            var country = d.value;
-                            if (country_code[country]) {
-                                var str = "";
-                                for (var i = 0; i < country_code[country].length; i++) {
-                                    //console.log(country_code[country][i]);
-                                    str = str + String.fromCodePoint("0x" + country_code[country][i]);
-                                }
-                                //console.log(str);
-                                return str + d.value;
+                tr.append("td")
+                    .attr("class", "userID")
+                    .html(function(d) {
+                        var name = d.userID;
+                        var country = d.userID;
+                        var str = "";
+
+                        if (country_code[country]) {
+                            for (var i = 0; i < country_code[country].length; i++) {
+                                //console.log(country_code[country][i]);
+                                str = str + String.fromCodePoint("0x" + country_code[country][i]);
                             }
+                            //console.log(str);
+                            return str;
                         }
-                        return d.value;
                     })
-                    .style("display", function(d, i) {
-                        if (i == 3) {
-                            return "inline-block";
-                        }
-                    });
+                    .append("user")
+                    .append("firstLetter")
+                    .text(function(d) {
+                        return d.userID.slice(0, 1);
+                    })
+                    .style("display", "inline")
+                    .append("second")
+                    .text(function(d) {
+                        return d.userID.slice(1);
+                    })
+                    .style("display", "inline")
+                tr.append("td")
+                    .attr("class", "rating")
+                    .html(function(d) {
+                        return d.rating;
+                    })
+                tr.append("td")
+                    .attr("class", "solved")
+                    .html(function(d) {
+                        return d.solved;
+                    })
                 twemoji.parse(document.body);
                 jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
-                prev_tag = tag;
             }
 
             function showUser() {
@@ -165,10 +173,8 @@
                 title.textContent = (tag + " Ranking");
                 list = ranking_data[tag];
                 console.log(list);
-                var titles = []; //タイトルのリスト
-                for (title in list[0]) {
-                    titles.push(title);
-                }
+                var titles = ["rank", "userID", "rating", "solved"]; //タイトルのリスト
+
                 console.log(titles);
                 var id = "ranking-table";
                 var className = "table table-bordered";
@@ -176,7 +182,8 @@
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
-                //タイトルを追加する
+
+                var tr = table.selectAll("tr").data(list).enter().append("tr");
                 table.append("thead")
                     .append("tr")
                     .selectAll("th")
@@ -186,62 +193,68 @@
                     .text(function(d) {
                         return d;
                     });
-                table.append("tbody")
-                    .selectAll("tr")
-                    .data(list)
-                    .enter()
-                    .append("tr")
-                    .selectAll("td")
-                    .data(function(row) {
-                        return d3.entries(row);
+                tr.append("td")
+                    .attr("class", "rank")
+                    .html(function(d) {
+                        return d.rank;
                     })
-                    .enter()
-                    .append("td")
-                    .append("div")
-                    .text(function(d, i) {
-                        if (i == 3) {
-                            var name = d.value;
-                            var country = "unknown";
-                            var str = "";
-                            if (user_info[name]) {
-                                if (user_info[name].country) country = user_info[name].country;
-                            }
-                            if (country_code[country]) {
-                                for (var i = 0; i < country_code[country].length; i++) {
-                                    //console.log(country_code[country][i]);
-                                    str = str + String.fromCodePoint("0x" + country_code[country][i]);
-                                }
-
-                                //console.log(str);
-                                return str + d.value;
-                            }
+                tr.append("td")
+                    .attr("class", "userID")
+                    .html(function(d) {
+                        var name = d.userID;
+                        var country = "unknown";
+                        var str = "";
+                        if (user_info[name]) {
+                            if (user_info[name].country) country = user_info[name].country;
                         }
-                        return d.value;
+                        if (country_code[country]) {
+                            for (var i = 0; i < country_code[country].length; i++) {
+                                //console.log(country_code[country][i]);
+                                str = str + String.fromCodePoint("0x" + country_code[country][i]);
+                            }
+                            //console.log(str);
+                            return str;
+                        }
                     })
+                    .append("user")
+                    .append("firstLetter")
+                    .text(function(d) {
+                        return d.userID.slice(0, 1);
+                    })
+                    .style("color", function(d) {
+                        var name = d.userID;
+                        if (user_info[name] && (user_info[name].rating >= 3000)) return "black";
+                        else if (user_info[name]) return decideColor(user_info[name].rating);
+                        else return "black";
+                    })
+                    .style("display", "inline")
+                    .append("second")
+                    .text(function(d) {
+                        return d.userID.slice(1);
+                    })
+                    .style("display", "inline")
                     .style("color", function(d, i) {
-                        if (i == 3) {
-                            var name = d.value;
-                            if (user_info[name]) return decideColor(user_info[name].rating);
-                            else return "black";
-                        } else return "black";
+                        var name = d.userID;
+                        if (user_info[name]) return decideColor(user_info[name].rating);
+                        else return "black";
                     })
                     .attr("class", function(d, i) {
-                        if (i == 3) {
-                            var name = d.value;
-                            if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
-                            else return d.key;
-                        } else return d.key;
+                        var name = d.userID;
+                        if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
                     })
-                    .style("display", function(d, i) {
-                        if (i == 3) {
-                            return "inline-block";
-                        }
-                    });
+                tr.append("td")
+                    .attr("class", "rating")
+                    .html(function(d) {
+                        return d.rating;
+                    })
+                tr.append("td")
+                    .attr("class", "solved")
+                    .html(function(d) {
+                        return d.solved;
+                    })
                 twemoji.parse(document.body);
-                var legendary = document.getElementsByClassName("legendary-grandmaster");
-                console.log(legendary);
                 //.append("text");
-                table.selectAll("div.userID")
+                table.selectAll("user")
                     .on("mouseover", function(d) {
                         d3.select(this).style("cursor", "pointer");
                     })
@@ -249,7 +262,7 @@
                         d3.select(this).style("cursor", "default");
                     })
                     .on("click", function(d) {
-                        window.open("https://codeforces.com/profile/" + d.value, '_blank');
+                        window.open("https://codeforces.com/profile/" + d.userID, '_blank');
                     });
 
                 function decideColor(rating) {
@@ -264,7 +277,6 @@
                 jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
-                prev_tag = tag;
                 twemoji.parse(document.body);
             }
         }
