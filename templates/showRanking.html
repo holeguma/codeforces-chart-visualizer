@@ -117,17 +117,17 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d;
                     });
                 tr.append("td")
                     .attr("class", "rank")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.rank;
                     })
                 tr.append("td")
                     .attr("class", "userID")
-                    .html(function(d) {
+                    .html(function (d) {
                         var name = d.userID;
                         var country = d.userID;
                         var str = "";
@@ -143,27 +143,27 @@
                     })
                     .append("user")
                     .append("firstLetter")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d.userID.slice(0, 1);
                     })
                     .style("display", "inline")
                     .append("second")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d.userID.slice(1);
                     })
                     .style("display", "inline")
                 tr.append("td")
                     .attr("class", "rating")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.rating;
                     })
                 tr.append("td")
                     .attr("class", "solved")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.solved;
                     })
                 twemoji.parse(document.body);
-                jQuery(function($) {
+                jQuery(function ($) {
                     $("#" + "ranking-table").DataTable();
                 });
             }
@@ -175,7 +175,7 @@
                 list = ranking_data[tag];
                 console.log(list);
                 console.log(list);
-                var titles = ["rank", "userID", "rating", "solved"]; //タイトルのリスト
+                var titles = ["rank", "userID", "rating", "solved", "country"]; //タイトルのリスト
 
                 console.log(titles);
                 var id = "ranking-table";
@@ -192,17 +192,17 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d;
                     });
                 tr.append("td")
                     .attr("class", "rank")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.rank;
                     })
                 tr.append("td")
                     .attr("class", "userID")
-                    .html(function(d) {
+                    .html(function (d) {
                         var name = d.userID;
                         var country = "unknown";
                         var str = "";
@@ -220,10 +220,10 @@
                     })
                     .append("user")
                     .append("firstLetter")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d.userID.slice(0, 1);
                     })
-                    .style("color", function(d) {
+                    .style("color", function (d) {
                         var name = d.userID;
                         if (user_info[name] && (user_info[name].rating >= 3000)) return "black";
                         else if (user_info[name]) return decideColor(user_info[name].rating);
@@ -231,43 +231,52 @@
                     })
                     .style("display", "inline")
                     .append("second")
-                    .text(function(d) {
+                    .text(function (d) {
                         return d.userID.slice(1);
                     })
                     .style("display", "inline")
-                    .style("color", function(d, i) {
+                    .style("color", function (d, i) {
                         var name = d.userID;
                         if (user_info[name]) return decideColor(user_info[name].rating);
                         else return "black";
                     })
-                    .attr("class", function(d, i) {
+                    .attr("class", function (d, i) {
                         var name = d.userID;
                         if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
                     })
                 tr.append("td")
                     .attr("class", "rating")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.rating;
                     })
                 tr.append("td")
                     .attr("class", "solved")
-                    .html(function(d) {
+                    .html(function (d) {
                         return d.solved;
                     })
-                    //.append("text");
+                tr.append("td")
+                    .attr("class", "country")
+                    .html(function (d) {
+                        return d.country;
+                    })
+                //.append("text");
                 table.selectAll("user")
-                    .on("mouseover", function(d) {
+                    .on("mouseover", function (d) {
                         d3.select(this).style("cursor", "pointer");
                     })
-                    .on("mouseout", function(d) {
+                    .on("mouseout", function (d) {
                         d3.select(this).style("cursor", "default");
                     })
-                    .on("click", function(d) {
+                    .on("click", function (d) {
                         window.open("https://codeforces.com/profile/" + d.userID, '_blank');
                     });
                 twemoji.parse(document.body);
-                jQuery(function($) {
-                    $("#" + "ranking-table").DataTable();
+                jQuery(function ($) {
+                    $("#" + "ranking-table").DataTable({
+                        columnDefs: [
+                            { targets: 4, visible: false }
+                        ]
+                    });
                 });
             }
 
