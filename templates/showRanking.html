@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
-    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Table sort example in D3</title>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_ranking.css')}}">
 </head>
 
@@ -17,9 +19,9 @@
     <span id="dummy" style="display:none;"></span>
     <header id="top-head">
         <div class="inner">
-            <div id="mobile-head">
-                <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
-            </div>
+            <!-- <div id="mobile-head"> -->
+            <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+            <!-- </div> -->
             <nav id="global-nav">
                 <ul>
                     <li><a href="/">Radar Chart</a></li>
@@ -28,12 +30,8 @@
             </nav>
         </div>
     </header>
-    <br><br><br>
+    <br><br><br><br>
     <h1 id="title"> &#x1f1ef;&#x1f1f5; Ranking</h1>
-    <table>
-        <thead></thead>
-        <tbody></tbody>
-    </table>
     <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()" checked>user</label>
     <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
     <form action="#" method="GET" onchange="makeTable()">
@@ -73,15 +71,18 @@
             <option value="chinese remainder theorem">chinese remainder theorem</option>
             <option value="schedules">schedules</option>
         </select>
-        <input type="button" name="apply" onclick="makeTable()" value="apply" />
+        <input type="button" class="btn-primary" name="apply" onclick="makeTable()" value="Apply" />
         <br><br>
     </form>
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
     <script type="text/javascript">
         var user_info = JSON.parse('{{user_info|tojson}}');
         var ranking_data = JSON.parse('{{ranking_data|tojson}}');
         var country_ranking_data = JSON.parse('{{country_ranking_data|tojson}}');
         var country_code = JSON.parse('{{country_code|tojson}}');
-        console.log(user_info['jcvb']);
 
         function makeTable() {
             if ($.fn.DataTable.isDataTable("#" + "ranking-table")) {
@@ -109,7 +110,7 @@
                     .attr("class", className)
                     .attr("id", id);
 
-                var tr = table.selectAll("tr").data(list).enter().append("tr");
+                var tr = table.append("tbody").selectAll("tr").data(list).enter().append("tr");
                 table.append("thead")
                     .append("tr")
                     .selectAll("th")
@@ -173,6 +174,7 @@
                 title.textContent = (tag + " Ranking");
                 list = ranking_data[tag];
                 console.log(list);
+                console.log(list);
                 var titles = ["rank", "userID", "rating", "solved"]; //タイトルのリスト
 
                 console.log(titles);
@@ -183,7 +185,7 @@
                     .attr("class", className)
                     .attr("id", id);
 
-                var tr = table.selectAll("tr").data(list).enter().append("tr");
+                var tr = table.append("tbody").selectAll("tr").data(list).enter().append("tr");
                 table.append("thead")
                     .append("tr")
                     .selectAll("th")
@@ -252,8 +254,7 @@
                     .html(function(d) {
                         return d.solved;
                     })
-                twemoji.parse(document.body);
-                //.append("text");
+                    //.append("text");
                 table.selectAll("user")
                     .on("mouseover", function(d) {
                         d3.select(this).style("cursor", "pointer");
@@ -264,26 +265,23 @@
                     .on("click", function(d) {
                         window.open("https://codeforces.com/profile/" + d.userID, '_blank');
                     });
-
-                function decideColor(rating) {
-                    if (rating >= 2400) return "#FF0000";
-                    else if (rating >= 2100) return "#FF8C00";
-                    else if (rating >= 1900) return "#AA00AA";
-                    else if (rating >= 1600) return "#0000FF";
-                    else if (rating >= 1400) return "#03A89E";
-                    else if (rating >= 1200) return "#008000";
-                    else return "#808080";
-                }
+                twemoji.parse(document.body);
                 jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
-                twemoji.parse(document.body);
+            }
+
+            function decideColor(rating) {
+                if (rating >= 2400) return "#FF0000";
+                else if (rating >= 2100) return "#FF8C00";
+                else if (rating >= 1900) return "#AA00AA";
+                else if (rating >= 1600) return "#0000FF";
+                else if (rating >= 1400) return "#03A89E";
+                else if (rating >= 1200) return "#008000";
+                else return "#808080";
             }
         }
-        twemoji.parse(document.body);
     </script>
 </body>
-
-</html>
 
 </html>

@@ -34,6 +34,10 @@ td:nth-of-type(2) {
     font-weight: bold;
 }
 
+td.userID {
+    padding-left: 0.5em;
+}
+
 div {
     display: block !important;
 }
@@ -56,13 +60,23 @@ div.userID {
     display: inline !important;
 }
 
-#rankingbtn {
-    margin-bottom: 10px !important;
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    cursor: pointer;
+    touch-action: manipulation;
+    text-shadow: none;
 }
 
 .inner {
     width: 980px;
-    margin: 0 auto 0 30px;
 }
 
 .inner:after {
@@ -78,14 +92,14 @@ div.userID {
     display: block;
     top: 0px;
     position: absolute;
-    width: 1100px;
+    width: 100%;
     height: auto !important;
     margin-left: 0px;
     padding-top: 5px;
     padding-bottom: 13px;
     line-height: 1;
     z-index: 999;
-    background-color: #007bff;
+    background-color: #101010;
 }
 
 #top-head a,
@@ -96,21 +110,23 @@ div.userID {
 
 #top-head .inner {
     position: relative;
+    padding: 7px 20px !important;
 }
 
 #top-head .logo {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     float: left;
-    font-size: 18px;
+    font-size: 20px;
+    margin-right: 19px !important;
 }
 
 #global-nav ul {
     font-family: 'Lato', sans-serif;
     list-style: none;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 14px;
+    left: 250px;
+    top: 30px;
+    font-size: 15px;
 }
 
 #global-nav ul li {
@@ -141,6 +157,7 @@ div.userID {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
     color: #333;
+    margin-right: 20px !important;
 }
 
 #top-head.fixed #global-nav ul li a {
@@ -193,6 +210,6 @@ div.userID {
 img.emoji {
     height: 1em;
     width: 1em;
-    margin: 0 .1em 0 .1em;
+    margin: 0.1em 0.5em 0.1em 0;
     /* vertical-align: -0.1em; */
 }
