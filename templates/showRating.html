@@ -18,31 +18,33 @@
 </head>
 
 <body>
-    <header id="top-head">
-        <div class="inner">
-            <div id="mobile-head">
-                <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+    <div id="main-div" class="float-container">
+        <header id="top-head">
+            <div class="inner">
+                <div id="mobile-head">
+                    <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+                </div>
+                <nav id="global-nav">
+                    <ul>
+                        <li><a href="/">Radar Chart</a></li>
+                        <li><a href="/ranking">Ranking</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav id="global-nav">
-                <ul>
-                    <li><a href="/">Radar Chart</a></li>
-                    <li><a href="/ranking">Ranking</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <br><br>
-    <div class="box_1">
+        </header>
         <br><br>
-        <label><input type="radio" id="radio_user" name="d5" checked>user</label>
-        <label><input type="radio" id="radio_country" name="d5">country</label>
-        <br><br>
-        <form id="form1" action="#" method="GET" class="cp_iptxt">
-            <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
-            <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
-            <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br><br>
-            <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
-            <select name="form2" onchange="enter_clicked()" id="form2">
+        <div id="main-container" class="container">
+            <div class="box_1">
+                <br><br>
+                <label><input type="radio" id="radio_user" name="d5" checked>user</label>
+                <label><input type="radio" id="radio_country" name="d5">country</label>
+                <br><br>
+                <form id="form1" action="#" method="GET" class="cp_iptxt">
+                    <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
+                    <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
+                    <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br><br>
+                    <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
+                    <select name="form2" onchange="enter_clicked()" id="form2">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -54,16 +56,18 @@
                             <option value="9">9</option>
                             <option value="10">10</option>
                         </select>
-            <br><br>
-            <input type="button" class="btn-primary" name="Enter" onclick="enter_clicked()" value="Enter" />
-        </form>
-    </div>
+                    <br><br>
+                    <input type="button" class="btn-primary" name="Enter" onclick="enter_clicked()" value="Enter" />
+                </form>
+            </div>
 
-    <div class="box_2">
-        <div class="radarChart" style="display: inline-flex;"></div>
-    </div>
-    <div class="box_3">
-        <svg id="legend-div"></svg>
+            <div class="box_2">
+                <div class="radarChart" style="display: inline-flex;"></div>
+            </div>
+            <div class="box_3">
+                <svg id="legend-div"></svg>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript">

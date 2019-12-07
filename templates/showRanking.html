@@ -16,26 +16,27 @@
 </head>
 
 <body>
-    <span id="dummy" style="display:none;"></span>
-    <header id="top-head">
-        <div class="inner">
-            <!-- <div id="mobile-head"> -->
-            <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
-            <!-- </div> -->
-            <nav id="global-nav">
-                <ul>
-                    <li><a href="/">Radar Chart</a></li>
-                    <li><a href="/ranking">Ranking</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <br><br><br><br>
-    <h1 id="title"> &#x1f1ef;&#x1f1f5; Ranking</h1>
-    <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()" checked>user</label>
-    <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
-    <form action="#" method="GET" onchange="makeTable()">
-        <select name="form2" id="form2">
+    <div id="main-div" class="float-container">
+        <span id="dummy" style="display:none;"></span>
+        <header id="top-head">
+            <div class="inner">
+                <!-- <div id="mobile-head"> -->
+                <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+                <!-- </div> -->
+                <nav id="global-nav">
+                    <ul>
+                        <li><a href="/">Radar Chart</a></li>
+                        <li><a href="/ranking">Ranking</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main-container" class="container">
+            <h1 id="title"> Ranking</h1>
+            <label><input type="radio" id="radio_user" name="d5" onchange="makeTable()" checked>user</label>
+            <label><input type="radio" id="radio_country" name="d5" onchange="makeTable()">country</label>
+            <form action="#" method="GET" onchange="makeTable()">
+                <select name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
             <option value="divide and conquer">divide and conquer</option>
             <option value="math">math</option>
@@ -71,13 +72,16 @@
             <option value="chinese remainder theorem">chinese remainder theorem</option>
             <option value="schedules">schedules</option>
         </select>
-        <input type="button" class="btn-primary" name="apply" onclick="makeTable()" value="Apply" />
-        <br><br>
-    </form>
-    <table>
-        <thead></thead>
-        <tbody></tbody>
-    </table>
+                <input type="button" class="btn-primary" name="apply" onclick="makeTable()" value="Apply" />
+                <br><br>
+            </form>
+            <br>
+            <table>
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
     <script type="text/javascript">
         var user_info = JSON.parse('{{user_info|tojson}}');
         var ranking_data = JSON.parse('{{ranking_data|tojson}}');
@@ -105,7 +109,7 @@
                 console.log(titles);
                 var id = "ranking-table";
                 var className = "table table-bordered";
-                var table = d3.select("body")
+                var table = d3.select(".container")
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
@@ -117,17 +121,17 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d;
                     });
                 tr.append("td")
                     .attr("class", "rank")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.rank;
                     })
                 tr.append("td")
                     .attr("class", "userID")
-                    .html(function (d) {
+                    .html(function(d) {
                         var name = d.userID;
                         var country = d.userID;
                         var str = "";
@@ -143,27 +147,27 @@
                     })
                     .append("user")
                     .append("firstLetter")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d.userID.slice(0, 1);
                     })
                     .style("display", "inline")
                     .append("second")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d.userID.slice(1);
                     })
                     .style("display", "inline")
                 tr.append("td")
                     .attr("class", "rating")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.rating;
                     })
                 tr.append("td")
                     .attr("class", "solved")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.solved;
                     })
                 twemoji.parse(document.body);
-                jQuery(function ($) {
+                jQuery(function($) {
                     $("#" + "ranking-table").DataTable();
                 });
             }
@@ -180,7 +184,7 @@
                 console.log(titles);
                 var id = "ranking-table";
                 var className = "table table-bordered";
-                var table = d3.select("body")
+                var table = d3.select(".container")
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
@@ -192,17 +196,17 @@
                     .data(titles)
                     .enter()
                     .append("th")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d;
                     });
                 tr.append("td")
                     .attr("class", "rank")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.rank;
                     })
                 tr.append("td")
                     .attr("class", "userID")
-                    .html(function (d) {
+                    .html(function(d) {
                         var name = d.userID;
                         var country = "unknown";
                         var str = "";
@@ -220,10 +224,10 @@
                     })
                     .append("user")
                     .append("firstLetter")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d.userID.slice(0, 1);
                     })
-                    .style("color", function (d) {
+                    .style("color", function(d) {
                         var name = d.userID;
                         if (user_info[name] && (user_info[name].rating >= 3000)) return "black";
                         else if (user_info[name]) return decideColor(user_info[name].rating);
@@ -231,51 +235,52 @@
                     })
                     .style("display", "inline")
                     .append("second")
-                    .text(function (d) {
+                    .text(function(d) {
                         return d.userID.slice(1);
                     })
                     .style("display", "inline")
-                    .style("color", function (d, i) {
+                    .style("color", function(d, i) {
                         var name = d.userID;
                         if (user_info[name]) return decideColor(user_info[name].rating);
                         else return "black";
                     })
-                    .attr("class", function (d, i) {
+                    .attr("class", function(d, i) {
                         var name = d.userID;
                         if (user_info[name] && (user_info[name].rating >= 3000)) return "legendary-grandmaster userID";
                     })
                 tr.append("td")
                     .attr("class", "rating")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.rating;
                     })
                 tr.append("td")
                     .attr("class", "solved")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.solved;
                     })
                 tr.append("td")
                     .attr("class", "country")
-                    .html(function (d) {
+                    .html(function(d) {
                         return d.country;
                     })
-                //.append("text");
+                    //.append("text");
                 table.selectAll("user")
-                    .on("mouseover", function (d) {
+                    .on("mouseover", function(d) {
                         d3.select(this).style("cursor", "pointer");
                     })
-                    .on("mouseout", function (d) {
+                    .on("mouseout", function(d) {
                         d3.select(this).style("cursor", "default");
                     })
-                    .on("click", function (d) {
+                    .on("click", function(d) {
                         window.open("https://codeforces.com/profile/" + d.userID, '_blank');
                     });
                 twemoji.parse(document.body);
-                jQuery(function ($) {
+                jQuery(function($) {
                     $("#" + "ranking-table").DataTable({
-                        columnDefs: [
-                            { targets: 4, visible: false }
-                        ]
+                        columnDefs: [{
+                            targets: 4,
+                            visible: false
+                        }]
                     });
                 });
             }

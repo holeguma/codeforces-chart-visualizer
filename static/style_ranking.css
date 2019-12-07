@@ -1,3 +1,17 @@
+#main-div.float-container {
+    background: #f5f5f5;
+}
+
+.float-container>#main-container {
+    background: #ffffff;
+    box-shadow: 0px 0px 10px 5px #888888;
+}
+
+#main-container {
+    padding: 60px 40px 20px;
+    min-height: 80vh;
+}
+
 table {
     /* border-collapse: collapse; */
 }
@@ -91,12 +105,12 @@ div.userID {
 #top-head {
     display: block;
     top: 0px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto !important;
     margin-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 13px;
+    padding-top: 0px;
+    padding-bottom: 8px;
     line-height: 1;
     z-index: 999;
     background-color: #101010;
@@ -117,7 +131,7 @@ div.userID {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     float: left;
     font-size: 20px;
-    margin-right: 19px !important;
+    margin-right: 18px !important;
 }
 
 #global-nav ul {
@@ -126,7 +140,7 @@ div.userID {
     position: absolute;
     left: 250px;
     top: 30px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #global-nav ul li {
@@ -135,76 +149,6 @@ div.userID {
 
 #global-nav ul li a {
     padding: 0 30px;
-}
-
-
-/* Fixed */
-
-#top-head.fixed {
-    margin-top: 0;
-    top: 0;
-    position: fixed;
-    padding-top: 10px;
-    height: 55px;
-    background: #fff;
-    background: rgba(255, 255, 255, .7);
-    transition: top 0.65s ease-in;
-    -webkit-transition: top 0.65s ease-in;
-    -moz-transition: top 0.65s ease-in;
-}
-
-#top-head.fixed .logo {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    color: #333;
-    margin-right: 20px !important;
-}
-
-#top-head.fixed #global-nav ul li a {
-    color: #333;
-    padding: 0 20px;
-}
-
-
-/* Toggle Button */
-
-#nav-toggle {
-    display: none;
-    position: absolute;
-    right: 12px;
-    top: 14px;
-    width: 34px;
-    height: 36px;
-    cursor: pointer;
-    z-index: 101;
-}
-
-#nav-toggle div {
-    position: relative;
-}
-
-#nav-toggle span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #666;
-    left: 0;
-    -webkit-transition: .35s ease-in-out;
-    -moz-transition: .35s ease-in-out;
-    transition: .35s ease-in-out;
-}
-
-#nav-toggle span:nth-child(1) {
-    top: 0;
-}
-
-#nav-toggle span:nth-child(2) {
-    top: 11px;
-}
-
-#nav-toggle span:nth-child(3) {
-    top: 22px;
 }
 
 img.emoji {
