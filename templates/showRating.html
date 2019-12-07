@@ -35,13 +35,17 @@
         <br><br>
         <div id="main-container" class="container">
             <div class="box_1">
-                <br><br>
-                <label><input type="radio" id="radio_user" name="d5" checked>user</label>
-                <label><input type="radio" id="radio_country" name="d5">country</label>
-                <br><br>
+                <br>
+                <div class="sample">
+                    <input type="radio" name="s2" id="radio_user" checked="">
+                    <label for="radio_user" class="switch-on">User</label>
+                    <input type="radio" name="s2" id="radio_country">
+                    <label for="radio_country" class="switch-off">Country</label>
+                </div>
                 <form id="form1" action="#" method="GET" class="cp_iptxt">
+                    <p>You / Your Country</p>
                     <input type="text" id="You" value="" placeholder="Enter your ID"><br><br>
-                    <span class="sample1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS<br><br></span>
+                    <p>Rivals / Rivals' Country</p>
                     <input type="text" id="Rivals" value="" placeholder="Enter Rivals' ID (space separated)"><br><br><br>
                     <span class="sample1">Solved&nbsp;Problems&nbsp;>=&nbsp;&nbsp;</span>
                     <select name="form2" onchange="enter_clicked()" id="form2">
@@ -61,12 +65,12 @@
                 </form>
             </div>
 
-            <div class="box_2">
+            <!-- <div class="box_2">
                 <div class="radarChart" style="display: inline-flex;"></div>
-            </div>
-            <div class="box_3">
+            </div> -->
+            <!-- <div class="box_3">
                 <svg id="legend-div"></svg>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -122,6 +126,21 @@
         }
 
         function enter_clicked() {
+            if (cnt != 0) {
+                d3.selectAll("g").remove();
+            } else {
+                d3.selectAll(".container")
+                    .append("div")
+                    .attr("class", "box2")
+                    .style("display", "inline-block")
+                    .style("width", "70%")
+                    .style("height", "600px")
+                    .style("margin-left", "5%")
+                    .style("margin-right", "5%")
+                    .append("div")
+                    .attr("class", "radarChart")
+                    .style("display", "inline-flex")
+            }
             if (document.getElementById("radio_user").checked) {
                 var minSolveCount = document.getElementById("form2").value;
                 console.log(minSolveCount);
@@ -141,7 +160,6 @@
                 for (let rival of rivals) {
                     addUserInRadarChart(rival);
                 }
-                d3.selectAll("g").remove();
                 showUserLegend();
                 showUserRaderChart();
             } else {
@@ -163,7 +181,6 @@
                 for (let rival of rivals) {
                     addCountryInRadarChart(rival);
                 }
-                d3.selectAll("g").remove();
                 showCountryLegend();
                 showCountryRaderChart();
             }
@@ -215,8 +232,8 @@
                 left: 80
             };
             var radarChartOptions = {
-                w: 300,
-                h: 300,
+                w: 500,
+                h: 500,
                 margin: margin,
                 maxValue: max_rating,
                 opacityArea: 0.1,
@@ -231,19 +248,31 @@
         }
 
         function showUserLegend() {
-            let legend = d3.select("#legend-div")
+            if (cnt == 0) {
+                d3.selectAll(".container")
+                    .append("div")
+                    .attr("class", "box3")
+                    .style("display", "inline-block")
+                    .style("vertical-align", "top")
+                    .style("width", "20%")
+                    .style("height", "600px")
+                    .append("svg")
+                    .attr("class", "legend-div");
+                cnt = 1;
+            }
+            legend = d3.select(".legend-div")
                 .selectAll("g")
                 .data(legendVals)
                 .enter()
-                .append("g")
-                .attr("class", "legends");
+                .append("g");
+            console.log(legendVals)
 
             legend.append('rect')
                 .attr("x", 0)
                 .attr("y", 10)
                 .attr("width", 10)
                 .attr("height", 10)
-                .style("fill", function(d, i) {
+                .attr("fill", function(d, i) {
                     return d3.schemeCategory10[i];
                 });
 
@@ -251,6 +280,7 @@
                 .attr("x", 20)
                 .attr("y", 20)
                 .text(function(d, i) {
+                    console.log(d)
                     return d;
                 })
                 .attr('class', function(d) {
@@ -281,14 +311,14 @@
         //Radar Chartを表示
         function showCountryRaderChart() {
             var margin = {
-                top: 50,
+                top: 80,
                 right: 80,
                 bottom: 80,
                 left: 80
             };
             var radarChartOptions = {
-                w: 300,
-                h: 300,
+                w: 450,
+                h: 450,
                 margin: margin,
                 maxValue: max_rating,
                 opacityArea: 0.1,
@@ -303,12 +333,23 @@
         }
 
         function showCountryLegend() {
-            let legend = d3.select("#legend-div")
+            if (cnt == 0) {
+                d3.selectAll(".container")
+                    .append("div")
+                    .attr("class", "box3")
+                    .style("display", "inline-block")
+                    .style("vertical-align", "top")
+                    .style("width", "20%")
+                    .style("height", "600px")
+                    .append("svg")
+                    .attr("class", "legend-div");
+                cnt = 1;
+            }
+            legend = d3.select(".legend-div")
                 .selectAll("g")
                 .data(legendVals)
                 .enter()
-                .append("g")
-                .attr("class", "legends");
+                .append("g");
 
             legend.append('rect')
                 .attr("x", 0)

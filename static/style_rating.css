@@ -9,19 +9,19 @@
 
 #main-container {
     padding: 60px 40px 20px;
-    min-height: 1000px;
+    min-height: 80vh;
 }
 
 .cp_iptxt {
     position: relative;
-    width: 400px;
+    width: 100%;
     margin: 40px 3%;
 }
 
 .cp_iptxt input[type=text] {
     font: 15px/24px sans-serif;
     box-sizing: border-box;
-    width: 350px;
+    width: 90%;
     padding: 0.3em;
     transition: 0.3s;
     border: 1px solid #1b2538;
@@ -57,12 +57,14 @@
     margin-bottom: 100px;
 }
 
-.box_2 {
+
+/* .box_2 {
     display: inline-block;
     vertical-align: middle;
     color: black;
     width: 70%;
-    height: 300px;
+    height: 600px;
+    margin-left: 3%;
 }
 
 .box_3 {
@@ -70,8 +72,8 @@
     vertical-align: middle;
     color: black;
     width: 20%;
-    height: 300px;
-}
+    height: 600px;
+} */
 
 span.sample1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -95,11 +97,11 @@ span.sample1 {
     cursor: pointer;
     touch-action: manipulation;
     text-shadow: none;
-    margin: auto auto auto 300px
 }
 
-#legend-div {
-    width: 100px;
+.legend-div {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 text.legendary-grandmaster:first-letter {
@@ -166,4 +168,43 @@ text.legendary-grandmaster:first-letter {
 
 #global-nav ul li a {
     padding: 0 30px;
+}
+
+.sample {
+    margin-left: 3%;
+}
+
+.sample input {
+    display: none;
+}
+
+.sample label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    background: #bdc3c7;
+    color: #869198;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+    transition: .2s;
+}
+
+.sample label:first-of-type {
+    border-radius: 3px 0 0 3px;
+}
+
+.sample label:last-of-type {
+    border-radius: 0 3px 3px 0;
+}
+
+.sample input[type="radio"]:checked+.switch-on {
+    background-color: rgb(63, 63, 63);
+    color: #fff;
+}
+
+.sample input[type="radio"]:checked+.switch-off {
+    background-color: rgb(63, 63, 63);
+    color: #fff;
 }

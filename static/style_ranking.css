@@ -157,3 +157,42 @@ img.emoji {
     margin: 0.1em 0.5em 0.1em 0;
     /* vertical-align: -0.1em; */
 }
+
+.sample {
+    margin-left: 3%;
+}
+
+.sample input {
+    display: none;
+}
+
+.sample label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    background: #bdc3c7;
+    color: #869198;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+    transition: .2s;
+}
+
+.sample label:first-of-type {
+    border-radius: 3px 0 0 3px;
+}
+
+.sample label:last-of-type {
+    border-radius: 0 3px 3px 0;
+}
+
+.sample input[type="radio"]:checked+.switch-on {
+    background-color: rgb(63, 63, 63);
+    color: #fff;
+}
+
+.sample input[type="radio"]:checked+.switch-off {
+    background-color: rgb(63, 63, 63);
+    color: #fff;
+}
