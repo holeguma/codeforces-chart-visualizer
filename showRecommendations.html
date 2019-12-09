@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Table sort example in D3</title>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_Recommendations.css')}}"> -->
+</head>
+
+<body>
+    <div id="main-div" class="float-container">
+        <div id="main-container" class="container">
+            <table>
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        d3.json("./problem_data/problem_list.json").then(function(data) {
+            d3.json("./user_data/small_hash_data.json").then(function(data2) {
+                {
+                    showRecommendation("Mojumbo");
+
+                    //hideはタグを隠すかどうか
+                    function showRecommendation(userID = "holeguma", hide = false) {
+                        var problem_list = data.result.problems;
+                        var hash = data2;
+
+                        console.log(userID);
+                        d3.json("./user_data/personal_data/" + userID + ".json").then(function(data3) {
+                            var solved = data3;
+                            var n_problems = problem_list.length;
+                            var recommendation_list = [];
+                            var titles = ["ID", "Name", "Difficulty", "Tags"]; //タイトルのリスト
+                            for (var i = 0; i < n_problems; i++) {
+                                var problem = problem_list[i];
+                                if (!problem.rating) continue; //問題にdifficultyが設定されていなければスキップ
+                                if (!problem.tags) continue; //問題にタグが設定されていなければスキップ
+                                var problem_name = [];
+                                problem_name.push(problem.contestId);
+                                problem_name.push(problem.index);
+                                var title = problem.name;
+                                //すでに解かれていればスキップ
+                                if (solved[problem_name[0] + problem_name[1]]) {
+                                    continue;
+                                }
+                                var difficulty = problem.rating;
+                                var tags = "";
+                                var ok = false;
+                                var n_tags = problem.tags.length;
+                                for (var j = 0; j < n_tags; j++) {
+                                    var tag = problem.tags[j];
+                                    tags += tag;
+                                    if (j < n_tags - 1) tags += ", ";
+                                    if (hash[userID].tags[tag].solveCount == 0) continue;
+                                    var rating = hash[userID].tags[tag].value;
+                                    //あるtagのレーティングとdifficultyの差が100以下ならレコメンドする
+                                    if (Math.abs(rating - difficulty) <= 100) ok = true;
+                                }
+                                if (!ok) continue;
+                                var obj = {};
+                                obj.id = problem_name;
+                                obj.name = title;
+                                obj.difficulty = difficulty;
+                                obj.tags = tags;
+                                recommendation_list.push(obj);
+                            }
+
+
+                            var id = "recommendation-table";
+                            var className = "table table-bordered";
+                            var table = d3.select(".container")
+                                .append("table")
+                                .attr("class", className)
+                                .attr("id", id);
+
+                            var tr = table.append("tbody").selectAll("tr").data(recommendation_list).enter().append("tr");
+
+                            table.append("thead")
+                                .append("tr")
+                                .selectAll("th")
+                                .data(titles)
+                                .enter()
+                                .append("th")
+                                .text(function(d) {
+                                    return d;
+                                })
+                            tr.append("td")
+                                .attr("class", "problem-ID")
+                                .html(function(d) {
+                                    return d.id[0] + d.id[1];
+                                })
+                                .on("mouseover", function(d) {
+                                    d3.select(this).style("cursor", "pointer");
+                                })
+                                .on("mouseout", function(d) {
+                                    d3.select(this).style("cursor", "default");
+                                })
+                                .on("click", function(d) {
+                                    window.open("https://codeforces.com/problemset/problem/" + d.id[0] + "/" + d.id[1], '_blank');
+                                });
+                            tr.append("td")
+                                .attr("class", "problem-name")
+                                .html(function(d) {
+                                    return d.name;
+                                })
+                            tr.append("td")
+                                .attr("class", "problem-difficulty")
+                                .html(function(d) {
+                                    return d.difficulty;
+                                })
+                            tr.append("td")
+                                .attr("class", "problem-tags")
+                                .html(function(d) {
+                                    return d.tags;
+                                })
+
+                            jQuery(function($) {
+                                $("#" + id).DataTable({
+                                    columnDefs: [{
+                                        targets: 3,
+                                        visible: hide ? false : true
+                                    }]
+                                });
+                            });
+                        })
+                    }
+
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
