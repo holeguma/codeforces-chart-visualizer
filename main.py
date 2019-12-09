@@ -31,9 +31,14 @@ def ranking():
 
 @app.route('/userpage')
 def userpage():
+    return render_template('showUserPage.html')
+
+
+@app.route('/userpage/<username>')
+def getUserPage(username):
     with open("./user_data/small_hash_data.json") as f:
         hash = json.load(f)
-    return render_template('showUserPage.html', hash=hash)
+    return render_template('UserPage.html', name=username, hash=hash[username])
 
 
 if __name__ == '__main__':

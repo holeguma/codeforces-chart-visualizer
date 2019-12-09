@@ -37,157 +37,21 @@
             <form id="form1" action="#" method="GET" class="cp_iptxt">
                 <p>User Name</p>
                 <input type="text" id="UserName" value="" placeholder="Enter Your ID">
-                <input type="button" class="btn-primary" name="Enter" onclick="enter_clicked()" value="Enter" />
+                <input type="submit" class="btn-primary" value="Enter" />
             </form>
         </div>
     </div>
     <script type="text/javascript">
-        var hash = JSON.parse('{{hash|tojson|safe}}');
-
-        function enter_clicked() {
-            name = document.getElementById("UserName").value;
-            var count = 0;
-            for (var tag in hash[name]["tags"]) {
-                if (hash[name]["tags"][tag] == name) continue;
-                count += hash[name]["tags"][tag].solveCount;
+        $('#form1').submit(function() {
+            var name = $('#UserName').val();
+            if (name == "") {
+                $('form').attr('action', '/userpage');
+                $("#form1").submit();
+            } else {
+                $('form').attr('action', '/userpage/' + name);
+                $("#form1").submit();
             }
-            var container = d3.select(".container");
-
-
-            container.append("h3")
-                .html(name + "<br>")
-                .style("margin-left", "3%")
-                .style("color", function() {
-                    if (hash[name].country.rating >= 2400) return "#FF0000";
-                    else if (hash[name].country.rating >= 2100) return "#FF8C00";
-                    else if (hash[name].country.rating >= 1900) return "#AA00AA";
-                    else if (hash[name].country.rating >= 1600) return "#0000FF";
-                    else if (hash[name].country.rating >= 1400) return "#03A89E";
-                    else if (hash[name].country.rating >= 1200) return "#008000";
-                    else return "#808080";
-                })
-                .attr("class", function() {
-                    if (hash[name].country.rating >= 3000) return "legendary-grandmaster";
-                });
-
-            var status = container.append("div")
-                .style("display", "flex")
-                .style("flex-wrap", "wrap")
-                .append("div")
-                .style("text-align", "center")
-                .style("max-width", "25%")
-                .style("flex", "0 0 25%");
-
-            status.append("h5")
-                .text("Solved")
-
-            status.append("h4")
-                .text(count)
-
-
-            container.append("h3")
-                .text("Radar Chart")
-                .style("margin-left", "3%")
-                .style("color", function() {
-                    if (hash[name].country.rating >= 2400) return "#FF0000";
-                    else if (hash[name].country.rating >= 2100) return "#FF8C00";
-                    else if (hash[name].country.rating >= 1900) return "#AA00AA";
-                    else if (hash[name].country.rating >= 1600) return "#0000FF";
-                    else if (hash[name].country.rating >= 1400) return "#03A89E";
-                    else if (hash[name].country.rating >= 1200) return "#008000";
-                    else return "#808080";
-                })
-                .attr("class", function() {
-                    if (hash[name].country.rating >= 3000) return "legendary-grandmaster";
-                });
-
-            container.append("div")
-                .style("margin-left", "3%")
-                .style("padding", "0 auto")
-                .attr("class", "radarChart")
-                .style("display", "inline-flex");
-
-            showRadarChart(name)
-
-            container.append("h3")
-                .text("Performance Graph")
-                .style("margin-left", "3%")
-                .style("color", function() {
-                    if (hash[name].country.rating >= 2400) return "#FF0000";
-                    else if (hash[name].country.rating >= 2100) return "#FF8C00";
-                    else if (hash[name].country.rating >= 1900) return "#AA00AA";
-                    else if (hash[name].country.rating >= 1600) return "#0000FF";
-                    else if (hash[name].country.rating >= 1400) return "#03A89E";
-                    else if (hash[name].country.rating >= 1200) return "#008000";
-                    else return "#808080";
-                })
-                .attr("class", function() {
-                    if (hash[name].country.rating >= 3000) return "legendary-grandmaster";
-                });
-
-            container.append("h3")
-                .text("Recommendations")
-                .style("margin-left", "3%")
-                .style("color", function() {
-                    if (hash[name].country.rating >= 2400) return "#FF0000";
-                    else if (hash[name].country.rating >= 2100) return "#FF8C00";
-                    else if (hash[name].country.rating >= 1900) return "#AA00AA";
-                    else if (hash[name].country.rating >= 1600) return "#0000FF";
-                    else if (hash[name].country.rating >= 1400) return "#03A89E";
-                    else if (hash[name].country.rating >= 1200) return "#008000";
-                    else return "#808080";
-                })
-                .attr("class", function() {
-                    if (hash[name].country.rating >= 3000) return "legendary-grandmaster";
-                });
-        }
-
-        function showRadarChart(name) {
-            data = [];
-            selected_tags = {};
-            for (var tag in hash[name]["tags"]) {
-                if (hash[name]["tags"][tag] == name) continue;
-                if (hash[name]["tags"][tag].solveCount >= 1) {
-                    //console.log(tag)
-                    selected_tags[tag] = true;
-                }
-            }
-            max_rating = 0;
-            newSeries = {};
-            newSeries.name = name;
-            newSeries.axes = [];
-            for (let tag in hash[name]["tags"]) {
-                if (hash[name]["tags"][tag] == name) continue;
-                if (!selected_tags[tag]) continue;
-                if (max_rating < hash[name]["tags"][tag].value) max_rating = hash[name]["tags"][tag].value;
-                newSeries.axes.push({
-                    "axis": tag,
-                    "value": hash[name]["tags"][tag].value
-                });
-            }
-            data.push(newSeries);
-
-            var margin = {
-                top: 50,
-                right: 150,
-                bottom: 50,
-                left: 300
-            };
-            var radarChartOptions = {
-                w: 300,
-                h: 300,
-                margin: margin,
-                maxValue: max_rating,
-                opacityArea: 0.1,
-                levels: 6,
-                roundStrokes: false,
-                color: d3.scaleOrdinal(d3.schemeCategory10),
-                format: '.0f'
-            };
-            console.log(data);
-
-            let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
-        }
+        });
     </script>
 
 </body>

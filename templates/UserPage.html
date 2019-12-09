@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_userpage.css')}}">
+    <title>Test</title>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" />
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script src="{{url_for('static', filename='radar-chart.js')}}" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="main-div" class="float-container">
+        <header id="top-head">
+            <div class="inner">
+                <div id="mobile-head">
+                    <h1 class="logo"><a href="/">Codeforces Chart Visualizer</a></h1>
+                </div>
+                <nav id="global-nav">
+                    <ul>
+                        <li><a href="/">Radar Chart</a></li>
+                        <li><a href="/ranking">Ranking</a></li>
+                        <li><a href="/userpage">User Page</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main-container" class="container">
+            <form id="form1" action="#" method="GET" class="cp_iptxt">
+                <p>User Name</p>
+                <input type="text" id="UserName" value="" placeholder="Enter Your ID">
+                <input type="submit" class="btn-primary" value="Enter" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#form1').submit(function() {
+            var user = $('#UserName').val();
+            if (user == "") {
+                $('form').attr('action', '/userpage');
+                $("#form1").submit();
+            } else {
+                $('form').attr('action', '/userpage/' + user);
+                $("#form1").submit();
+            }
+        });
+
+        var name = JSON.parse('{{name|tojson|safe}}');
+        console.log(name);
+
+        var hash = JSON.parse('{{hash|tojson|safe}}');
+        var count = 0;
+        for (var tag in hash["tags"]) {
+            if (hash["tags"][tag] == name) continue;
+            count += hash["tags"][tag].solveCount;
+        }
+        var container = d3.select(".container");
+
+
+        container.append("h3")
+            .text(name)
+            .style("margin-left", "3%")
+            .style("color", function() {
+                if (hash.country.rating >= 2400) return "#FF0000";
+                else if (hash.country.rating >= 2100) return "#FF8C00";
+                else if (hash.country.rating >= 1900) return "#AA00AA";
+                else if (hash.country.rating >= 1600) return "#0000FF";
+                else if (hash.country.rating >= 1400) return "#03A89E";
+                else if (hash.country.rating >= 1200) return "#008000";
+                else return "#808080";
+            })
+            .attr("class", function() {
+                if (hash.country.rating >= 3000) return "legendary-grandmaster";
+            });
+
+        var div = container.append("div")
+            .style("display", "flex")
+            .style("flex-wrap", "wrap")
+            .append("div")
+            .style("text-align", "center")
+            .style("max-width", "25%")
+            .style("flex", "0 0 25%");
+
+        div.append("h5")
+            .text("Solved")
+
+        div.append("h4")
+            .text(count)
+
+
+        container.append("h3")
+            .text("Radar Chart")
+            .style("margin-left", "3%")
+            .style("color", function() {
+                if (hash.country.rating >= 2400) return "#FF0000";
+                else if (hash.country.rating >= 2100) return "#FF8C00";
+                else if (hash.country.rating >= 1900) return "#AA00AA";
+                else if (hash.country.rating >= 1600) return "#0000FF";
+                else if (hash.country.rating >= 1400) return "#03A89E";
+                else if (hash.country.rating >= 1200) return "#008000";
+                else return "#808080";
+            })
+            .attr("class", function() {
+                if (hash.country.rating >= 3000) return "legendary-grandmaster";
+            });
+
+        container.append("div")
+            .style("margin-left", "3%")
+            .style("padding", "0 auto")
+            .attr("class", "radarChart")
+            .style("display", "inline-flex");
+
+        showRadarChart(name)
+
+        container.append("h3")
+            .text("Performance Graph")
+            .style("margin-left", "3%")
+            .style("color", function() {
+                if (hash.country.rating >= 2400) return "#FF0000";
+                else if (hash.country.rating >= 2100) return "#FF8C00";
+                else if (hash.country.rating >= 1900) return "#AA00AA";
+                else if (hash.country.rating >= 1600) return "#0000FF";
+                else if (hash.country.rating >= 1400) return "#03A89E";
+                else if (hash.country.rating >= 1200) return "#008000";
+                else return "#808080";
+            })
+            .attr("class", function() {
+                if (hash.country.rating >= 3000) return "legendary-grandmaster";
+            });
+
+        container.append("h3")
+            .text("Recommendations")
+            .style("margin-left", "3%")
+            .style("color", function() {
+                if (hash.country.rating >= 2400) return "#FF0000";
+                else if (hash.country.rating >= 2100) return "#FF8C00";
+                else if (hash.country.rating >= 1900) return "#AA00AA";
+                else if (hash.country.rating >= 1600) return "#0000FF";
+                else if (hash.country.rating >= 1400) return "#03A89E";
+                else if (hash.country.rating >= 1200) return "#008000";
+                else return "#808080";
+            })
+            .attr("class", function() {
+                if (hash.country.rating >= 3000) return "legendary-grandmaster";
+            });
+
+
+        function showRadarChart(name) {
+            data = [];
+            selected_tags = {};
+            for (var tag in hash["tags"]) {
+                if (hash["tags"][tag] == name) continue;
+                if (hash["tags"][tag].solveCount >= 1) {
+                    //console.log(tag)
+                    selected_tags[tag] = true;
+                }
+            }
+            max_rating = 0;
+            newSeries = {};
+            newSeries.name = name;
+            newSeries.axes = [];
+            for (let tag in hash["tags"]) {
+                if (hash["tags"][tag] == name) continue;
+                if (!selected_tags[tag]) continue;
+                if (max_rating < hash["tags"][tag].value) max_rating = hash["tags"][tag].value;
+                newSeries.axes.push({
+                    "axis": tag,
+                    "value": hash["tags"][tag].value
+                });
+            }
+            data.push(newSeries);
+
+            var margin = {
+                top: 50,
+                right: 150,
+                bottom: 100,
+                left: 300
+            };
+            var radarChartOptions = {
+                w: 300,
+                h: 300,
+                margin: margin,
+                maxValue: max_rating,
+                opacityArea: 0.1,
+                levels: 6,
+                roundStrokes: false,
+                color: d3.scaleOrdinal(d3.schemeCategory10),
+                format: '.0f'
+            };
+            console.log(data);
+
+            let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+    </script>
+
+</body>
+
+</html>
