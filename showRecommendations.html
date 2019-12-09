@@ -28,7 +28,7 @@
         d3.json("./problem_data/problem_list.json").then(function(data) {
             d3.json("./user_data/small_hash_data.json").then(function(data2) {
                 {
-                    showRecommendation("holeguma");
+                    showRecommendation("Mojumbo");
 
                     //hideはタグを隠すかどうか
                     function showRecommendation(userID = "holeguma", hide = false) {
@@ -45,10 +45,12 @@
                                 var problem = problem_list[i];
                                 if (!problem.rating) continue; //問題にdifficultyが設定されていなければスキップ
                                 if (!problem.tags) continue; //問題にタグが設定されていなければスキップ
-                                var problem_name = problem.contestId + problem.index;
+                                var problem_name = [];
+                                problem_name.push(problem.contestId);
+                                problem_name.push(problem.index);
                                 var title = problem.name;
                                 //すでに解かれていればスキップ
-                                if (solved[problem_name]) {
+                                if (solved[problem_name[0] + problem_name[1]]) {
                                     continue;
                                 }
                                 var difficulty = problem.rating;
@@ -95,8 +97,17 @@
                             tr.append("td")
                                 .attr("class", "problem-ID")
                                 .html(function(d) {
-                                    return d.id;
+                                    return d.id[0] + d.id[1];
                                 })
+                                .on("mouseover", function(d) {
+                                    d3.select(this).style("cursor", "pointer");
+                                })
+                                .on("mouseout", function(d) {
+                                    d3.select(this).style("cursor", "default");
+                                })
+                                .on("click", function(d) {
+                                    window.open("https://codeforces.com/problemset/problem/" + d.id[0] + "/" + d.id[1], '_blank');
+                                });
                             tr.append("td")
                                 .attr("class", "problem-name")
                                 .html(function(d) {
