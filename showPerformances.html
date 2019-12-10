@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Performances</title>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <!-- <script src="https://d3js.org/d3-path.v1.min.js" charset="utf-8"></script> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_Recommendations.css')}}"> -->
+    <style>
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 200px;
+            height: auto;
+            padding: 5px;
+            font: 12px;
+            padding: 10px;
+            line-height: 1;
+            font-weight: normal;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 2px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-div" class="float-container">
+        <div id="main-container" class="container">
+            <div id="performances"></div>
+        </div>
+    </div>
+    <script>
+        showRatingChanges("Mojumbo");
+        function showRatingChanges(userID) {
+            d3.json("./user_data/rating_data/" + userID + ".json").then(function (data) {
+                var list = [];
+                var n_results = data.result.length;
+                console.log(n_results);
+
+                var highestPerf = -1e9;
+                var lowestPerf = 1e9;
+                for (var i = 0; i < n_results; i++) {
+                    var obj = Object.assign(data.result[i]);
+
+                    var diff = obj.newRating - obj.oldRating;
+                    obj["performance"] = obj.oldRating + diff * 4;
+                    highestPerf = Math.max(highestPerf, obj.performance);
+                    lowestPerf = Math.min(lowestPerf, obj.performance);
+                    obj["timeMilliSeconds"] = obj.ratingUpdateTimeSeconds * 1000;
+                    obj["date"] = new Date(obj.timeMilliSeconds);
+                    list.push(obj);
+                    if (i == 0) console.log(obj);
+                }
+                var oldestTime = list[0].timeMilliSeconds;
+                var latestTime = list[n_results - 1].timeMilliSeconds;
+                console.log(new Date(oldestTime));
+                console.log(new Date(latestTime));
+
+                var width = 1000;
+                var height = 600;
+                var svg = d3.select("#performances")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+
+                var padding = 50;
+                var xAxisPadding = 10;
+                var yAxisPadding = 10;
+                var tooltip = d3.select("body").append("div").attr("class", "tooltip");
+                var xScale = d3.scaleTime()
+                    .domain([
+                        new Date(oldestTime)
+                        , new Date(latestTime)
+                    ])
+                    .range([padding, width - padding]);
+                var yScale = d3.scaleLinear()
+                    .domain([
+                        lowestPerf - 400,
+                        highestPerf + 400
+                    ])
+                    .range([height - padding, padding]);
+
+                var xAxis = d3.axisBottom(xScale)
+                    .tickFormat(d3.timeFormat("%Y-%m"))
+                    .ticks(10);
+                var yAxis = d3.axisLeft(yScale)
+
+                var line = d3.line()
+                    .x(function (d) { return xScale(d.date) })
+                    .y(function (d) { return yScale(d.performance) });
+                svg.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", "translate(" + 0 + ", " + (height - padding) + ")")
+                    .call(xAxis)
+                svg.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", "translate(" + padding + ", 0)")
+                    .call(yAxis);
+
+                svg.append("path")
+                    .datum(list)
+                    .attr("fill", "none")
+                    .attr("stroke", "steelblue")
+                    .attr("stroke-width", 1.5)
+                    .attr("d", line);
+                svg.append("g")
+                    .selectAll("circle")
+                    .data(list)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function (d) {
+                        return xScale(d.date);
+                    })
+                    .attr("cy", function (d) {
+                        return yScale(d.performance);
+                    })
+                    .attr("fill", function (d) {
+                        return decideColor(d.performance);
+                    })
+                    .attr("r", 4)
+                    .on("mouseover", function (d) {
+                        d3.select(this).style("cursor", "pointer");
+                        var year = d.date.getFullYear();
+                        var month = d.date.getMonth() + 1;
+                        var day = d.date.getDate();
+                        d3.select(this)
+                            .attr("r", 5);
+                        tooltip
+                            .style("top", (d3.event.pageY - 20) + "px")
+                            .style("left", (d3.event.pageX + 10) + "px")
+                            .style("visibility", "visible")
+                            .html(
+                                "perf: " + d.performance
+                                + "<br>" + d.contestName
+                                + "<br>" + year + "/" + month + "/" + day
+                            );
+                    })
+                    .on("mousemove", function (d) {
+                    })
+                    .on("mouseout", function (d) {
+                        d3.select(this).style("cursor", "default");
+                        d3.select(this)
+                            .attr("r", 4);
+                        tooltip.style("visibility", "hidden");
+                    })
+                    .on("click", function (d) {
+                        window.open("https://codeforces.com/contest/" + d.contestId, '_blank');
+                    })
+
+                function decideColor(rating) {
+                    if (rating >= 2400) return "#FF0000";
+                    else if (rating >= 2100) return "#FF8C00";
+                    else if (rating >= 1900) return "#AA00AA";
+                    else if (rating >= 1600) return "#0000FF";
+                    else if (rating >= 1400) return "#03A89E";
+                    else if (rating >= 1200) return "#008000";
+                    else return "#808080";
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
