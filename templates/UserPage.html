@@ -54,14 +54,15 @@
         });
 
         var name = JSON.parse('{{name|tojson|safe}}');
-        console.log(name);
-
         var hash = JSON.parse('{{hash|tojson|safe}}');
+        var problem_list = JSON.parse('{{problem_list|tojson|safe}}');
+        var solved = JSON.parse('{{solved|tojson|safe}}');
         var count = 0;
         for (var tag in hash["tags"]) {
             if (hash["tags"][tag] == name) continue;
             count += hash["tags"][tag].solveCount;
         }
+
         var container = d3.select(".container");
 
 
@@ -69,13 +70,7 @@
             .text(name)
             .style("margin-left", "3%")
             .style("color", function() {
-                if (hash.country.rating >= 2400) return "#FF0000";
-                else if (hash.country.rating >= 2100) return "#FF8C00";
-                else if (hash.country.rating >= 1900) return "#AA00AA";
-                else if (hash.country.rating >= 1600) return "#0000FF";
-                else if (hash.country.rating >= 1400) return "#03A89E";
-                else if (hash.country.rating >= 1200) return "#008000";
-                else return "#808080";
+                return decideColor(hash.country.rating);
             })
             .attr("class", function() {
                 if (hash.country.rating >= 3000) return "legendary-grandmaster";
@@ -124,13 +119,7 @@
             .text("Performance Graph")
             .style("margin-left", "3%")
             .style("color", function() {
-                if (hash.country.rating >= 2400) return "#FF0000";
-                else if (hash.country.rating >= 2100) return "#FF8C00";
-                else if (hash.country.rating >= 1900) return "#AA00AA";
-                else if (hash.country.rating >= 1600) return "#0000FF";
-                else if (hash.country.rating >= 1400) return "#03A89E";
-                else if (hash.country.rating >= 1200) return "#008000";
-                else return "#808080";
+                return decideColor(hash.country.rating);
             })
             .attr("class", function() {
                 if (hash.country.rating >= 3000) return "legendary-grandmaster";
@@ -140,17 +129,13 @@
             .text("Recommendations")
             .style("margin-left", "3%")
             .style("color", function() {
-                if (hash.country.rating >= 2400) return "#FF0000";
-                else if (hash.country.rating >= 2100) return "#FF8C00";
-                else if (hash.country.rating >= 1900) return "#AA00AA";
-                else if (hash.country.rating >= 1600) return "#0000FF";
-                else if (hash.country.rating >= 1400) return "#03A89E";
-                else if (hash.country.rating >= 1200) return "#008000";
-                else return "#808080";
+                return decideColor(hash.country.rating);
             })
             .attr("class", function() {
                 if (hash.country.rating >= 3000) return "legendary-grandmaster";
             });
+
+        showRecommendations();
 
 
         function showRadarChart(name) {
@@ -198,6 +183,127 @@
             console.log(data);
 
             let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+
+        function showRecommendations(hide = false) {
+            var n_problems = problem_list.length;
+            var recommendation_list = [];
+            var titles = ["ID", "Name", "Difficulty", "Tags"]; //タイトルのリスト
+            for (var i = 0; i < n_problems; i++) {
+                var problem = problem_list[i];
+                console.log(problem);
+                if (!problem.rating) continue; //問題にdifficultyが設定されていなければスキップ
+                if (!problem.tags) continue; //問題にタグが設定されていなければスキップ
+                var problem_name = [];
+                problem_name.push(problem.contestId);
+                problem_name.push(problem.index);
+                var title = problem.name;
+                //すでに解かれていればスキップ
+                if (solved[problem_name[0] + problem_name[1]]) {
+                    continue;
+                }
+                var difficulty = problem.rating;
+                var tags = "";
+                var ok = false;
+                var n_tags = problem.tags.length;
+                for (var j = 0; j < n_tags; j++) {
+                    var tag = problem.tags[j];
+                    tags += tag;
+                    if (j < n_tags - 1) tags += ", ";
+                    if (hash.tags[tag].solveCount == 0) continue;
+                    var rating = hash.tags[tag].value;
+                    //あるtagのレーティングとdifficultyの差が100以下ならレコメンドする
+                    if (Math.abs(rating - difficulty) <= 100) ok = true;
+                }
+                if (!ok) continue;
+                var obj = {};
+                obj.id = problem_name;
+                obj.name = title;
+                obj.difficulty = difficulty;
+                obj.tags = tags;
+                recommendation_list.push(obj);
+            }
+
+
+            var id = "recommendation-table";
+            var className = "table table-bordered";
+            var table = d3.select(".container")
+                .append("div")
+                .style("margin-left", "5%")
+                .style("margin-right", "5%")
+                .style("margin-top", "30px")
+                .append("table")
+                .attr("class", className)
+                .attr("id", id);
+
+            var tr = table.append("tbody").selectAll("tr").data(recommendation_list).enter().append("tr");
+
+            table.append("thead")
+                .append("tr")
+                .selectAll("th")
+                .data(titles)
+                .enter()
+                .append("th")
+                .text(function(d) {
+                    return d;
+                })
+
+            tr.append("td")
+                .attr("class", "problem-ID")
+                .html(function(d) {
+                    return d.id[0] + d.id[1];
+                });
+            tr.append("td")
+                .attr("class", "problem-name")
+                .html(function(d) {
+                    return d.name;
+                })
+                .style("color", "#0000ff")
+                .style("text-decoration", "underline")
+                .on("mouseover", function(d) {
+                    d3.select(this).style("cursor", "pointer").style("color", "#ff0000");
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).style("cursor", "default").style("color", "#0000ff");
+                })
+                .on("click", function(d) {
+                    window.open("https://codeforces.com/problemset/problem/" + d.id[0] + "/" + d.id[1], '_blank');
+                });
+            tr.append("td")
+                .attr("class", "problem-difficulty")
+                .html(function(d) {
+                    return d.difficulty;
+                })
+                .style("color", function(d) {
+                    return decideColor(d.difficulty);
+                })
+                .attr("class", function(d) {
+                    if (d.difficulty >= 3000) return "legendary-grandmaster";
+                });
+            tr.append("td")
+                .attr("class", "problem-tags")
+                .html(function(d) {
+                    return d.tags;
+                })
+
+            jQuery(function($) {
+                $("#" + id).DataTable({
+                    columnDefs: [{
+                        targets: 3,
+                        visible: hide ? false : true
+                    }]
+                });
+            });
+        }
+
+        function decideColor(rating) {
+            if (rating >= 2400) return "#FF0000";
+            else if (rating >= 2100) return "#FF8C00";
+            else if (rating >= 1900) return "#AA00AA";
+            else if (rating >= 1600) return "#0000FF";
+            else if (rating >= 1400) return "#03A89E";
+            else if (rating >= 1200) return "#008000";
+            else return "#808080";
         }
     </script>
 

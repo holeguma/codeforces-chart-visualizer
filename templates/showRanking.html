@@ -27,6 +27,7 @@
                     <ul>
                         <li><a href="/">Radar Chart</a></li>
                         <li><a href="/ranking">Ranking</a></li>
+                        <li><a href="/userpage">User Page</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,6 +41,7 @@
                 <input type="radio" name="s2" id="radio_country" onchange="makeTable()">
                 <label for="radio_country" class="switch-off">Country</label>
             </div>
+            <br>
             <form action="#" method="GET" onchange="makeTable()">
                 <select name="form2" id="form2">
             <option value="bitmasks">bitmasks</option>
@@ -190,6 +192,9 @@
                 var id = "ranking-table";
                 var className = "table table-bordered";
                 var table = d3.select(".container")
+                    .append("div")
+                    .style("margin-left", "3%")
+                    .style("margin-right", "3%")
                     .append("table")
                     .attr("class", className)
                     .attr("id", id);
