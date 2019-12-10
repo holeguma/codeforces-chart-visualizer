@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    with open("./user_data/small_hash_data.json") as f:
+    with open("./user_data/hash_data_10000.json") as f:
         hash = json.load(f)
     with open("./user_data/user_info.json") as f:
         user_info = json.load(f)
@@ -36,7 +36,7 @@ def userpage():
 
 @app.route('/userpage/<username>')
 def getUserPage(username):
-    with open("./user_data/small_hash_data.json") as f:
+    with open("./user_data/hash_data_10000.json") as f:
         hash = json.load(f)
     with open("./problem_data/problem_list.json", encoding="utf-8") as f:
         data = json.load(f)
