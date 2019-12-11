@@ -43,13 +43,13 @@ def getUserPage(username):
     problem_list = []
     with open("./user_data/personal_data/" + username + ".json") as f:
         solved = json.load(f)
-    print(data['result']['problems'][4885])
-    print(len(data['result']['problems']))
     for i in range(len(data['result']['problems'])):
         if '"' in data['result']['problems'][i]['name'] or '%' in data['result']['problems'][i]['name']:
             continue
         problem_list.append(data['result']['problems'][i])
-    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved)
+    with open("./user_data/rating_data/" + username + ".json") as f:
+        rating_data=json.load(f)
+    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'])
 
 
 if __name__ == '__main__':

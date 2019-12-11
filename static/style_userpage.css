@@ -155,3 +155,19 @@
     flex: 0 0 25%;
     max-width: 25%;
 }
+
+.tooltip_rating {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    font: 12px;
+    padding: 10px;
+    line-height: 1;
+    font-weight: normal;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    visibility: hidden;
+}

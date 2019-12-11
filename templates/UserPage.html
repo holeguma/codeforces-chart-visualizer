@@ -57,6 +57,7 @@
         var hash = JSON.parse('{{hash|tojson|safe}}');
         var problem_list = JSON.parse('{{problem_list|tojson|safe}}');
         var solved = JSON.parse('{{solved|tojson|safe}}');
+        var rating_data = JSON.parse('{{rating_data|tojson|safe}}');
         var count = 0;
         for (var tag in hash["tags"]) {
             if (hash["tags"][tag] == name) continue;
@@ -88,7 +89,7 @@
             .text("Solved")
 
         div.append("h4")
-            .text(count)
+            .text(Object.keys(solved).length)
 
 
         container.append("h3")
@@ -124,6 +125,8 @@
             .attr("class", function() {
                 if (hash.country.rating >= 3000) return "legendary-grandmaster";
             });
+
+        showPerformanceGraph();
 
         container.append("h3")
             .text("Recommendations")
@@ -183,6 +186,126 @@
             console.log(data);
 
             let svg_radar = RadarChart(".radarChart", data, radarChartOptions);
+        }
+
+        function showPerformanceGraph() {
+            var list = [];
+            var n_results = rating_data.length;
+            console.log(n_results);
+
+            var highestPerf = -1e9;
+            var lowestPerf = 1e9;
+            for (var i = 0; i < n_results; i++) {
+                var obj = Object.assign(rating_data[i]);
+
+                var diff = obj.newRating - obj.oldRating;
+                obj["performance"] = obj.oldRating + diff * 4;
+                highestPerf = Math.max(highestPerf, obj.performance);
+                lowestPerf = Math.min(lowestPerf, obj.performance);
+                obj["timeMilliSeconds"] = obj.ratingUpdateTimeSeconds * 1000;
+                obj["date"] = new Date(obj.timeMilliSeconds);
+                list.push(obj);
+                if (i == 0) console.log(obj);
+            }
+            var oldestTime = list[0].timeMilliSeconds;
+            var latestTime = list[n_results - 1].timeMilliSeconds;
+            console.log(new Date(oldestTime));
+            console.log(new Date(latestTime));
+
+            var width = 800;
+            var height = 450;
+            var svg = d3.select(".container")
+                .append("div")
+                .style("margin-left", "5%")
+                .style("margin-right", "5%")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+
+            var padding = 50;
+            var xAxisPadding = 10;
+            var yAxisPadding = 10;
+            var tooltip_rating = d3.select("body").append("div").attr("class", "tooltip_rating");
+            var xScale = d3.scaleTime()
+                .domain([
+                    new Date(oldestTime), new Date(latestTime)
+                ])
+                .range([padding, width - padding]);
+            var yScale = d3.scaleLinear()
+                .domain([
+                    lowestPerf - 400,
+                    highestPerf + 400
+                ])
+                .range([height - padding, padding]);
+
+            var xAxis = d3.axisBottom(xScale)
+                .tickFormat(d3.timeFormat("%Y-%m"))
+                .ticks(10);
+            var yAxis = d3.axisLeft(yScale)
+
+            var line = d3.line()
+                .x(function(d) {
+                    return xScale(d.date)
+                })
+                .y(function(d) {
+                    return yScale(d.performance)
+                });
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(" + 0 + ", " + (height - padding) + ")")
+                .call(xAxis)
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(" + padding + ", 0)")
+                .call(yAxis);
+
+            svg.append("path")
+                .datum(list)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .attr("d", line);
+            svg.append("g")
+                .selectAll("circle")
+                .data(list)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d) {
+                    return xScale(d.date);
+                })
+                .attr("cy", function(d) {
+                    return yScale(d.performance);
+                })
+                .attr("fill", function(d) {
+                    return decideColor(d.performance);
+                })
+                .attr("r", 4)
+                .on("mouseover", function(d) {
+                    d3.select(this).style("cursor", "pointer");
+                    var year = d.date.getFullYear();
+                    var month = d.date.getMonth() + 1;
+                    var day = d.date.getDate();
+                    d3.select(this)
+                        .attr("r", 5);
+                    tooltip_rating.style("top", (d3.event.pageY - 20) + "px")
+                        .style("left", (d3.event.pageX + 10) + "px")
+                        .style("visibility", "visible")
+                        .html(
+                            "perf: " + d.performance +
+                            "<br>" + d.contestName +
+                            "<br>" + year + "/" + month + "/" + day
+                        );
+                })
+                .on("mousemove", function(d) {})
+                .on("mouseout", function(d) {
+                    d3.select(this).style("cursor", "default");
+                    d3.select(this)
+                        .attr("r", 4);
+                    tooltip_rating.style("visibility", "hidden");
+                })
+                .on("click", function(d) {
+                    window.open("https://codeforces.com/contest/" + d.contestId, '_blank');
+                })
         }
 
         function showRecommendations(hide = false) {
