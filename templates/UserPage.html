@@ -15,6 +15,8 @@
     <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
     <script src="{{url_for('static', filename='radar-chart.js')}}" charset="utf-8"></script>
+    <!-- Bootstrap/JS -->
+    <script src="/public/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,7 @@
         </div>
     </div>
     <script type="text/javascript">
+        all_tags = ["bitmasks", "divide and conquer", "math", "data structures", "trees", "dp", "greedy", "binary search", "sortings", "number theory", "fft", "brute force", "hashing", "meet-in-the-middle", "two pointers", "implementation", "strings", "constructive algorithms", "graphs", "combinatorics", "dfs and similar", "dsu", "probabilities", "geometry", "interactive", "ternary search", "shortest paths", "flows", "matrices", "2-sat", "graph matchings", "games", "*special", "string suffix structures", "expression parsing", "chinese remainder theorem", "schedules"];
         $('#form1').submit(function() {
             var user = $('#UserName').val();
             if (user == "") {
@@ -97,13 +100,84 @@
             .text("Radar Chart")
             .style("margin-left", "3%");
 
+        var div = container.append("div")
+            .style("margin-left", "3%")
+            .style("margin-right", "3%")
+            .attr("class", "panel panel-default")
+
+        div.append("div")
+            .attr("class", "panel-heading collapse-heading collapsed")
+            .attr("data-toggle", "collapse")
+            .attr("data-target", "#collapse-chart")
+            .attr("aria-expanded", "false")
+            .append("h3")
+            .attr("class", "panel-title")
+            .text("Option")
+            .append("span")
+            .attr("class", "glyphicon pull-right")
+            .html("▼");
+
+        var panel_body = div.append("div")
+            .attr("id", "collapse-chart")
+            .attr("class", "panel-body panel-collapse collapse");
+
+        var select = panel_body.append("span")
+            .text("Solved Problems ≧ ")
+            .append("select")
+            .attr("class", "selectpicker")
+            .attr("id", "solved-min")
+            .attr("onchange", "showRadarChart()");
+
+        for (var i = 1; i <= 10; i++) {
+            select.append("option")
+                .attr("value", i)
+                .text(i)
+        }
+
+        var panel_body_tags = panel_body.append("span")
+            .attr("class", "collapse-heading")
+            .attr("data-toggle", "collapse")
+            .attr("data-target", "#collapse-tags")
+            .attr("aria-expanded", "true")
+            .append("p")
+            .attr("class", "border")
+
+        panel_body_tags.append("span")
+            .text("Tags")
+            .style("font-size", "large")
+
+        panel_body_tags.append("span")
+            .text("▼")
+            .style("font-size", "large")
+            .attr("class", "glyphicon pull-right")
+
+        var tags_body = panel_body.append("div")
+            .attr("class", "collapse in")
+            .attr("id", "collapse-tags");
+
+        for (var tag of all_tags) {
+            var div = tags_body.append("div")
+                .style("margin-left", "3%")
+
+            div.append("input")
+                .attr("type", "checkbox")
+                .attr("id", tag)
+                .attr("checked", "checked")
+                .attr("onchange", "showRadarChart()");;
+
+            div.append("label")
+                .attr("for", tag)
+                .html("&nbsp;&nbsp;" + tag);
+        }
+
+
         container.append("div")
             .style("margin-left", "3%")
             .style("padding", "0 auto")
             .attr("class", "radarChart")
             .style("display", "inline-flex");
 
-        showRadarChart(name)
+        showRadarChart();
 
         container.append("h3")
             .text("Performance Graph")
@@ -118,12 +192,14 @@
         showRecommendations();
 
 
-        function showRadarChart(name) {
+        function showRadarChart() {
+            var minSolveCount = document.getElementById("solved-min").value;
             data = [];
             selected_tags = {};
             for (var tag in hash["tags"]) {
+                console.log(tag);
                 if (hash["tags"][tag] == name) continue;
-                if (hash["tags"][tag].solveCount >= 1) {
+                if (hash["tags"][tag].solveCount >= minSolveCount && document.getElementById(tag).checked) {
                     //console.log(tag)
                     selected_tags[tag] = true;
                 }
