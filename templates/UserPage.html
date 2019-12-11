@@ -84,17 +84,28 @@
         var div = container.append("div")
             .style("display", "flex")
             .style("flex-wrap", "wrap")
-            .append("div")
+            
+        var div2=div.append("div")
+            .style("text-align", "center")
+            .style("max-width", "25%")
+            .style("flex", "0 0 25%");
+            
+        div2.append("h5")
+            .text("Solved");
+
+        div2.append("h4")
+            .text(Object.keys(solved).length);
+
+        var div2=div.append("div")
             .style("text-align", "center")
             .style("max-width", "25%")
             .style("flex", "0 0 25%");
 
-        div.append("h5")
-            .text("Solved")
+        div2.append("h5")
+            .text("Difficulty Sum");
 
-        div.append("h4")
-            .text(Object.keys(solved).length)
-
+        div2.append("h4")
+            .html("{{difficultySum|tojson|safe}}");
 
         container.append("h3")
             .text("Radar Chart")

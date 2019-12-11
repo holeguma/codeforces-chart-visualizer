@@ -43,6 +43,20 @@ def getUserPage(username):
     problem_list = []
     with open("./user_data/personal_data/" + username + ".json") as f:
         solved = json.load(f)
+    difficultySum=0
+    for problem in solved:
+        contestID=-1
+        problem_index=-1
+        if problem[-1:].isdigit():
+            contestID=int(problem[:-2])
+            problem_index=problem[-2:]
+        else:
+            contestID=int(problem[:-1])
+            problem_index=problem[-1:]
+        list=[x for x in data['result']['problems'] if x['contestId']==contestID and x['index']==problem_index]
+        if len(list):
+            difficultySum+=list[0]['rating']
+
     for i in range(len(data['result']['problems'])):
         if '"' in data['result']['problems'][i]['name'] or '%' in data['result']['problems'][i]['name']:
             continue
@@ -51,7 +65,7 @@ def getUserPage(username):
         rating_data = json.load(f)
     with open("./user_data/user_info.json") as f:
         user_info = json.load(f)
-    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'], user_info=user_info)
+    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'], user_info=user_info,difficultySum=difficultySum)
 
 
 if __name__ == '__main__':
