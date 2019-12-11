@@ -138,7 +138,7 @@
             .attr("class", "collapse-heading")
             .attr("data-toggle", "collapse")
             .attr("data-target", "#collapse-tags")
-            .attr("aria-expanded", "true")
+            .attr("aria-expanded", "false")
             .append("p")
             .attr("class", "border")
 
@@ -158,6 +158,9 @@
         for (var tag of all_tags) {
             var div = tags_body.append("div")
                 .style("margin-left", "3%")
+                .style("margin-right","3%")
+                .style("display","inline-block")
+                .style("width","27%");
 
             div.append("input")
                 .attr("type", "checkbox")
