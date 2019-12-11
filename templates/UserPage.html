@@ -58,6 +58,7 @@
         var problem_list = JSON.parse('{{problem_list|tojson|safe}}');
         var solved = JSON.parse('{{solved|tojson|safe}}');
         var rating_data = JSON.parse('{{rating_data|tojson|safe}}');
+        var user_info = JSON.parse('{{user_info|tojson|safe}}');
         var count = 0;
         for (var tag in hash["tags"]) {
             if (hash["tags"][tag] == name) continue;
@@ -71,10 +72,10 @@
             .text(name)
             .style("margin-left", "3%")
             .style("color", function() {
-                return decideColor(hash.country.rating);
+                return decideColor(user_info[name].rating);
             })
             .attr("class", function() {
-                if (hash.country.rating >= 3000) return "legendary-grandmaster";
+                if (user_info[name].rating >= 3000) return "legendary-grandmaster";
             });
 
         var div = container.append("div")
@@ -94,19 +95,7 @@
 
         container.append("h3")
             .text("Radar Chart")
-            .style("margin-left", "3%")
-            .style("color", function() {
-                if (hash.country.rating >= 2400) return "#FF0000";
-                else if (hash.country.rating >= 2100) return "#FF8C00";
-                else if (hash.country.rating >= 1900) return "#AA00AA";
-                else if (hash.country.rating >= 1600) return "#0000FF";
-                else if (hash.country.rating >= 1400) return "#03A89E";
-                else if (hash.country.rating >= 1200) return "#008000";
-                else return "#808080";
-            })
-            .attr("class", function() {
-                if (hash.country.rating >= 3000) return "legendary-grandmaster";
-            });
+            .style("margin-left", "3%");
 
         container.append("div")
             .style("margin-left", "3%")
@@ -118,25 +107,13 @@
 
         container.append("h3")
             .text("Performance Graph")
-            .style("margin-left", "3%")
-            .style("color", function() {
-                return decideColor(hash.country.rating);
-            })
-            .attr("class", function() {
-                if (hash.country.rating >= 3000) return "legendary-grandmaster";
-            });
+            .style("margin-left", "3%");
 
         showPerformanceGraph();
 
         container.append("h3")
             .text("Recommendations")
-            .style("margin-left", "3%")
-            .style("color", function() {
-                return decideColor(hash.country.rating);
-            })
-            .attr("class", function() {
-                if (hash.country.rating >= 3000) return "legendary-grandmaster";
-            });
+            .style("margin-left", "3%");
 
         showRecommendations();
 

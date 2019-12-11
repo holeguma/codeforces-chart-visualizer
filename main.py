@@ -48,8 +48,10 @@ def getUserPage(username):
             continue
         problem_list.append(data['result']['problems'][i])
     with open("./user_data/rating_data/" + username + ".json") as f:
-        rating_data=json.load(f)
-    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'])
+        rating_data = json.load(f)
+    with open("./user_data/user_info.json") as f:
+        user_info = json.load(f)
+    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'], user_info=user_info)
 
 
 if __name__ == '__main__':
