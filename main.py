@@ -54,7 +54,7 @@ def getUserPage(username):
             contestID=int(problem[:-1])
             problem_index=problem[-1:]
         list=[x for x in data['result']['problems'] if x['contestId']==contestID and x['index']==problem_index]
-        if len(list):
+        if len(list) and 'rating' in list[0]:
             difficultySum+=list[0]['rating']
 
     for i in range(len(data['result']['problems'])):

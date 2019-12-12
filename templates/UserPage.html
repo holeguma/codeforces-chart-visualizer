@@ -369,9 +369,9 @@
                 .attr("cy", function(d) {
                     return yScale(d.performance);
                 })
-                .attr("fill", function(d) {
-                    return decideColor(d.performance);
-                })
+                .attr("fill", 'white')
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
                 .attr("r", 4)
                 .on("mouseover", function(d) {
                     d3.select(this).style("cursor", "pointer");
