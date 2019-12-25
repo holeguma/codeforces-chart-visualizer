@@ -52,6 +52,7 @@ class user_tag(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     rating = db.Column(db.Integer)
     solved = db.Column(db.Integer)
+    accepted=db.Column(db.Integer)
 
 
 class country_tag(db.Model):
@@ -61,6 +62,7 @@ class country_tag(db.Model):
     country_id = db.Column(db.Integer, db.ForeignKey('countries.id'))
     rating = db.Column(db.Integer)
     solved = db.Column(db.Integer)
+    accepted=db.Column(db.Integer)
 
 
 class Problem(db.Model):

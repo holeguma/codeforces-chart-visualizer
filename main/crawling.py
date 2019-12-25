@@ -22,7 +22,7 @@ def updateRating(rating, difficulty, wins, loses, K):
 def update():
     all_tags = ["bitmasks", "divide and conquer", "math", "data structures", "trees", "dp", "greedy", "binary search", "sortings", "number theory", "fft", "brute force", "hashing", "meet-in-the-middle", "two pointers", "implementation", "strings", "constructive algorithms", "graphs",
                 "combinatorics", "dfs and similar", "dsu", "probabilities", "geometry", "interactive", "ternary search", "shortest paths", "flows", "matrices", "2-sat", "graph matchings", "games", "*special", "string suffix structures", "expression parsing", "chinese remainder theorem", "schedules"]
-    contestID = 80
+    contestID = 83
     while True:
         finished = db.session.query(finished_contest).filter(
             finished_contest.contestID == contestID).first()
@@ -35,7 +35,7 @@ def update():
         data = response.json()
         if data['status'] == 'FAILED':
             print(str(contestID)+' : FAILED')
-            if data['comment'][-2] == 'n':
+            if data['comment'][-2] == 'n' and contestID>1200:
                 break
             else:
                 contestID += 1
@@ -75,7 +75,8 @@ def update():
                         user.tags.append(user_tag(
                             name=tag,
                             rating=1500,
-                            solved=0
+                            solved=0,
+                            accepted=0
                         ))
                     db.session.commit()
                 for tag in problems[j]['tags']:
@@ -87,7 +88,8 @@ def update():
                     rating = utag.rating
                     utag.rating = updateRating(
                         rating, difficulty, result, result ^ 1, K)
-                    utag.solved += result
+                    utag.solved += 1
+                    utag.accepted += result
                 if not user.country:
                     continue
                 print(user.country)
@@ -103,7 +105,8 @@ def update():
                     rating = ctag.rating
                     ctag.rating = updateRating(
                         rating, difficulty, country_result[country.name][tag]['wins'], country_result[country.name][tag]['loses'], 0.5)
-                    ctag.solved += country_result[country.name][tag]['wins']
+                    ctag.solved += country_result[country.name][tag]['wins']+country_result[country.name][tag]['loses']
+                    ctag.accepted+=country_result[country.name][tag]['wins']
             db.session.commit()
         finished = finished_contest(
             contestID=contestID
