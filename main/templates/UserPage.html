@@ -16,7 +16,7 @@
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
     <script src="{{url_for('static', filename='radar-chart.js')}}" charset="utf-8"></script>
     <!-- Bootstrap/JS -->
-    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
     </div>
     <script type="text/javascript">
         all_tags = ["bitmasks", "divide and conquer", "math", "data structures", "trees", "dp", "greedy", "binary search", "sortings", "number theory", "fft", "brute force", "hashing", "meet-in-the-middle", "two pointers", "implementation", "strings", "constructive algorithms", "graphs", "combinatorics", "dfs and similar", "dsu", "probabilities", "geometry", "interactive", "ternary search", "shortest paths", "flows", "matrices", "2-sat", "graph matchings", "games", "*special", "string suffix structures", "expression parsing", "chinese remainder theorem", "schedules"];
-        $('#form1').submit(function() {
+        $('#form1').submit(function () {
             var user = $('#UserName').val();
             if (user == "") {
                 $('form').attr('action', '/userpage');
@@ -69,10 +69,10 @@
         container.append("h3")
             .text(name)
             .style("margin-left", "3%")
-            .style("color", function() {
+            .style("color", function () {
                 return decideColor(user_info[name].rating);
             })
-            .attr("class", function() {
+            .attr("class", function () {
                 if (user_info[name].rating >= 3000) return "legendary-grandmaster";
             });
 
@@ -106,99 +106,99 @@
             .text("Radar Chart")
             .style("margin-left", "3%");
 
-        // var div = container.append("div")
-        //     .style("margin-left", "3%")
-        //     .style("margin-right", "3%")
-        //     .attr("class", "panel panel-default")
+        var div = container.append("div")
+            .style("margin-left", "3%")
+            .style("margin-right", "3%")
+            .attr("class", "panel panel-default")
 
-        // div.append("div")
-        //     .attr("class", "panel-heading collapse-heading collapsed")
-        //     .attr("data-toggle", "collapse")
-        //     .attr("data-target", "#collapse-chart")
-        //     .attr("aria-expanded", "false")
-        //     .append("h3")
-        //     .attr("class", "panel-title")
-        //     .text("Option")
-        //     .append("span")
-        //     .attr("class", "glyphicon pull-right")
-        //     .html("▼");
+        div.append("div")
+            .attr("class", "panel-heading collapse-heading collapsed")
+            .attr("data-toggle", "collapse")
+            .attr("data-target", "#collapse-chart")
+            .attr("aria-expanded", "false")
+            .append("h3")
+            .attr("class", "panel-title")
+            .text("Option")
+            .append("span")
+            .attr("class", "glyphicon pull-right")
+            .html("▼");
 
-        // var panel_body = div.append("div")
-        //     .attr("id", "collapse-chart")
-        //     .attr("class", "panel-body panel-collapse collapse");
+        var panel_body = div.append("div")
+            .attr("id", "collapse-chart")
+            .attr("class", "panel-body panel-collapse collapse");
 
-        // var select = panel_body.append("span")
-        //     .text("Solved Problems ≧ ")
-        //     .append("select")
-        //     .attr("class", "selectpicker")
-        //     .attr("id", "solved-min")
-        //     .attr("onchange", "showRadarChart()");
+        var select = panel_body.append("span")
+            .text("Solved Problems ≧ ")
+            .append("select")
+            .attr("class", "selectpicker")
+            .attr("id", "solved-min")
+            .attr("onchange", "showRadarChart()");
 
-        // for (var i = 1; i <= 10; i++) {
-        //     select.append("option")
-        //         .attr("value", i)
-        //         .text(i)
-        // }
+        for (var i = 1; i <= 10; i++) {
+            select.append("option")
+                .attr("value", i)
+                .text(i)
+        }
 
-        // var panel_body_tags = panel_body.append("span")
-        //     .attr("class", "collapse-heading")
-        //     .attr("data-toggle", "collapse")
-        //     .attr("data-target", "#collapse-tags")
-        //     .attr("aria-expanded", "false")
-        //     .append("p")
-        //     .attr("class", "border")
+        var panel_body_tags = panel_body.append("span")
+            .attr("class", "collapse-heading")
+            .attr("data-toggle", "collapse")
+            .attr("data-target", "#collapse-tags")
+            .attr("aria-expanded", "false")
+            .append("p")
+            .attr("class", "border")
 
-        // panel_body_tags.append("span")
-        //     .text("Tags")
-        //     .style("font-size", "large")
+        panel_body_tags.append("span")
+            .text("Tags")
+            .style("font-size", "large")
 
-        // panel_body_tags.append("span")
-        //     .text("▼")
-        //     .style("font-size", "large")
-        //     .attr("class", "glyphicon pull-right")
+        panel_body_tags.append("span")
+            .text("▼")
+            .style("font-size", "large")
+            .attr("class", "glyphicon pull-right")
 
-        // var tags_body = panel_body.append("div")
-        //     .attr("class", "collapse in")
-        //     .attr("id", "collapse-tags");
+        var tags_body = panel_body.append("div")
+            .attr("class", "collapse in")
+            .attr("id", "collapse-tags");
 
-        // for (var tag of all_tags) {
-        //     var div = tags_body.append("div")
-        //         .style("margin-left", "3%")
-        //         .style("margin-right", "3%")
-        //         .style("display", "inline-block")
-        //         .style("width", "27%");
+        for (var tag of all_tags) {
+            var div = tags_body.append("div")
+                .style("margin-left", "3%")
+                .style("margin-right", "3%")
+                .style("display", "inline-block")
+                .style("width", "27%");
 
-        //     div.append("input")
-        //         .attr("type", "checkbox")
-        //         .attr("id", tag)
-        //         .attr("checked", "checked")
-        //         .attr("onchange", "showRadarChart()");;
+            div.append("input")
+                .attr("type", "checkbox")
+                .attr("id", tag)
+                .attr("checked", "checked")
+                .attr("onchange", "showRadarChart()");;
 
-        //     div.append("label")
-        //         .attr("for", tag)
-        //         .html("&nbsp;&nbsp;" + tag);
-        // }
+            div.append("label")
+                .attr("for", tag)
+                .html("&nbsp;&nbsp;" + tag);
+        }
 
 
-        // container.append("div")
-        //     .style("margin-left", "3%")
-        //     .style("padding", "0 auto")
-        //     .attr("class", "radarChart")
-        //     .style("display", "inline-flex");
+        container.append("div")
+            .style("margin-left", "3%")
+            .style("padding", "0 auto")
+            .attr("class", "radarChart")
+            .style("display", "inline-flex");
 
-        // showRadarChart();
+        showRadarChart();
 
-        // container.append("h3")
-        //     .text("Performance Graph")
-        //     .style("margin-left", "3%");
+        container.append("h3")
+            .text("Performance Graph")
+            .style("margin-left", "3%");
 
-        // showPerformanceGraph();
+        showPerformanceGraph();
 
-        // container.append("h3")
-        //     .text("Recommendations")
-        //     .style("margin-left", "3%");
+        container.append("h3")
+            .text("Recommendations")
+            .style("margin-left", "3%");
 
-        // showRecommendations();
+        showRecommendations();
 
 
         function showRadarChart() {
@@ -306,10 +306,10 @@
             var yAxis = d3.axisLeft(yScale)
 
             var line = d3.line()
-                .x(function(d) {
+                .x(function (d) {
                     return xScale(d.date)
                 })
-                .y(function(d) {
+                .y(function (d) {
                     return yScale(d.performance)
                 });
 
@@ -380,13 +380,13 @@
                 svg.append("path")
                     .datum(list)
                     .attr("d", d3.area()
-                        .x(function(d) {
+                        .x(function (d) {
                             return xScale(d.date);
                         })
-                        .y1(function() {
+                        .y1(function () {
                             return yScale(Math.min(marking.yaxis.to, highestPerf + 400));
                         })
-                        .y0(function() {
+                        .y0(function () {
                             return yScale(Math.max(marking.yaxis.from, lowestPerf - 400));
                         })
                     )
@@ -413,17 +413,17 @@
                 .data(list)
                 .enter()
                 .append("circle")
-                .attr("cx", function(d) {
+                .attr("cx", function (d) {
                     return xScale(d.date);
                 })
-                .attr("cy", function(d) {
+                .attr("cy", function (d) {
                     return yScale(d.performance);
                 })
                 .attr("fill", 'white')
                 .attr("stroke", "steelblue")
                 .attr("stroke-width", 1.5)
                 .attr("r", 4)
-                .on("mouseover", function(d) {
+                .on("mouseover", function (d) {
                     d3.select(this).style("cursor", "pointer");
                     var year = d.date.getFullYear();
                     var month = d.date.getMonth() + 1;
@@ -439,14 +439,14 @@
                             "<br>" + year + "/" + month + "/" + day
                         );
                 })
-                .on("mousemove", function(d) {})
-                .on("mouseout", function(d) {
+                .on("mousemove", function (d) { })
+                .on("mouseout", function (d) {
                     d3.select(this).style("cursor", "default");
                     d3.select(this)
                         .attr("r", 4);
                     tooltip_rating.style("visibility", "hidden");
                 })
-                .on("click", function(d) {
+                .on("click", function (d) {
                     window.open("https://codeforces.com/contest/" + d.contestId, '_blank');
                 })
         }
@@ -510,49 +510,49 @@
                 .data(titles)
                 .enter()
                 .append("th")
-                .text(function(d) {
+                .text(function (d) {
                     return d;
                 })
 
             tr.append("td")
                 .attr("class", "problem-ID")
-                .html(function(d) {
+                .html(function (d) {
                     return d.id[0] + d.id[1];
                 });
             tr.append("td")
                 .attr("class", "problem-name")
-                .html(function(d) {
+                .html(function (d) {
                     return d.name;
                 })
                 .style("color", "#0000ff")
                 .style("text-decoration", "underline")
-                .on("mouseover", function(d) {
+                .on("mouseover", function (d) {
                     d3.select(this).style("cursor", "pointer").style("color", "#ff0000");
                 })
-                .on("mouseout", function(d) {
+                .on("mouseout", function (d) {
                     d3.select(this).style("cursor", "default").style("color", "#0000ff");
                 })
-                .on("click", function(d) {
+                .on("click", function (d) {
                     window.open("https://codeforces.com/problemset/problem/" + d.id[0] + "/" + d.id[1], '_blank');
                 });
             tr.append("td")
                 .attr("class", "problem-difficulty")
-                .html(function(d) {
+                .html(function (d) {
                     return d.difficulty;
                 })
-                .style("color", function(d) {
+                .style("color", function (d) {
                     return decideColor(d.difficulty);
                 })
-                .attr("class", function(d) {
+                .attr("class", function (d) {
                     if (d.difficulty >= 3000) return "legendary-grandmaster";
                 });
             tr.append("td")
                 .attr("class", "problem-tags")
-                .html(function(d) {
+                .html(function (d) {
                     return d.tags;
                 })
 
-            jQuery(function($) {
+            jQuery(function ($) {
                 $("#" + id).DataTable({
                     columnDefs: [{
                         targets: 3,
