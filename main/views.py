@@ -47,7 +47,7 @@ def userpage():
 
 @app.route('/userpage/<username>')
 def getUserPage(username):
-    # user = db.session.query(User).filter(User.name==username).first()
+        # user = db.session.query(User).filter(User.name==username).first()
     # output = {}
     # if user == None:
     #     return render_template('showUserPage.html')
@@ -124,12 +124,12 @@ def getUserPage(username):
         list=[x for x in data['result']['problems'] if x['contestId']==contestID and x['index']==problem_index]
         if len(list) and 'rating' in list[0]:
             difficultySum+=list[0]['rating']
-        for i in range(len(data['result']['problems'])):
-            if '"' in data['result']['problems'][i]['name'] or '%' in data['result']['problems'][i]['name']:
-                continue
-            problem_list.append(data['result']['problems'][i])
+    for i in range(len(data['result']['problems'])):
+        if '"' in data['result']['problems'][i]['name'] or '%' in data['result']['problems'][i]['name']:
+            continue
+        problem_list.append(data['result']['problems'][i])
     with open("main/user_data/rating_data/" + username + ".json") as f:
         rating_data = json.load(f)
     with open("main/user_data/user_info.json") as f:
         user_info = json.load(f)
-    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'], user_info=user_info,difficultySum=difficultySum)
+    return render_template('UserPage.html', name=username, hash=hash[username], problem_list=problem_list, solved=solved, rating_data=rating_data['result'], user_rating=user_info[username]['rating'],difficultySum=difficultySum)
