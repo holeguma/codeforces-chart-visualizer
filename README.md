@@ -25,6 +25,6 @@ pip install Flask Jinja2 werkzeug
 ## Usage
 b-piyomboディレクトリ直下で
 ```
-python main.py
+python run.py
 ```
 を実行して http://localhost:5000/ にアクセスすると結果が見れます。
