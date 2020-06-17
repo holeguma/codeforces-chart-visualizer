@@ -50,16 +50,6 @@ jedi==0.17.0
 Jinja2==2.11.2
 joblib==0.15.1
 jsonschema==3.2.0
-jupyter-client==6.1.3
-jupyter-contrib-core==0.3.3
-jupyter-contrib-nbextensions==0.5.1
-jupyter-core==4.6.3
-jupyter-highlight-selected-word==0.2.0
-jupyter-latex-envs==1.4.4
-jupyter-nbextensions-configurator==0.4.1
-Keras==2.2.4
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
 kiwisolver==1.2.0
 lxml==4.1.1
 Mako==1.1.0
@@ -87,7 +77,6 @@ pandocfilters==1.4.2
 paramiko==2.7.1
 parso==0.7.0
 pickleshare==0.7.5
-Pillow==6.1.0
 pip-review==1.0
 pipreqs==0.4.10
 pluggy==0.13.1
@@ -138,10 +127,6 @@ sklearn==0.0
 sortedcontainers==2.2.2
 soupsieve==2.0.1
 SQLAlchemy==1.3.17
-tensorboard==1.14.0
-tensorflow==1.14.0
-tensorflow-estimator==1.14.0
-tensorflow-gpu==1.14.0
 termcolor==1.1.0
 terminado==0.8.2
 testpath==0.4.4
@@ -150,7 +135,6 @@ tornado==6.0.4
 tox==3.14.3
 tqdm==4.36.1
 traitlets==4.3.3
-Twisted==19.7.0
 txaio==20.4.1
 tzlocal==2.1
 unicorn==1.0.1
