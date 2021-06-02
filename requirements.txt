@@ -138,7 +138,7 @@ traitlets==4.3.3
 txaio==20.4.1
 tzlocal==2.1
 unicorn==1.0.1
-urllib3==1.24.2
+urllib3==1.26.5
 virtualenv==16.7.2
 wcwidth==0.2.4
 webencodings==0.5.1
