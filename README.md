@@ -1,13 +1,14 @@
-# Information Visualization
+# Codeforces Chart Visualizer
 
-## contest_data
-[Google Drive](https://drive.google.com/open?id=1q_qYlU_8CXlPlPt0KQPVpBp6f18PrVkB)からダウンロードしてください
+競技プログラミングサイトCodeforcesにおいてユーザーの能力値を可視化するためのサイトです。  
+現在デプロイに向けてデータベースへのデータの移植を行っております。
 
-## user_data
-`user_data`内の`hash_data.zip`と`user_list.zip`はファイルサイズが大きいので圧縮してあります
+## 使用技術
+frontend: D3.js  
+backend: Flask
 
 ## Usage
-b-piyomboディレクトリ直下で
+ディレクトリ直下で
 ```
 python run.py
 ```
